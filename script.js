@@ -1,7 +1,7 @@
 //
 
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-const URL = 'https://176.99.11.95:85/';
+const URL = 'http://176.99.11.95:85/';
 tg.expand(); //расширяем на все окно  
 
 const firstSection = document.querySelector('.main-select');
