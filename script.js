@@ -1,7 +1,8 @@
 //
 
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-const URL = 'http://176.99.11.95:85/';
+// const URL = 'https://e143-89-31-104-182.ngrok.io/';
+const URL = 'https://176.99.11.95:90/'
 tg.expand(); //расширяем на все окно  
 
 const firstSection = document.querySelector('.main-select');
@@ -19,8 +20,8 @@ const start = async () => {
     
 
     const data = await fetch(URL + 'get_user?' + new URLSearchParams({
-        id: tg.initDataUnsafe.user.id
-        // id: 5178264021
+        // id: tg.initDataUnsafe.user.id
+        id: 5178264021
     }))
 
     user = await data.json();
