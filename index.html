@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="null.css">
+</head>
+<body>
+    <div class="main-panel none page" category="start">
+        <div class="main-panel__container">
+            <div class="main-panel__wrapper">
+                <div id="dney7" class="main-panel__wrapper__button active"><span>7 дней бесплатно</span></div>
+                <div id="sub" class="sub main-panel__wrapper__button"><span>Оформить подписку</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-panel none page" category="medium">
+        <div class="main-panel__container">
+            <div class="main-panel__wrapper">
+                <div id="promo" class="main-panel__wrapper__button active"><span>Промокод на 14 дней</span></div>
+                <div id="sub" class="sub main-panel__wrapper__button"><span>Оформить подписку</span></div>
+            </div>
+            <div class="main-panel__time">
+                Действие подписки до<br><span class="date">11.11.23г. 11:22</span> 
+            </div>
+        </div>
+    </div>
+
+    <div class="main-panel page none" category="end">
+        <div class="main-panel__container">
+            <div class="main-panel__time">
+                Действие подписки до<br><span class="date">11.11.23г. 11:22</span> 
+            </div>
+        </div>
+    </div>
+
+    <div class="main-pay none page">
+        <div class="main-pay__container">
+            <div class="main-pay__blocktext">
+                <span>Подписка <span id="m">0</span> месяц(ев)</span>
+                <span id="price"><span id="rub">0</span> рублей</span>
+            </div>
+            <div class="main-pay__blocktext two">
+                <input id="email" type="text" placeholder="Электронная почта">
+                <div class="politic">
+                    <input id="check" type="checkbox">
+                    <span class="pol">Я ознакомлен(а) с <a target="_blank" href="https://cloud.mail.ru/public/8B4L/1hycfS3uL">Политика конфиденциальности</a></span>
+                </div>
+            </div>
+
+            <div id="oplata" class="main-pay__button">Оплатить</div>
+        </div>
+    </div>
+
+    <div class="main-buy page none">
+        <div class="main-buy__container">
+            <div id="firstButton" class="main-buy__button">Действие подписки: <span class="date"></span> </div>
+            <div class="main-buy__button" price="169" m="1">Подключить за 169 руб. / месяц</div>
+            <div class="main-buy__button" price="656" m="6">Подключить за 656 руб. / 6 месяцев</div>
+            <div class="main-buy__button" price="790" m="12">Подключить за 790 руб. / 12 месяцев</div>
+        </div>
+        
+    </div>
+
+    <div class="main-category page none">
+        <div class="category_wrapper">
+            
+            <div class="category_list">
+                <div class="category_up"><span>%s</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-select page">
+        <div class="container">
+            <div class="select-wrapper">
+                <div class="select-flex">
+                    <span><img step="-1" platform="3" id="lamoda" class="select-img" src="img/lamoda.jpg" alt=""><span class="text">Lamoda</span></span>
+                    <span><img step="-1" platform="2" id="wb" class="select-img" src="img/wb.jpg" alt=""><span class="text">Wildberries</span></span>
+                    <span><img step="-1" platform="0" id="letual" class="select-img" src="img/letual.jpg" alt=""><span class="text">ЛЭТУАЛЬ</span></span>
+                    <span><img step="-1" platform="1" id="ozon" class="select-img" src="img/ozon.jpg" alt=""><span class="text">OZON</span></span>
+                </div>
+                <div class="select-text">Выберите маркет-плейс</div>
+            </div>
+        </div>
+    </div>
+    <div id="log">log</div>
+    <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- 0 • LETUAL
+1 • OZON
+2 • WB
+3 • LAMODA -->
