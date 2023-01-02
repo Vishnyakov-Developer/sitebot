@@ -2,7 +2,7 @@
 
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 // const URL = 'https://e143-89-31-104-182.ngrok.io/';
-const URL = 'https://124699124.online/';
+const URL = 'https://124699124.online:85/';
 // let URL = 'http://176.99.11.95:85/';
 tg.expand(); //расширяем на все окно  
 
