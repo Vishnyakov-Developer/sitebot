@@ -2,8 +2,8 @@
 
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 // const URL = 'https://e143-89-31-104-182.ngrok.io/';
-// const URL = 'https://b6e3-2a00-f940-2-4-2-00-1483.ngrok.io/';
-const URL = 'https://b6e3-2a00-f940-2-4-2-00-1483.ngrok.io/';
+const URL = 'https://124699124.online/';
+// let URL = 'http://176.99.11.95:85/';
 tg.expand(); //расширяем на все окно  
 
 const firstSection = document.querySelector('.main-select');
@@ -21,16 +21,16 @@ const start = async () => {
     
     try {
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
-            // id: tg.initDataUnsafe.user.id
-            id: 5178264021
-        }))
+            id: tg.initDataUnsafe.user.id
+            // id: 5178264021
+        }), {mode: 'cors'})
+        user = await data.json();
     } catch (e) {
         console.log(e);
         log(JSON.stringify(e));
     }
     
 
-    user = await data.json();
 
     if(user.demo == false || user.demo == 0 || user.end*1000 < Date.now()) {
         
