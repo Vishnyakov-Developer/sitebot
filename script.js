@@ -21,8 +21,8 @@ const start = async () => {
     
     try {
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
-            // id: tg.initDataUnsafe.user.id
-            id: 5178264021
+            id: tg.initDataUnsafe.user.id
+            // id: 5178264021
         }), {mode: 'cors'})
         user = await data.json();
     } catch (e) {
@@ -39,7 +39,7 @@ const start = async () => {
     } else {
         openPanel('medium', user.end);
         const dating = new Date(user.end*1000);
-        dateElement.textContent = `Действие подписки ` + dating.toLocaleString();
+        // dateElement.textContent = `Действие подписки ` + dating.toLocaleString();
     }
     
     // openPanel('start');
