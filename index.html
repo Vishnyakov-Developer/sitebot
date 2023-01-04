@@ -10,12 +10,12 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 
 </head>
-<body>
+<body class="">
     <div class="main-panel none page" category="start">
         <div class="main-panel__container">
             <div class="main-panel__wrapper">
-                <div id="dney7" class="main-panel__wrapper__button active"><span>7 дней бесплатно</span></div>
-                <div id="sub" class="sub main-panel__wrapper__button"><span>Оформить подписку</span></div>
+                <div id="" class="eCatalog main-panel__wrapper__button active"><span>еКаталог</span></div>
+                <div id="sub" class="let sub main-panel__wrapper__button"><span>Оформить подписку</span></div>
             </div>
         </div>
     </div>
@@ -23,11 +23,8 @@
     <div class="main-panel none page" category="medium">
         <div class="main-panel__container">
             <div class="main-panel__wrapper">
-                <div id="promo" class="main-panel__wrapper__button active"><span>Промокод на 14 дней</span></div>
-                <div id="sub" class="sub main-panel__wrapper__button"><span>Оформить подписку</span></div>
-            </div>
-            <div class="main-panel__time">
-                Действие подписки до<br><span class="date">11.11.23г. 11:22</span> 
+                <div id="" class="eCatalog main-panel__wrapper__button active"><span>еКаталог</span></div>
+                <div id="sub" class="does main-panel__wrapper__button"><span>Действие подписки до<br></span> <span class="date res">Оформить подписку</span></div>
             </div>
         </div>
     </div>
@@ -40,11 +37,15 @@
         </div>
     </div>
 
-    <div class="main-pay none page">
+    <div class="main-pay none page" back-page="main-buy">
         <div class="main-pay__container">
-            <div class="main-pay__blocktext">
+            <div class="main-pay__blocktext one">
                 <span>Подписка <span id="m">0</span> месяц(ев)</span>
                 <span id="price"><span id="rub">0</span> рублей</span>
+            </div>
+            <div class="main-pay__blocktext itogo">
+                <span>Итого</span>
+                <span id="pricetwo"><span id="rubtwo">0</span> ₽</span>
             </div>
             <div class="main-pay__blocktext two">
                 <input id="email" type="text" placeholder="Электронная почта">
@@ -53,22 +54,26 @@
                     <span class="pol">Я ознакомлен(а) с <a target="_blank" href="https://cloud.mail.ru/public/8B4L/1hycfS3uL">Политика конфиденциальности</a></span>
                 </div>
             </div>
-
-            <div id="oplata" class="main-pay__button">Оплатить</div>
         </div>
     </div>
 
-    <div class="main-buy page none">
+    <div class="main-buy page none" back-page="main-select">
         <div class="main-buy__container">
             <div id="firstButton" class="main-buy__button">Действие подписки: <span class="date"></span> </div>
             <div class="main-buy__button" price="169" m="1">Подключить за 169 руб. / месяц</div>
             <div class="main-buy__button" price="656" m="6">Подключить за 656 руб. / 6 месяцев</div>
             <div class="main-buy__button" price="790" m="12">Подключить за 790 руб. / 12 месяцев</div>
         </div>
+        <div class="main-buy__quest container">
+            <div class="main-buy__item none">
+                <div class="main-buy__item__title">Вопрос номер 1</div>
+                <div class="main-buy__item__descr none">Ответ номер 1 ... ответ</div>
+            </div>
+        </div>
         
     </div>
 
-    <div class="main-category page none">
+    <div class="main-category container page none" back-page="main-select">
         <div class="category_wrapper">
             
             <div class="category_list">

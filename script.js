@@ -5,6 +5,7 @@ let tg = window.Telegram.WebApp; //получаем объект webapp теле
 const URL = 'https://124699124.online:85/';
 // let URL = 'http://176.99.11.95:85/';
 tg.expand(); //расширяем на все окно  
+let backPage = '';
 
 const firstSection = document.querySelector('.main-select');
 const categorySection = document.querySelector('.main-category');
@@ -22,7 +23,6 @@ const start = async () => {
     try {
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
             id: tg.initDataUnsafe.user.id
-            // id: 5178264021
         }), {mode: 'cors'})
         user = await data.json();
     } catch (e) {
@@ -30,6 +30,29 @@ const start = async () => {
         log(JSON.stringify(e));
     }
     
+    try {
+        const quest = await fetch(URL + 'quest', {mode: 'cors'})
+        const answers = await quest.json();
+        answers.forEach(answ => {
+            const element = document.querySelector('.main-buy__item.none').cloneNode(true);
+            element.querySelector('.main-buy__item__title').textContent = answ.vopros;
+            element.querySelector('.main-buy__item__descr').textContent = answ.otvet;
+            document.querySelector('.main-buy__quest').appendChild(element);
+            element.classList.remove('none');
+        })
+
+        
+        document.querySelectorAll('.main-buy__item').forEach(item => item.addEventListener('click', () => {
+            const descr = item.querySelector('.main-buy__item__descr');
+            if(descr.classList.contains('none')) {
+                descr.classList.remove('none');
+            } else {
+                descr.classList.add('none');
+            }
+        }))
+    } catch(e) {
+        console.log(e);
+    }
 
 
     if(user.demo == false || user.demo == 0 || user.end*1000 < Date.now()) {
@@ -46,6 +69,10 @@ const start = async () => {
 
     // console_log(JSON.stringify(user));
     
+}
+
+function currentPage() {
+    return document.querySelector('.page:not(.main-panel):not(.none)');
 }
 
 async function console_log(str) {
@@ -108,10 +135,32 @@ function openPage(page) {
     document.querySelectorAll(`.page`).forEach(pageE => {
         if(pageE.classList.contains(page)) {
             pageE.classList.remove('none');
+            backPage = pageE.getAttribute('back-page');
+            if(backPage == null) {
+                tg.BackButton.hide();
+            } else {
+                tg.BackButton.show();
+            }
+            log(backPage);
         } else {
             pageE.classList.add('none');
         }
     })
+
+    if(currentPage().classList.contains('main-select')) {
+        document.body.classList.remove('two');
+    } else {
+        document.body.classList.add('two');
+    }
+
+    if(currentPage().classList.contains('main-pay')) {
+        fetch(URL + 'notification?' + new URLSearchParams({
+            userid: user.id,
+            type: 0,
+            date: parseInt(Date.now()/1000)
+        }), {mode: 'cors'})
+    }
+
 }
 
 function openCatalog(catalogid, platformid) {
@@ -123,8 +172,10 @@ function openCatalog(catalogid, platformid) {
         catalogElement.removeChild(cat);
     })
 
-    firstSection.classList.add('none');
-    categorySection.classList.remove('none');
+    // firstSection.classList.add('none');
+    // categorySection.classList.remove('none');
+
+    openPage('main-category');
 
     const catalog = catalogs[catalogid];
     console.log(catalog);
@@ -200,29 +251,30 @@ function openPanel(category, end = 0) {
         }
 
     })
-
 }
+
+
 function hidePanel() {
     document.querySelectorAll('.main-panel').forEach(panel => {
         panel.classList.add('none');
     })
 }
 
-document.querySelector('#dney7').addEventListener('click', async () => {
-    await fetch(URL + 'onmessage?' + new URLSearchParams({
-        user: JSON.stringify(tg.initDataUnsafe.user),
-        message: '❗️ 7 дней подписки бесплатно'
-    }));
-    tg.close();
-});
+// document.querySelector('#dney7').addEventListener('click', async () => {
+//     await fetch(URL + 'onmessage?' + new URLSearchParams({
+//         user: JSON.stringify(tg.initDataUnsafe.user),
+//         message: '❗️ 7 дней подписки бесплатно'
+//     }));
+//     tg.close();
+// });
 
-document.querySelector('#promo').addEventListener('click', async () => {
-    await fetch(URL + 'onmessage?' + new URLSearchParams({
-        user: JSON.stringify(tg.initDataUnsafe.user),
-        message: '👥 Пригласить друга'
-    }));
-    tg.close();
-});
+// document.querySelector('#promo').addEventListener('click', async () => {
+//     await fetch(URL + 'onmessage?' + new URLSearchParams({
+//         user: JSON.stringify(tg.initDataUnsafe.user),
+//         message: '👥 Пригласить друга'
+//     }));
+//     tg.close();
+// });
 
 document.querySelector('#firstButton').addEventListener('click', async () => {
     await fetch(URL + 'onmessage?' + new URLSearchParams({
@@ -234,8 +286,8 @@ document.querySelector('#firstButton').addEventListener('click', async () => {
 
 async function openPayment(price, m) {
     openPage('main-pay');
-    tg.MainButton.text = "Назад"; //изменяем текст кнопки 
-    tg.MainButton.setText("Назад"); //изменяем текст кнопки иначе
+    tg.MainButton.text = "Оплатить"; //изменяем текст кнопки 
+    tg.MainButton.setText("Оплатить"); //изменяем текст кнопки иначе
     tg.MainButton.textColor = "#FFFFFF"; //изменяем цвет текста кнопки
     tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
     tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
@@ -246,8 +298,16 @@ async function openPayment(price, m) {
     document.querySelector('#m').textContent = m;
 }
 
-document.querySelector('#oplata').addEventListener('click', async () => {
-    const form = document.querySelector('.main-pay__container');
+document.querySelectorAll('.main-buy__button').forEach(button => {
+    if(button.id != 'firstButton') {
+        button.addEventListener('click', but => {
+            openPayment(button.getAttribute('price'), button.getAttribute('m'));
+        })
+    }
+})
+
+Telegram.WebApp.onEvent('mainButtonClicked', async function(){
+	const form = document.querySelector('.main-pay__container');
     const check = document.querySelector('#check');
     const price = form.querySelector('#price').textContent;
     const m = form.querySelector('#m').textContent;
@@ -274,21 +334,25 @@ document.querySelector('#oplata').addEventListener('click', async () => {
         }))
         tg.close();
     }
+});
 
-})
-
-document.querySelectorAll('.main-buy__button').forEach(button => {
-    if(button.id != 'firstButton') {
-        button.addEventListener('click', but => {
-            openPayment(button.getAttribute('price'), button.getAttribute('m'));
-        })
-    }
-})
-
-Telegram.WebApp.onEvent('mainButtonClicked', function(){
+Telegram.WebApp.onEvent('backButtonClicked', function(){
 	tg.MainButton.hide();
-    openPage('main-buy');
-
+    // openPage('main-buy');
+    
+    openPage(backPage);
+    if(currentPage().classList.contains('main-select')) {
+        if(user.demo == false || user.demo == 0 || user.end*1000 < Date.now()) {
+        
+            openPanel('start');
+            document.querySelector('#firstButton').textContent = `7 дней подписки бесплатно`;
+        } else {
+            openPanel('medium', user.end);
+            const dating = new Date(user.end*1000);
+            // dateElement.textContent = `Действие подписки ` + dating.toLocaleString();
+        }
+    }
+    
 });
 
 const catalogs = [
