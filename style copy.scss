@@ -32,16 +32,15 @@ body {
 
 .select-wrapper {
     .select-flex {
-        margin: 20px auto;
-        // gap: 20px 30px;
-        width: 331px;
+        margin: 50px auto;
+        gap: 20px 30px;
+        width: 60%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: center;
         span {
             display: flex;
-            padding: 12px;
             flex-direction: column;
             text-align: center;
             color: var(--tg-theme-text-color);
@@ -69,13 +68,10 @@ body {
     
     .select-text {
         text-align: center;
-        margin-top: 32px;
         font-family: Play;
         font-weight: 700;
         color: var(--tg-theme-text-color);
-        -webkit-transition: all 0.5s;
         transition: all 0.5s;
-        font-size: 20px;
         &:hover {
             transition: all 0.5s;
             opacity: 0.5;
@@ -225,12 +221,7 @@ body {
 .main-buy {
     max-width: 360px;
     margin: 0 auto;
-    .main-buy__text {
-        text-align: center;
-        font-size: 18px;
-        font-family: Play;
-        color: var(--tg-theme-text-color);
-    }
+    
     .main-buy__quest {
         max-width: 90%;
         margin: 0 auto;
@@ -281,7 +272,7 @@ body {
         width: 90%;
         gap: 13px;
         font-size: 14px;
-        margin: 15px auto 16px auto;
+        margin: 50px auto 16px auto;
         .main-buy__button {
             padding: 10px;
             border-radius: 15px;
@@ -291,9 +282,6 @@ body {
             color: var(--tg-theme-text-color);
             font-family: Play;
             cursor: pointer;
-            &.finish {
-                border: 2px solid #8FD14F;
-            }
         }
 
     }
@@ -330,13 +318,12 @@ input#check {
         .main-pay__blocktext {
             &.one {
                 border-bottom: 1px solid var(--tg-theme-text-color);
-                border-bottom: groove;
             }
             &.itogo {
                 font-weight: 800;
             }
             font-family: Play;
-            color: var(--tg-theme-text-color);
+            color: white;
             font-size: 15.5px;
             display: flex;
             justify-content: space-between;
@@ -350,7 +337,7 @@ input#check {
             }
             // border-radius: 15px;
             a {
-                color: var(--tg-theme-text-color);
+                color: white !important;
                 text-decoration: underline;
                 font-size: 12px;
             }
@@ -360,16 +347,10 @@ input#check {
                 &::placeholder {
                     font-size: 12px;
                     text-align: center;
-                    background: var(--tg-theme-bg-color);
-                    font-family: Play;
-                    color: var(--tg-theme-text-color);
                 }
-                outline: none;
-                background: var(--tg-theme-bg-color);
-                height: 30px;
                 border-radius: 5px;
-                border: 1px solid silver;
-                // padding: 10px;
+                border: none;
+                padding: 10px;
                 text-align: center;
                 font-size: 12px;
             }
@@ -382,7 +363,6 @@ input#check {
                 span.pol {
                     display: flex;
                     flex-direction: column;
-                    color: var(--tg-theme-text-color);
                 }
             }
         }

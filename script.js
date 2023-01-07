@@ -289,8 +289,8 @@ async function openPayment(price, m) {
     tg.MainButton.text = "Оплатить"; //изменяем текст кнопки 
     tg.MainButton.setText("Оплатить"); //изменяем текст кнопки иначе
     tg.MainButton.textColor = "#FFFFFF"; //изменяем цвет текста кнопки
-    tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
-    tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
+    tg.MainButton.color = "#5CB253"; //изменяем цвет бэкграунда кнопки
+    tg.MainButton.setParams({"color": "#5CB253"}); //так изменяются все параметры
     tg.MainButton.show()
 
 
