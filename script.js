@@ -263,7 +263,7 @@ function hidePanel() {
 // document.querySelector('#dney7').addEventListener('click', async () => {
 //     await fetch(URL + 'onmessage?' + new URLSearchParams({
 //         user: JSON.stringify(tg.initDataUnsafe.user),
-//         message: '❗️ 7 дней подписки бесплатно'
+//         message: '7 дней подписки бесплатно'
 //     }));
 //     tg.close();
 // });
@@ -271,7 +271,7 @@ function hidePanel() {
 // document.querySelector('#promo').addEventListener('click', async () => {
 //     await fetch(URL + 'onmessage?' + new URLSearchParams({
 //         user: JSON.stringify(tg.initDataUnsafe.user),
-//         message: '👥 Пригласить друга'
+//         message: 'Пригласить друга'
 //     }));
 //     tg.close();
 // });
@@ -279,7 +279,7 @@ function hidePanel() {
 document.querySelector('#firstButton').addEventListener('click', async () => {
     await fetch(URL + 'onmessage?' + new URLSearchParams({
         user: JSON.stringify(tg.initDataUnsafe.user),
-        message: '❗️ 7 дней подписки бесплатно'
+        message: '7 дней подписки бесплатно'
     }));
     tg.close();
 });
@@ -294,8 +294,9 @@ async function openPayment(price, m) {
     tg.MainButton.show()
 
 
-    document.querySelector('#price').textContent = price;
+    document.querySelector('#price').textContent = `${price} ₽`;
     document.querySelector('#m').textContent = m;
+    document.querySelector('#itogo__').textContent = `${price} ₽`;
 }
 
 document.querySelectorAll('.main-buy__button').forEach(button => {
