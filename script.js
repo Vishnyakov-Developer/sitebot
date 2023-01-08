@@ -89,7 +89,7 @@ let
 currentPlatform, 
 currentCatalog;
 
-window.addEventListener('click', async event => {
+document.addEventListener('click', async event => {
     console.log(event.target);
     if(event.target.getAttribute('return') != null) {
         // openCatalog(-1, event.target.getAttribute('return'))
