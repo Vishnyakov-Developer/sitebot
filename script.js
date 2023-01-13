@@ -6,7 +6,7 @@ const URL = 'https://124699124.online:85/';
 // let URL = 'http://176.99.11.95:85/';
 tg.expand(); //расширяем на все окно  
 let backPage = '';
-
+let platformButton = null, returnButton = null, stepButton = null;
 const firstSection = document.querySelector('.main-select');
 const categorySection = document.querySelector('.main-category');
 const catalogElement = document.querySelector('.main-category .category_list');
@@ -90,7 +90,7 @@ currentPlatform,
 currentCatalog;
 
 document.addEventListener('click', async event => {
-    console.log(event.target);
+    if(event.target.getAttribute('selectButton') == null) return false;
     if(event.target.getAttribute('return') != null) {
         // openCatalog(-1, event.target.getAttribute('return'))
         firstSection.classList.remove('none');
@@ -114,6 +114,7 @@ document.addEventListener('click', async event => {
                 tg.close();
                 return;
             }
+            console.log('step' ,event.target.getAttribute('step'));
             openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));
         } else {
             openCatalog(event.target.getAttribute('step'));
@@ -167,6 +168,11 @@ function openCatalog(catalogid, platformid) {
     hidePanel();
     currentCatalog = catalogid;
     currentPlatform = platformid;
+    if(currentPlatform == 2) {
+        document.querySelector('.category_up').classList.add('wb');
+    } else {
+        document.querySelector('.category_up').classList.remove('wb');
+    }
 
     document.querySelectorAll('.category_list-item').forEach(cat => {
         catalogElement.removeChild(cat);
@@ -180,12 +186,13 @@ function openCatalog(catalogid, platformid) {
     const catalog = catalogs[catalogid];
     console.log(catalog);
     try {
-        catalogElement.querySelector('.category_up span').textContent = catalog?.up_name || catalog.name;
+        document.querySelector('.category_up span').textContent = catalog?.up_name || catalog.name;
     } catch {
-        catalogElement.querySelector('.category_up span').textContent = 'Категории'
+        document.querySelector('.category_up span').textContent = 'Категории'
     }
     
     createList(catalogid);
+    console.log('catalogid = ', catalogid);
     
     
 }
@@ -199,6 +206,7 @@ function createList(catalogid) {
         const isHaveChild = !!(catalog.up_name && catalog.catalogId != currentCatalog);
         const catalogBlock = document.createElement(isHaveChild ? 'div' : 'a');
         catalogBlock.classList.add('category_list-item');
+        catalogBlock.setAttribute('selectButton', 'true');
         try {
             catalog.up_name = catalog.up_name.replace(/^([\d.]+)\s/g, '')
             catalog.name = catalog.name.replace(/^([\d.]+)\s/g, '')
@@ -217,6 +225,8 @@ function createList(catalogid) {
         if(isHaveChild == false) {
             catalogBlock.href = catalog.link;
         } else {
+            stepButton = catalog.catalogId;
+            platformButton = catalog.platform;
             catalogBlock.setAttribute('step', catalog.catalogId);
             catalogBlock.setAttribute('platform', catalog.platform);
         }
@@ -230,13 +240,13 @@ function createList(catalogid) {
     catalogBlock.textContent = 'Назад';
 
     try {
-        catalogBlock.setAttribute('step', catalogs[catalogid].parent);
-        catalogBlock.setAttribute('platform', catalogs[catalogid].platform);
+        stepButton = catalogs[catalogid].parent;
+        platformButton = catalogs[catalogid].platform;
     } catch {
-        catalogBlock.setAttribute('return', currentPlatform);
+        returnButton = currentPlatform;
     }
 
-    catalogElement.appendChild(catalogBlock);
+    // catalogElement.appendChild(catalogBlock);
 }
 
 function openPanel(category, end = 0) {
@@ -296,7 +306,7 @@ async function openPayment(price, m) {
 
     document.querySelector('#price').textContent = `${price} ₽`;
     document.querySelector('#m').textContent = m;
-    document.querySelector('#itogo__').textContent = `${price} ₽`;
+    document.querySelector('#rubtwo').textContent = `${price} ₽`;
 }
 
 document.querySelectorAll('.main-buy__button').forEach(button => {
@@ -308,6 +318,9 @@ document.querySelectorAll('.main-buy__button').forEach(button => {
 })
 
 Telegram.WebApp.onEvent('mainButtonClicked', async function(){
+    
+    
+
 	const form = document.querySelector('.main-pay__container');
     const check = document.querySelector('#check');
     const price = form.querySelector('#price').textContent;
@@ -338,6 +351,40 @@ Telegram.WebApp.onEvent('mainButtonClicked', async function(){
 });
 
 Telegram.WebApp.onEvent('backButtonClicked', function(){
+    // if(returnButton != null) {
+    //     // openCatalog(-1, event.target.getAttribute('return'))
+    //     firstSection.classList.remove('none');
+    //     categorySection.classList.add('none');
+
+    //     if(user.demo == false || user.demo == 0 || user.end*1000 < Date.now()) {
+    //         openPanel('start');
+            
+    //     } else {
+    //         openPanel('medium', user.end);
+    //     }
+    //     returnButton = null;
+    //     return;
+    // }
+    if(currentCatalog != -1 && currentCatalog != undefined) {
+        if(platformButton != null) {
+            // if(user.end*1000 < Date.now()) {
+            //     await fetch(URL + 'message?' + new URLSearchParams({
+            //         user: JSON.stringify(tg.initDataUnsafe.user),
+            //         message: 'Для просмотра каталога приобретите подписку или возьми пробный *период 7 дней*'
+            //     }));
+            //     tg.close();
+            //     return;
+            // }
+            console.log('pl1', stepButton, platformButton);
+            openCatalog(stepButton, platformButton);
+            return true;
+        } else {
+            console.log('pl2');
+            openCatalog(stepButton);
+        }
+        
+    }
+
 	tg.MainButton.hide();
     // openPage('main-buy');
     
