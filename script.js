@@ -41,9 +41,22 @@ const start = async () => {
             element.classList.remove('none');
         })
 
+        const element = document.querySelector('.main-buy__item.none').cloneNode(true);
+        element.querySelector('.main-buy__item__title').textContent = "ВОПРОС - ОТВЕТ";
+        element.querySelector('.main-buy__item__title').classList.add('prepend');
+        element.classList.add('active');
+        document.querySelector('.main-buy__quest').prepend(element);
+        element.classList.remove('none');
+
         
         document.querySelectorAll('.main-buy__item').forEach(item => item.addEventListener('click', () => {
             const descr = item.querySelector('.main-buy__item__descr');
+            if(item.querySelector('.main-buy__item__title').classList.contains('prepend')) return false;
+            if(item.classList.contains('active')) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
             if(descr.classList.contains('none')) {
                 descr.classList.remove('none');
             } else {
@@ -58,7 +71,13 @@ const start = async () => {
     if(user.demo == false || user.demo == 0 || user.end*1000 < Date.now()) {
         
         openPanel('start');
-        document.querySelector('#firstButton').textContent = `7 дней подписки бесплатно`;
+        if((user.demo == false || user.demo == 0) && user.end*1000 < Date.now()) {
+            document.querySelector('#firstButton').textContent = `7 дней подписки бесплатно`;
+            document.querySelector('#firstButton').classList.remove('none');
+        } else {
+            document.querySelector('#firstButton').classList.add('none');
+        }
+        
     } else {
         openPanel('medium', user.end);
         const dating = new Date(user.end*1000);
@@ -148,7 +167,7 @@ function openPage(page) {
         }
     })
 
-    if(currentPage().classList.contains('main-select')) {
+    if(currentPage().classList.contains('main-select') || currentPage().classList.contains('main-buy')) {
         document.body.classList.remove('two');
     } else {
         document.body.classList.add('two');
@@ -296,8 +315,8 @@ document.querySelector('#firstButton').addEventListener('click', async () => {
 
 async function openPayment(price, m) {
     openPage('main-pay');
-    tg.MainButton.text = "Оплатить"; //изменяем текст кнопки 
-    tg.MainButton.setText("Оплатить"); //изменяем текст кнопки иначе
+    tg.MainButton.text = "Оплатить " + price + ' ₽'; //изменяем текст кнопки 
+    tg.MainButton.setText("Оплатить " + price + ' ₽'); //изменяем текст кнопки иначе
     tg.MainButton.textColor = "#FFFFFF"; //изменяем цвет текста кнопки
     tg.MainButton.color = "#5CB253"; //изменяем цвет бэкграунда кнопки
     tg.MainButton.setParams({"color": "#5CB253"}); //так изменяются все параметры
@@ -916,7 +935,7 @@ const catalogs = [
     },
     {
         "url": "https://www.ozon.ru/category/aksessuary-7697/?sorting=new",
-        "name": "29. Аксессуары]",
+        "name": "29. Аксессуары",
         "channel": "-1808504817",
         "platform": 1,
         "catalogId": 56,
@@ -1260,7 +1279,7 @@ const catalogs = [
     },
     {
         "url": "https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=newly&search=%D1%8E%D0%B2%D0%B5%D0%BB%D0%B8%D1%80%D0%BD%D1%8B%D0%B5+%D0%B8%D0%B7%D0%B4%D0%B5%D0%BB%D0%B8%D1%8F",
-        "name": "Ювелирные изделия WB [30]",
+        "name": "Ювелирные изделия WB",
         "channel": "-1894857469",
         "platform": 2,
         "catalogId": 94,

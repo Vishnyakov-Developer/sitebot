@@ -61,9 +61,9 @@ body.two {
 
 .select-wrapper .select-flex span .text {
   opacity: 0.9;
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 200;
+  margin-top: 2px;
+  font-size: 12.04px;
+  font-weight: 600;
   font-family: Karla;
 }
 
@@ -71,7 +71,7 @@ body.two {
   width: 86px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 9px;
+  border-radius: 20px;
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -144,12 +144,12 @@ body.two {
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--tg-theme-bg-color);
-  width: 80%;
+  width: 92%;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   margin: 15px auto 0 auto;
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
 .main-category .category_wrapper .category_list .category_list-item {
@@ -173,7 +173,8 @@ body.two {
   max-width: 94px;
   position: absolute;
   font-family: serif;
-  top: 30%;
+  font-size: 25px;
+  top: 5%;
   font-weight: 800;
   font-family: Anonymous Pro;
   right: -75px;
@@ -181,6 +182,10 @@ body.two {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+}
+
+.category_wrapper {
+  overflow-x: hidden;
 }
 
 .main-panel {
@@ -204,13 +209,17 @@ body.two {
 }
 
 .main-panel .main-panel__container .main-panel__wrapper {
-  display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
   font-family: Play;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
   padding: 10px;
   font-size: 12px;
 }
@@ -259,6 +268,7 @@ body.two {
       align-self: center;
   margin: auto;
   font-size: 14px;
+  display: none;
 }
 
 .main-panel .main-panel__container .main-panel__wrapper .main-panel__wrapper__button.let {
@@ -304,14 +314,21 @@ body.two {
   border-bottom: 1px solid var(--tg-theme-text-color);
 }
 
-.main-buy .main-buy__quest .main-buy__item border-opa
-.main-buy__item__title {
+.main-buy .main-buy__quest .main-buy__item.active {
+  opacity: 1;
+}
+
+.main-buy .main-buy__quest .main-buy__item.active .main-buy__item__title {
+  opacity: 1;
+  color: var(--tg-theme-text-color);
+}
+
+.main-buy .main-buy__quest .main-buy__item .main-buy__item__title {
   position: relative;
   opacity: 0.7;
 }
 
-.main-buy .main-buy__quest .main-buy__item border-opa
-.main-buy__item__title::after {
+.main-buy .main-buy__quest .main-buy__item .main-buy__item__title::after {
   background-image: url("img/down.png");
   background-repeat: no-repeat;
   position: absolute;
@@ -323,6 +340,12 @@ body.two {
   content: "";
   right: -30px;
   top: -1px;
+  color: var(--tg-theme-text-color);
+  opacity: 1;
+}
+
+.main-buy .main-buy__quest .main-buy__item .main-buy__item__title.prepend::after {
+  display: none;
 }
 
 .main-buy .main-buy__quest .main-buy__item .main-buy__item__descr {
@@ -348,11 +371,15 @@ body.two {
   margin: 15px auto 16px auto;
 }
 
+.main-buy .main-buy__container .main-buy__text {
+  padding-bottom: 10px;
+}
+
 .main-buy .main-buy__container .main-buy__button {
   padding: 10px;
   border-radius: 15px;
   text-align: center;
-  background: var(--tg-theme-bg-color);
+  background: var(--tg-theme-secondary-bg-color);
   color: var(--tg-theme-text-color);
   font-family: Play;
   cursor: pointer;
@@ -382,6 +409,14 @@ input#check {
   margin: 25px auto;
 }
 
+.main-pay .main-pay__title {
+  color: var(--tg-theme-text-color);
+  text-align: center;
+  padding-bottom: 21px;
+  font-size: 26px;
+  font-family: 'Play';
+}
+
 .main-pay .main-pay__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,7 +426,7 @@ input#check {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0;
-  width: 90%;
+  width: 92%;
   margin: 0 auto;
 }
 
@@ -416,7 +451,7 @@ input#check {
   gap: 14px;
   width: 90%;
   margin: 0 auto;
-  padding: 11px 20px;
+  padding: 11px 0;
 }
 
 .main-pay .main-pay__container .main-pay__blocktext.one {
