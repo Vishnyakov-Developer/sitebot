@@ -138,11 +138,15 @@ document.addEventListener('click', async event => {
                 }));
                 tg.close();
                 return;
+            } else if(user.end*1000 > Date.now()) {
+                console.log('step' ,event.target.getAttribute('step'));
+                openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));    
             }
-            console.log('step' ,event.target.getAttribute('step'));
-            openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));
+            
         } else {
-            openCatalog(event.target.getAttribute('step'));
+            if(user.end*1000 > Date.now()) {
+                openCatalog(event.target.getAttribute('step'));
+            }
         }
         
     }
