@@ -31,15 +31,22 @@ body {
     margin: 0 auto;
 }
 
+.opacity0 {
+    opacity: 0;
+}
+
 .select-wrapper {
+    .select-flex:nth-child(2) {
+        margin: 20px auto 0 auto;
+        justify-content: center;
+    }
     .select-flex {
-        margin: 20px auto;
+        
         // gap: 20px 30px;
-        width: 331px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: center;
         span {
             display: flex;
             padding: 12px;
@@ -187,7 +194,7 @@ body {
             display: flex;
             -webkit-box-pack: center;
             -ms-flex-pack: center;
-            justify-content: space-between;
+            justify-content: center;
             font-family: Play;
             flex-flow: row-reverse;
             padding: 10px;
@@ -209,7 +216,7 @@ body {
                     font-size: 14px;
                 }
                 cursor: pointer;
-                padding: 18px 10px ;
+                padding: 18px 76px ;
                 border-radius: 25px;
 
                 &.eCatalog {
