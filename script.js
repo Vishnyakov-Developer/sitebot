@@ -1,5 +1,10 @@
 //
 
+window.onerror = function(msg, url, linenumber) {
+    alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+    return true;
+}
+
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 // const URL = 'https://e143-89-31-104-182.ngrok.io/';
 const URL = 'https://124699124.online:85/';

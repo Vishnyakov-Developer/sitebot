@@ -110,6 +110,10 @@
     <div id="log">log2</div>
     <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
     </div>
+    <script>window.onerror = function(msg, url, linenumber) {
+        alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+        return true;
+    }</script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
 
