@@ -250,6 +250,7 @@ body {
     
 }
 
+
 .main-buy {
     max-width: 360px;
     margin: 0 auto;
@@ -257,6 +258,7 @@ body {
         text-align: center;
         font-size: 18px;
         font-family: Play;
+        font-weight: 600;
         color: var(--tg-theme-text-color);
     }
     .main-buy__quest {
@@ -267,6 +269,7 @@ body {
         justify-content: center;
         gap: 10px;
         .main-buy__item {
+            position: relative;
             cursor: pointer;
             // background: var(--tg-theme-text-color);
             color: var(--tg-theme-text-color);
@@ -282,54 +285,84 @@ body {
             font-weight: 400;
             font-size: 16px;
             opacity: 0.7;
+            svg {
+                fill: var(--tg-theme-text-color);
+                position: absolute;
+                width: 16px;
+                height: 15px;
+                right: 19px;
+                transition: 0.5s all;
+                top: 3.75px;
+            }
+            &.prependItem {
+                .main-buy__item__title {
+                    max-width: 100%;
+                }
+                svg {
+                    display: none;
+                }
+            }
             border-bottom: 1px solid var(--tg-theme-text-color);
             &.active {
+                svg {
+                    transition: 0.5s all;
+                    transform: rotate(180deg);
+                }
                 opacity: 1;
                 .main-buy__item__title {
+                    
                     opacity: 1;
                     color: var(--tg-theme-text-color);
-                    &::after {
+                    // &::after {
                     
-                        // content: url('img/down.png');
-                        background-image: url('img/Vector2.png');
-                        background-repeat: no-repeat;
-                        position: absolute;
-                        cursor: pointer;
-                        background-size: 13px 8px;
-                        display: inline-block;
-                        width: 50px;
-                        height: 20px;
-                        content:"";
-                        right: -30px;
-                        top: -1px;
-                        color: var(--tg-theme-text-color);
-                        opacity: 1;
-                    }
+                    //     // content: url('img/down.png');
+                    //     background-image: url('img/Vector.svg');
+                    //     background-repeat: no-repeat;
+                    //     position: absolute;
+                    //     cursor: pointer;
+                    //     background-size: 13px 8px;
+                    //     display: inline-block;
+                    //     width: 50px;
+                    //     height: 20px;
+                    //     content:"";
+                    //     right: -30px;
+                    //     top: -1px;
+                    //     // color: var(--tg-theme-text-color);
+                    //     color: green;
+                    //     opacity: 1;
+                        
+                    // }
                 }
+            }
+            &.prependItem {
+                border: none;
             }
             // font-family: Karla;
             .main-buy__item__title {
+                max-width: 90%;
                 position: relative;
                 opacity: 0.7;
                 
                 &::after {
                     
-                    // content: url('img/down.png');
-                    background-image: url('img/Vector.png');
-                    background-repeat: no-repeat;
-                    position: absolute;
-                    cursor: pointer;
-                    background-size: 13px 8px;
-                    display: inline-block;
-                    width: 50px;
-                    height: 20px;
-                    content:"";
-                    right: -30px;
-                    top: -1px;
-                    color: var(--tg-theme-text-color);
-                    opacity: 1;
+                    // // content: url('img/down.png');
+                    // background-image: url('img/Vector.png');
+                    // background-repeat: no-repeat;
+                    // position: absolute;
+                    // cursor: pointer;
+                    // background-size: 13px 8px;
+                    // display: inline-block;
+                    // width: 50px;
+                    // height: 20px;
+                    // content:"";
+                    // right: -30px;
+                    // top: -1px;
+                    // color: var(--tg-theme-text-color);
+                    // opacity: 1;
                 }
                 &.prepend {
+                    text-align: center;
+                    font-weight: 600;
                     &::after {
                         display: none;
                     }
@@ -367,6 +400,7 @@ body {
             color: var(--tg-theme-text-color);
             font-family: Play;
             cursor: pointer;
+            font-size: 15px;
             &.finish {
                 background: #56B680;
                 color: white;

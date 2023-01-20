@@ -49,6 +49,7 @@ const start = async () => {
         const element = document.querySelector('.main-buy__item.none').cloneNode(true);
         element.querySelector('.main-buy__item__title').textContent = "ВОПРОС - ОТВЕТ";
         element.querySelector('.main-buy__item__title').classList.add('prepend');
+        element.classList.add('prependItem');        
         element.classList.add('active');
         document.querySelector('.main-buy__quest').prepend(element);
         element.classList.remove('none');
