@@ -202,6 +202,7 @@ body {
             // background: #E2E3E8;
             // background: var(--tg-theme-secondary-bg-color);
             .main-panel__wrapper__button {
+                font-weight: 600;
                 &:hover {
                     // transition: all 0.2s;
                     // animation: two 3s forwards;
@@ -401,6 +402,7 @@ body {
         .main-buy__button {
             padding: 10px;
             border-radius: 15px;
+            font-weight: 600;
             // border: 1px solid white;
             text-align: center;
             background: var(--tg-theme-secondary-bg-color);

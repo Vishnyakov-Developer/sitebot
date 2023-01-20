@@ -230,6 +230,7 @@ body.two {
 }
 
 .main-panel .main-panel__container .main-panel__wrapper .main-panel__wrapper__button {
+  font-weight: 600;
   cursor: pointer;
   padding: 18px 76px;
   border-radius: 25px;
@@ -405,6 +406,7 @@ body.two {
 .main-buy .main-buy__container .main-buy__button {
   padding: 10px;
   border-radius: 15px;
+  font-weight: 600;
   text-align: center;
   background: var(--tg-theme-secondary-bg-color);
   color: var(--tg-theme-text-color);
