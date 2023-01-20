@@ -42,6 +42,9 @@ const start = async () => {
             const element = document.querySelector('.main-buy__item.none').cloneNode(true);
             element.querySelector('.main-buy__item__title').textContent = answ.vopros;
             element.querySelector('.main-buy__item__descr').textContent = answ.otvet;
+            if(answ.vopros.includes('Отменить')) {
+                element.classList.add('otmenit');
+            }
             document.querySelector('.main-buy__quest').appendChild(element);
             element.classList.remove('none');
         })
