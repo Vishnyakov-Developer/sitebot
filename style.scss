@@ -302,7 +302,7 @@ body {
                 transition: 0.5s all;
                 transform: rotate(180deg);
                 top: 3.75px;
-                opacity: 0.7;
+                opacity: 0.4;
             }
             &.prependItem {
                 .main-buy__item__title {
@@ -346,6 +346,7 @@ body {
                 }
             }
             &.prependItem {
+                opacity: 0.6;
                 border: none;
             }
             // font-family: Karla;
@@ -404,7 +405,7 @@ body {
         }
         .main-buy__button {
             padding: 20px 10px;
-            border-radius: 15px;
+            border-radius: 24px;
             font-weight: 600;
             // border: 1px solid white;
             text-align: center;
@@ -413,6 +414,7 @@ body {
             font-family: Play;
             cursor: pointer;
             font-size: 15px;
+            opacity: 0.9;
             &.finish {
                 background: #56B680;
                 color: white;

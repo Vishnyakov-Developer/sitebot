@@ -333,7 +333,7 @@ body.two {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   top: 3.75px;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 .main-buy .main-buy__quest .main-buy__item.prependItem .main-buy__item__title {
@@ -362,6 +362,7 @@ body.two {
 }
 
 .main-buy .main-buy__quest .main-buy__item.prependItem {
+  opacity: 0.6;
   border: none;
 }
 
@@ -409,7 +410,7 @@ body.two {
 
 .main-buy .main-buy__container .main-buy__button {
   padding: 20px 10px;
-  border-radius: 15px;
+  border-radius: 24px;
   font-weight: 600;
   text-align: center;
   background: var(--tg-theme-secondary-bg-color);
@@ -417,6 +418,7 @@ body.two {
   font-family: Play;
   cursor: pointer;
   font-size: 15px;
+  opacity: 0.9;
 }
 
 .main-buy .main-buy__container .main-buy__button.finish {
