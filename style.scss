@@ -91,7 +91,7 @@ body {
         text-align: center;
         .category_up {
             &.wb {
-                background: #481285;    
+                // background: #481285;    
             }
             font-size: 11px;
             padding: 11px 0;
@@ -288,6 +288,23 @@ body {
                 .main-buy__item__title {
                     opacity: 1;
                     color: var(--tg-theme-text-color);
+                    &::after {
+                    
+                        // content: url('img/down.png');
+                        background-image: url('img/Vector2.png');
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        cursor: pointer;
+                        background-size: 13px 8px;
+                        display: inline-block;
+                        width: 50px;
+                        height: 20px;
+                        content:"";
+                        right: -30px;
+                        top: -1px;
+                        color: var(--tg-theme-text-color);
+                        opacity: 1;
+                    }
                 }
             }
             // font-family: Karla;
@@ -298,11 +315,11 @@ body {
                 &::after {
                     
                     // content: url('img/down.png');
-                    background-image: url('img/down.png');
+                    background-image: url('img/Vector.png');
                     background-repeat: no-repeat;
                     position: absolute;
                     cursor: pointer;
-                    background-size: 20px 20px;
+                    background-size: 13px 8px;
                     display: inline-block;
                     width: 50px;
                     height: 20px;
@@ -374,6 +391,8 @@ input#check {
 .main-pay {
     margin: 25px auto;
     // background: var(--tg-theme-bg-color);
+    background: var(--tg-theme-secondary-bg-color);
+    padding: 20px 0;
     .main-pay__title {
         color: var(--tg-theme-text-color);
         text-align: center;
@@ -382,6 +401,7 @@ input#check {
         font-family: 'Play';
     }
     .main-pay__container {
+        
         display: flex;
         flex-direction: column;
         gap: 0;

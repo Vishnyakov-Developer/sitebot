@@ -123,10 +123,6 @@ body.two {
   text-align: center;
 }
 
-.main-category .category_wrapper .category_up.wb {
-  background: #481285;
-}
-
 .main-category .category_wrapper .category_up span {
   width: 80%;
   margin: 0 auto;
@@ -323,17 +319,33 @@ body.two {
   color: var(--tg-theme-text-color);
 }
 
+.main-buy .main-buy__quest .main-buy__item.active .main-buy__item__title::after {
+  background-image: url("img/Vector2.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+  background-size: 13px 8px;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  content: "";
+  right: -30px;
+  top: -1px;
+  color: var(--tg-theme-text-color);
+  opacity: 1;
+}
+
 .main-buy .main-buy__quest .main-buy__item .main-buy__item__title {
   position: relative;
   opacity: 0.7;
 }
 
 .main-buy .main-buy__quest .main-buy__item .main-buy__item__title::after {
-  background-image: url("img/down.png");
+  background-image: url("img/Vector.png");
   background-repeat: no-repeat;
   position: absolute;
   cursor: pointer;
-  background-size: 20px 20px;
+  background-size: 13px 8px;
   display: inline-block;
   width: 50px;
   height: 20px;
@@ -407,6 +419,8 @@ input#check {
 
 .main-pay {
   margin: 25px auto;
+  background: var(--tg-theme-secondary-bg-color);
+  padding: 20px 0;
 }
 
 .main-pay .main-pay__title {

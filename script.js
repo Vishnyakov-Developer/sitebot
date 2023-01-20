@@ -25,6 +25,11 @@ const start = async () => {
             id: tg.initDataUnsafe.user.id
         }), {mode: 'cors'})
         user = await data.json();
+        if(user.end < Date.now()/1000) {
+            document.querySelector('.let.sub.main-panel__wrapper__button').classList.remove('none');
+        } else {
+            document.querySelector('.let.sub.main-panel__wrapper__button').classList.add('none');
+        }
     } catch (e) {
         console.log(e);
         log(JSON.stringify(e));
@@ -142,14 +147,11 @@ document.addEventListener('click', async event => {
     }
 })
 
-
-
 document.querySelectorAll('.sub').forEach(sub => {
     sub.addEventListener('click', () => {
         openPage('main-buy');
     })
 })
-
 
 function openPage(page) {
     document.querySelectorAll(`.page`).forEach(pageE => {
@@ -167,7 +169,7 @@ function openPage(page) {
         }
     })
 
-    if(currentPage().classList.contains('main-select') || currentPage().classList.contains('main-buy')) {
+    if(currentPage().classList.contains('main-select') || currentPage().classList.contains('main-buy') || currentPage().classList.contains('main-pay')) {
         document.body.classList.remove('two');
     } else {
         document.body.classList.add('two');
@@ -310,6 +312,7 @@ document.querySelector('#firstButton').addEventListener('click', async () => {
         user: JSON.stringify(tg.initDataUnsafe.user),
         message: '7 дней подписки бесплатно'
     }));
+    console.log('test');
     tg.close();
 });
 
@@ -325,7 +328,7 @@ async function openPayment(price, m) {
 
     document.querySelector('#price').textContent = `${price} ₽`;
     document.querySelector('#m').textContent = m;
-    document.querySelector('#rubtwo').textContent = `${price} ₽`;
+    document.querySelector('#rubtwo').textContent = `${price}`;
 }
 
 document.querySelectorAll('.main-buy__button').forEach(button => {
