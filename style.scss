@@ -296,11 +296,13 @@ body {
             svg {
                 fill: var(--tg-theme-text-color);
                 position: absolute;
-                width: 16px;
-                height: 15px;
+                width: 17px;
+                height: 10px;
                 right: 19px;
                 transition: 0.5s all;
+                transform: rotate(180deg);
                 top: 3.75px;
+                opacity: 0.7;
             }
             &.prependItem {
                 .main-buy__item__title {
@@ -314,7 +316,8 @@ body {
             &.active {
                 svg {
                     transition: 0.5s all;
-                    transform: rotate(180deg);
+                    opacity: 1;
+                    transform: rotate(0deg);
                 }
                 opacity: 1;
                 .main-buy__item__title {
