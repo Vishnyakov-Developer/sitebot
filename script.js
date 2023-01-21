@@ -93,7 +93,7 @@ const start = async () => {
         }
         
     } else {
-        openPanel('medium', user.end);
+        
         const dating = new Date(user.end*1000);
         // dateElement.textContent = `Действие подписки ` + dating.toLocaleString();
     }

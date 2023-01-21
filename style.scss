@@ -295,13 +295,14 @@ body {
             opacity: 0.7;
             svg {
                 fill: var(--tg-theme-text-color);
+                // fill: green;
                 position: absolute;
                 width: 17px;
                 height: 10px;
-                right: 19px;
+                right: 1px;
                 transition: 0.5s all;
                 transform: rotate(180deg);
-                top: 3.75px;
+                top: 25%;
                 opacity: 0.4;
             }
             &.prependItem {
@@ -312,7 +313,10 @@ body {
                     display: none;
                 }
             }
-            border-bottom: 1px solid var(--tg-theme-text-color);
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--tg-theme-text-color);
+            }
+            
             &.active {
                 svg {
                     transition: 0.5s all;
@@ -375,12 +379,14 @@ body {
                 &.prepend {
                     text-align: center;
                     font-weight: 600;
+                    opacity: 0.7;
                     &::after {
                         display: none;
                     }
                 }
             }
             .main-buy__item__descr {
+                max-width: 90%;
                 // border-top: 1px solid var(--tg-theme-bg-color);
                 font-size: 13.4px;
                 padding: 10px 0;
