@@ -123,6 +123,15 @@ currentPlatform,
 currentCatalog;
 
 document.addEventListener('click', async event => {
+    if(event.target.getAttribute('linker') != null) {
+        
+        await fetch(URL + 'link?' + new URLSearchParams({
+        user: JSON.stringify(tg.initDataUnsafe.user),
+        catalogId: event.target.getAttribute('linker')
+        }));
+        tg.close();
+        
+    }
     if(event.target.getAttribute('selectButton') == null) return false;
     if(event.target.getAttribute('return') != null) {
         // openCatalog(-1, event.target.getAttribute('return'))
@@ -257,7 +266,8 @@ function createList(catalogid) {
         
 
         if(isHaveChild == false) {
-            catalogBlock.href = catalog.link;
+            // catalogBlock.href = catalog.link;
+            catalogBlock.setAttribute('linker', catalog.catalogId);
         } else {
             stepButton = catalog.catalogId;
             platformButton = catalog.platform;
