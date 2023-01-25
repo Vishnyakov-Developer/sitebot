@@ -5,6 +5,8 @@
 
 body {
   background: var(--tg-theme-bg-color);
+  -webkit-animation: ani 6s forwards;
+          animation: ani 6s forwards;
 }
 
 body.two {
