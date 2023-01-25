@@ -125,10 +125,11 @@ currentCatalog;
 document.addEventListener('click', async event => {
     if(event.target.getAttribute('linker') != null) {
         
-        fetch(URL + 'link?' + new URLSearchParams({
+        const result = await fetch(URL + 'link?' + new URLSearchParams({
             user: JSON.stringify(tg.initDataUnsafe.user),
             catalogId: event.target.getAttribute('linker')
         }));
+        console.log(result);
         tg.close();
         
     }
