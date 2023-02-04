@@ -125,12 +125,17 @@ currentCatalog;
 document.addEventListener('click', async event => {
     if(event.target.getAttribute('linker') != null) {
         
+        // await fetch(URL + 'leave?' + new URLSearchParams({
+        //     user: JSON.stringify(tg.initDataUnsafe.user),
+        //     catalogId: event.target.getAttribute('linker')
+        // }));
+
         const result = await fetch(URL + 'link?' + new URLSearchParams({
             user: JSON.stringify(tg.initDataUnsafe.user),
             catalogId: event.target.getAttribute('linker')
         }));
         console.log(result);
-        tg.close();
+        await tg.close();
         
     }
     if(event.target.getAttribute('selectButton') == null) return false;
@@ -280,15 +285,30 @@ function createList(catalogid) {
         catalogElement.appendChild(catalogBlock);
     })
 
-    const catalogBlock = document.createElement('div');
-    catalogBlock.classList.add('category_list-item', 'center');
-    catalogBlock.textContent = 'Назад';
+    const catalogBlock = document.createElement('a');
+    catalogBlock.classList.add('category_list-item');
+    catalogBlock.textContent = 'Все категории';
 
     try {
         stepButton = catalogs[catalogid].parent;
         platformButton = catalogs[catalogid].platform;
     } catch {
         returnButton = currentPlatform;
+    }
+
+    if(catalogid == -1) {
+        if(currentPlatform == 0) {
+            catalogBlock.setAttribute('linker', '-1');
+        } else if(currentPlatform == 1) {
+            catalogBlock.setAttribute('linker', '-2');
+        } else if(currentPlatform == 2) {
+            catalogBlock.setAttribute('linker', '-3');
+        } else if(currentPlatform == 3) {
+            catalogBlock.setAttribute('linker', '-4');
+        }
+        catalogBlock.setAttribute('selectbutton', 'true');
+        
+        catalogElement.prepend(catalogBlock);
     }
 
     // catalogElement.appendChild(catalogBlock);
