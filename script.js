@@ -136,7 +136,10 @@ document.addEventListener('click', async event => {
         }));
         console.log(result);
         await tg.close();
-        
+        const URL = 'https://cfd7-89-31-104-182.ngrok.io/?';
+        const cID = event.target.getAttribute('linker');
+        window.location.replace(url + `from=${0}&limit=70&catalogid=${cID}&search=`);
+        return false;
     }
     if(event.target.getAttribute('selectButton') == null) return false;
     if(event.target.getAttribute('return') != null) {
