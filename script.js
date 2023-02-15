@@ -130,15 +130,15 @@ document.addEventListener('click', async event => {
         //     catalogId: event.target.getAttribute('linker')
         // }));
 
-        const result = await fetch(URL + 'link?' + new URLSearchParams({
-            user: JSON.stringify(tg.initDataUnsafe.user),
-            catalogId: event.target.getAttribute('linker')
-        }));
-        console.log(result);
-        await tg.close();
+        // const result = await fetch(URL + 'link?' + new URLSearchParams({
+        //     user: JSON.stringify(tg.initDataUnsafe.user),
+        //     catalogId: event.target.getAttribute('linker')
+        // }));
+        // console.log(result);
+        // await tg.close();
         const URL = 'https://cfd7-89-31-104-182.ngrok.io/?';
         const cID = event.target.getAttribute('linker');
-        window.location.replace(url + `from=${0}&limit=70&catalogid=${cID}&search=`);
+        window.location.replace(URL + `from=${0}&limit=70&catalogid=${cID}&search=`);
         return false;
     }
     if(event.target.getAttribute('selectButton') == null) return false;
