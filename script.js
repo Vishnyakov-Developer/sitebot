@@ -5,6 +5,26 @@ window.onerror = function(msg, url, linenumber) {
     return true;
 }
 
+const getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+// if(getUrlParameter)
+// openCatalog(event.target.getAttribute('step'));
+console.log(getUrlParameter('catalogid'));
+
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 // const URL = 'https://e143-89-31-104-182.ngrok.io/';
 const URL = 'https://124699124.online:85/';
