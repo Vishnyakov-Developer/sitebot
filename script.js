@@ -21,13 +21,7 @@ const getUrlParameter = function getUrlParameter(sParam) {
     return false;
 };
 
-const argumentCatalog = getUrlParameter('catalogid');
-const argumentPlatform = getUrlParameter('platform');
 
-if(argumentCatalog != false) {
-    openCatalog(argumentCatalog, argumentPlatform);  
-    return false;
-}
 
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
 // const URL = 'https://e143-89-31-104-182.ngrok.io/';
@@ -48,6 +42,12 @@ let user = {};
 
 const start = async () => {
 
+    const argumentCatalog = getUrlParameter('catalogid');
+    const argumentPlatform = getUrlParameter('platform');
+
+    if(argumentCatalog != false) {
+        openCatalog(argumentCatalog, argumentPlatform);  
+    }
     
     try {
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
