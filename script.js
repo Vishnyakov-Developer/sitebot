@@ -42,11 +42,10 @@ let user = {};
 
 const start = async () => {
 
-    const argumentCatalog = getUrlParameter('catalogid');
-    const argumentPlatform = getUrlParameter('platform');
+    const argumentReturn = getUrlParameter('return');
 
-    if(argumentCatalog != false) {
-        openCatalog(argumentCatalog, argumentPlatform);  
+    if(argumentReturn != false) {
+        openCatalog(window.localStorage.getItem('current_catalog'), window.localStorage.getItem('current_platform'));  
     }
     
     try {
@@ -236,6 +235,8 @@ function openCatalog(catalogid, platformid) {
     hidePanel();
     currentCatalog = catalogid;
     currentPlatform = platformid;
+    window.localStorage.setItem('current_catalog', currentCatalog);
+    window.localStorage.setItem('current_platform', currentPlatform);
     if(currentPlatform == 2) {
         document.querySelector('.category_up').classList.add('wb');
     } else {
