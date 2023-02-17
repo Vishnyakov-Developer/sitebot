@@ -227,7 +227,7 @@ function openPage(page) {
 }
 
 function windowCatalog(catalogid, platform) {
-    const URL = 'https://a67c-89-31-104-182.ngrok.io/?';
+    const URL = 'https://25be-89-31-104-182.ngrok.io/?';
     window.location.replace(URL + `from=${0}&limit=70&catalogid=${catalogid}&search=`);
 }
 
