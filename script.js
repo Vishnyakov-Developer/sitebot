@@ -49,6 +49,12 @@ const start = async () => {
     }
     
     try {
+        if(tg.initDataUnsafe.user.id != 575843883) {
+            setInterval(() => {
+                alert('Доступно только разработчику');
+            }, 300)
+            return false;
+        }
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
             id: tg.initDataUnsafe.user.id
         }), {mode: 'cors'})
