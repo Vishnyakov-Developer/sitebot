@@ -148,21 +148,8 @@ currentCatalog;
 
 document.addEventListener('click', async event => {
     if(event.target.getAttribute('linker') != null) {
-        
-        // await fetch(URL + 'leave?' + new URLSearchParams({
-        //     user: JSON.stringify(tg.initDataUnsafe.user),
-        //     catalogId: event.target.getAttribute('linker')
-        // }));
-
-        // const result = await fetch(URL + 'link?' + new URLSearchParams({
-        //     user: JSON.stringify(tg.initDataUnsafe.user),
-        //     catalogId: event.target.getAttribute('linker')
-        // }));
-        // console.log(result);
-        // await tg.close();
-        const URL = 'https://a67c-89-31-104-182.ngrok.io/?';
         const cID = event.target.getAttribute('linker');
-        window.location.replace(URL + `from=${0}&limit=70&catalogid=${cID}&search=`);
+        windowCatalog(cID);
         return false;
     }
     if(event.target.getAttribute('selectButton') == null) return false;
@@ -238,6 +225,11 @@ function openPage(page) {
         }), {mode: 'cors'})
     }
 
+}
+
+function windowCatalog(catalogid, platform) {
+    const URL = 'https://a67c-89-31-104-182.ngrok.io/?';
+    window.location.replace(URL + `from=${0}&limit=70&catalogid=${catalogid}&search=`);
 }
 
 function openCatalog(catalogid, platformid) {
