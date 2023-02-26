@@ -233,7 +233,7 @@ function openPage(page) {
 }
 
 function windowCatalog(catalogid, platform) {
-    const URL = 'http://124699124.online/catalog?';
+    const URL = 'https://124699124.online/catalog?';
     window.location.replace(URL + `from=${0}&limit=70&catalogid=${catalogid}&search=`);
 }
 
