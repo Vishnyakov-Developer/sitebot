@@ -1,0 +1,212 @@
+/* 
+
+var(--tg-theme-secondary-bg-color)
+var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color)
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.none {
+    display: none !important;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+}
+
+.template {
+    display: none !important;
+}
+
+.fullpading {
+    padding: 10000px 0;
+}
+
+body {
+    font-family: Inter;
+}
+
+@keyframes sizeUp {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.main-catalog {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    padding: 9px 2px;
+
+    .search {
+        padding-top: 20px;
+        position: fixed;
+        z-index: 1;
+        background: var(--tg-theme-secondary-bg-color);
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        top: 0;
+        padding-top: 21px;
+        padding-bottom: 12px;
+        .search__panel {
+            .search__input {
+                position: relative;
+                svg {
+                    height: 32px;
+                    width: 15px;
+                    position: absolute;
+                    left: 7.5%;
+                    margin-top: 2.5px;
+                    path {
+                        fill: #8A898E;
+                    }
+                }
+                display: flex;
+                flex-grow: 1;
+                input {
+                    width: 100%;
+                    background: #F2F5F9;
+                    border-radius: 20px;
+                    border: none;
+                    height: 38px;
+                    padding: 5px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    padding: 7px 14%;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 12px;
+                    color: #8A898E;
+
+                    &::placeholder {
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 12px;
+                        color: #8A898E;
+                    }
+                }
+            }
+            
+        }
+    }
+    .products {
+        margin-top: 13px;
+        // padding-top: 60px;
+        .products__list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .products__item {
+                width: 170px;
+                height: 300px;
+                box-sizing: content-box;
+                overflow: hidden;
+                color: var(--tg-theme-text-color);
+                .products__item__url {
+                    font-size: 10px;
+                    width: 100%;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 25px;
+                    background: black;
+                    border-radius: 8px;
+                    margin-top: 6px;
+                    color: white;
+                    opacity: 0.6;
+                    transition: 0.5s all;
+                    &:hover {
+                        opacity: 1;
+                        transition: 0.5s all;
+                    }
+                }
+                .products__item__name {
+                    height: 26px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 11.5px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                }
+                .products__item__descr {
+                    display: flex;
+                    gap: 8px;
+                    font-size: 12.5px;
+                    & > * {
+                        gap: 5.5px;
+                        display: flex;
+                        img {
+                            align-self: center;
+                        }
+                    }
+                }
+                .products__item__price {
+                    padding-top: 2px;
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 9px;
+                    .products__item__price__sale {
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                    .products__item__price__original {
+                        font-size: 11px;
+                        font-weight: 400;
+                        text-decoration: line-through;
+                        opacity: 0.6;
+                    }
+                }
+                .products__item__img {
+                    width: 170px;
+                    height: 195px;
+                    position: relative;
+                    .original {
+                        border-radius: 10px;
+                        box-sizing: content-box;
+                        width: 170px;
+                        height: 195px;
+                    }
+                    .products__item__sale {
+                        width: 42px;
+                        height: 22px;
+                        font-weight: 700;
+                        font-size: 10px;
+                        line-height: 12px;
+                        color: #FFFFFF;
+                        position: absolute;
+                        background-color: #E43658;
+                        border-radius: 6px;
+                        display: flex;
+                        flex-direction: column;
+                        margin: auto;
+                        text-align: center;
+                        justify-content: center;
+                        align-self: center;
+                        align-content: center;
+                        bottom: 6px;
+                        left: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+

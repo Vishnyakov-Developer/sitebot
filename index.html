@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="null.css">
+    <title>eCatalog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/null.css">
+    <link rel="stylesheet" href="css/catalog/style.css">
+    <link rel="stylesheet" href="css/catalog/scroll.css">
+    <link rel="stylesheet" href="css/catalog/arrow.css">
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 
 </head>
+
+
+
+
+
+
 <body class="">
     <div class="main-panel none page" category="start">
         <div class="main-panel__container">
@@ -109,16 +118,107 @@
             </div>
         </div>
     </div>
+    <div class="main-catalog page none" back-page="main-select">
+        <div class="arrow">
+            <div class="arrow-inner">...</div>
+        </div>
+        <div class="search">
+            <div class="search__panel">
+                <div class="search__input">
+                    <input type="text" placeholder="Поиск товаров">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.875 2.12506C5.38254 2.12506 4.89491 2.22205 4.43994 2.41051C3.98497 2.59896 3.57157 2.87519 3.22335 3.22341C2.87513 3.57163 2.59891 3.98502 2.41045 4.43999C2.222 4.89496 2.125 5.3826 2.125 5.87506C2.125 6.36751 2.222 6.85515 2.41045 7.31012C2.59891 7.76509 2.87513 8.17849 3.22335 8.52671C3.57157 8.87493 3.98497 9.15115 4.43994 9.33961C4.89491 9.52806 5.38254 9.62506 5.875 9.62506C6.86956 9.62506 7.82339 9.22997 8.52665 8.52671C9.22991 7.82345 9.625 6.86962 9.625 5.87506C9.625 4.8805 9.22991 3.92667 8.52665 3.22341C7.82339 2.52014 6.86956 2.12506 5.875 2.12506ZM0.875 5.87506C0.87503 5.07765 1.06578 4.29182 1.43133 3.58313C1.79688 2.87445 2.32662 2.26348 2.97636 1.8012C3.62609 1.33892 4.37697 1.03874 5.16633 0.925722C5.95568 0.812701 6.76062 0.890114 7.51397 1.1515C8.26732 1.41288 8.94723 1.85066 9.49695 2.42829C10.0467 3.00593 10.4503 3.70667 10.6741 4.47203C10.8978 5.23739 10.9353 6.04517 10.7834 6.82797C10.6315 7.61076 10.2945 8.34587 9.80062 8.97193L12.5625 11.6782C12.6212 11.7356 12.668 11.8041 12.7002 11.8796C12.7324 11.9552 12.7495 12.0363 12.7503 12.1184C12.7512 12.2005 12.7359 12.282 12.7053 12.3582C12.6747 12.4344 12.6293 12.5039 12.5719 12.5626C12.5144 12.6212 12.446 12.668 12.3704 12.7003C12.2949 12.7325 12.2138 12.7495 12.1316 12.7504C12.0495 12.7513 11.968 12.736 11.8918 12.7053C11.8156 12.6747 11.7462 12.6294 11.6875 12.5719L8.91 9.84881C8.16909 10.4147 7.28472 10.7622 6.35675 10.852C5.42877 10.9419 4.49417 10.7704 3.65848 10.3572C2.82278 9.94385 2.11929 9.30514 1.62743 8.51313C1.13558 7.72112 0.874955 6.80737 0.875 5.87506Z" fill="green"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="products__list fullpading">
+                <div class="products__item template">
+                    <div class="products__item__img">
+                        <img src="img/template.png" alt="" class="original">
+                        <div class="products__item__sale">
+                            48%
+                        </div>
+                    </div>
+                    <div class="products__item__price">
+                        <div class="products__item__price__sale">4 000 ₽</div>
+                        <div class="products__item__price__original">16 000 ₽</div>
+                    </div>
+                    <div class="products__item__name">Спортивный костюм IHOMELUX большой размер</div>
+                    <div class="products__item__descr">
+                        <div class="products__item__rating">
+                            <img src="img/star.png" alt="">
+                            <span>4.8</span>
+                        </div>
+                        <div class="products__item__reviews">
+                            <img src="img/review.png" alt="">
+                            <span>118</span>
+                        </div>
+                    </div>
+                    <a href="https://yandex.ru" class="products__item__url">Открыть</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="log">log2</div>
     <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
     </div>
+
+
+
+
+
+    
     <script>window.onerror = function(msg, url, linenumber) {
-        alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+        ('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
         return true;
     }</script>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="script.js"></script>
+    <script>
+        /* ------------ GENERATION API JS -------- */
+        const URL           = 'https://124699124.online:85/';
+        const list          = document.querySelector('.products__list');
+        var count           = 70;
+        var nextProducts    = () => {};
+        var backProducts    = () => {};
+        var lastProducts    = () => {};
+        var stopApplication = () => {};
+        var countForAdd     = 24;
+        var lastLoaded      = 0;
+        /* ------------___________________-------- */
 
+        /* ------------ SEARCH JS ---------------- */
+        const input         = document.querySelector('.search__input input');
+        const catalogid     = undefined; 
+        const search        = undefined;
+        /* ------------___________________-------- */
+
+        /* ------------ AUTOLOADER JS ---------------- */
+        let timerPage           = undefined;
+        let timerPageBack       = undefined;
+        const archiveProducts   = [];
+        var scrollReverseDrop   = 2500;
+        var scrollDrop          = 1000;
+        /* ------------___________________-------- */
+
+        /* ------------ INDEX-CATALOG JS ---------------- */
+        const ELEMENT_ARROW         = document.querySelector('.arrow');
+        const ELEMENT_ARROW_INNER   = document.querySelector('.arrow-inner'); 
+        const CATALOG_URL           = 'https://124699124.online:85/'
+        /* ------------___________________-------- */
+
+    </script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="js/script.js"></script>
+    
+
+    <script type="text/javascript" src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/catalog/search.js"></script>
+    <script type="text/javascript" src="js/catalog/generation-api.js"></script>
+    <script type="text/javascript" src="js/catalog/autoloader.js"></script>
+    <script type="text/javascript" src="js/catalog/telegram-listener.js"></script>
+    <script type="text/javascript" src="js/catalog/test.js"></script>
+    <script defer type="text/javascript" src="js/catalog/index.js"></script>
 </body>
 </html>
 

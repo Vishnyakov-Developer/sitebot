@@ -1,0 +1,40 @@
+.arrow {
+    width: 50px;
+    height: 50px;
+    position: sticky;
+    background: url("../../img/circle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    right: 11%;
+    cursor: pointer;
+    bottom: 6%;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.21);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.21);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.21);
+    // z-index: 2;
+    /* box-sizing: border-box; */
+    /* overflow: -webkit-paged-y; */
+    border-radius: 100%;
+
+    top: 83%;
+    left: 79%;
+    .arrow-inner {
+        width: 50%;
+        height: 41%;
+        background: rgb(254, 81, 111);
+        border-radius: 46%;
+        position: relative;
+        left: 67%;
+        top: -11%;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.21);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.21);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.21);
+        z-index: 0;
+        font-size: 9px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
