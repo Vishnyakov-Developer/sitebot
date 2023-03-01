@@ -1,0 +1,144 @@
+<section class="act-section b-as-cat-grid-mini">
+	<div class="container">
+		<div class="as-cat-grid-mini">
+			<div class="as-cat-grid-mini__content">
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/zatochnye-ustrojstva-i-aksessuary/zatochnye-ustrojstva-zhuk">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Точилки ЖУК</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Заточные устройства" srcset="/assets/templates/main/img/cat-grid-mini/zhuk1x.png 1x, /assets/templates/main/img/cat-grid-mini/zhuk2x.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/zatochnye-ustrojstva-i-aksessuary/zatochnye-ustrojstva-tsprof">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Точилки TSPROF</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Профиль К03" srcset="/assets/templates/main/img/cat-grid-mini/k03.png 1x, /assets/templates/main/img/cat-grid-mini/k03@2x.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/nozhi/ohotnichi-nozhi-kizlyar-supreme">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Охотничие ножи</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Охотничие ножи" srcset="/assets/templates/main/img/cat-grid-mini/knife.png 1x, /assets/templates/main/img/cat-grid-mini/knife@2x.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/nozhi/turisticheskie-nozhi-kizlyar-supreme">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Тактические ножи</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Тактические ножи" srcset="/assets/templates/main/img/cat-grid-mini/tactical.png 1x, /assets/templates/main/img/cat-grid-mini/tactical@2x.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/nozhi/skladnye-nozhi-kizlyar-supreme">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Складные ножи</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Складные EDC" srcset="/assets/templates/main/img/cat-grid-mini/edc.png 1x, /assets/templates/main/img/cat-grid-mini/edc@2x.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/zatochnye-ustrojstva-i-aksessuary/aksessuary">
+							<div class="as-cgm__info">
+								<h3 class="as-cgm__family">Аксессуары</h3>
+							</div>
+							<div class="as-cgm__image">
+								<img alt="Аксессуары" srcset="/assets/templates/main/img/cat-grid-mini/accessories.png 1x, /assets/templates/main/img/cat-grid-mini/accessories@2x.png 2x">
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/zatochnye-ustrojstva-i-aksessuary/abrazivy">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Абразивы</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Абразивы" srcset="/assets/templates/main/img/cat-grid-mini/bruski.png 1x, /assets/templates/main/img/cat-grid-mini/bruski@2x.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/zatochnye-ustrojstva-i-aksessuary/pasty-dlya-dovodki">
+							<div class="as-cgm__info">
+								<h3 class="as-cgm__family">Пасты</h3>
+							</div>
+							<div class="as-cgm__image">
+								<img alt="Пасты" srcset="/assets/templates/main/img/cat-grid-mini/pasta.png 1x, /assets/templates/main/img/cat-grid-mini/pasta@2x.png 2x">
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog/zatochnye-ustrojstva-i-aksessuary/poltavskie-elbory-i-almazy">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Эльборы и алмазы</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Комплектующие" srcset="/assets/templates/main/img/cat-grid-mini/poltava.png 1x, /assets/templates/main/img/cat-grid-mini/poltava.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell all">
+					<div class="as-cgm">
+						<a class="as-cgm__link" href="catalog">
+							<div class="as-cgm__content">
+								<div class="as-cgm__info">
+									<h3 class="as-cgm__family">Весь каталог</h3>
+								</div>
+								<div class="as-cgm__image">
+									<img alt="Комплектующие" srcset="/assets/templates/main/img/cat-grid-mini/all.png 1x, /assets/templates/main/img/cat-grid-mini/all.png 2x">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

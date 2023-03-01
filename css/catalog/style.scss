@@ -10,7 +10,11 @@ var(--tg-theme-button-text-color)
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    padding-bottom: 52px;
+}
 
 .none {
     display: none !important;
@@ -33,15 +37,15 @@ body {
 }
 
 @keyframes sizeUp {
-	0% {
-		transform: scale3d(1, 1, 1);
-	}
-	50% {
-		transform: scale3d(1.05, 1.05, 1.05);
-	}
-	100% {
-		transform: scale3d(1, 1, 1);
-	}
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .main-catalog {
@@ -74,14 +78,14 @@ body {
                     left: 7.5%;
                     margin-top: 2.5px;
                     path {
-                        fill: #8A898E;
+                        fill: #8a898e;
                     }
                 }
                 display: flex;
                 flex-grow: 1;
                 input {
                     width: 100%;
-                    background: #F2F5F9;
+                    background: #f2f5f9;
                     border-radius: 20px;
                     border: none;
                     height: 38px;
@@ -93,17 +97,16 @@ body {
                     font-weight: 400;
                     font-size: 13px;
                     line-height: 12px;
-                    color: #8A898E;
+                    color: #8a898e;
 
                     &::placeholder {
                         font-weight: 400;
                         font-size: 13px;
                         line-height: 12px;
-                        color: #8A898E;
+                        color: #8a898e;
                     }
                 }
             }
-            
         }
     }
     .products {
@@ -115,11 +118,12 @@ body {
             flex-wrap: wrap;
             .products__item {
                 width: 170px;
-                height: 300px;
+                height: 327px;
                 box-sizing: content-box;
                 overflow: hidden;
                 color: var(--tg-theme-text-color);
                 .products__item__url {
+                    padding: 3px 0;
                     font-size: 10px;
                     width: 100%;
                     text-align: center;
@@ -139,17 +143,20 @@ body {
                     }
                 }
                 .products__item__name {
-                    height: 26px;
+                    height: 29px;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: 600;
                     font-size: 11.5px;
                     box-sizing: border-box;
                     overflow: hidden;
+                    padding-top: 5px;
                 }
                 .products__item__descr {
                     display: flex;
-                    gap: 8px;
+                    gap: 16px;
                     font-size: 12.5px;
+                    padding-top: 11px;
+                    align-items: center;
                     & > * {
                         gap: 5.5px;
                         display: flex;
@@ -159,7 +166,7 @@ body {
                     }
                 }
                 .products__item__price {
-                    padding-top: 2px;
+                    padding-top: 12px;
                     display: flex;
                     align-items: flex-end;
                     gap: 9px;
@@ -190,9 +197,9 @@ body {
                         font-weight: 700;
                         font-size: 10px;
                         line-height: 12px;
-                        color: #FFFFFF;
+                        color: #ffffff;
                         position: absolute;
-                        background-color: #E43658;
+                        background-color: #e43658;
                         border-radius: 6px;
                         display: flex;
                         flex-direction: column;
@@ -209,4 +216,3 @@ body {
         }
     }
 }
-

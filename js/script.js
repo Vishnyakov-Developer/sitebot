@@ -227,6 +227,7 @@ function openPage(page) {
 
 function windowCatalog(catalogid, platform) {
     startApplication(0, 70, catalogid, '');
+    isCatalogOpen = true;
 }
 
 function openCatalog(catalogid, platformid) {
@@ -449,24 +450,27 @@ Telegram.WebApp.onEvent('backButtonClicked', function(){
     //     returnButton = null;
     //     return;
     // }
-    if(currentCatalog != -1 && currentCatalog != undefined) {
-        if(platformButton != null) {
-            // if(user.end*1000 < Date.now()) {
-            //     await fetch(URL + 'message?' + new URLSearchParams({
-            //         user: JSON.stringify(tg.initDataUnsafe.user),
-            //         message: 'Для просмотра каталога приобретите подписку или возьми пробный *период 7 дней*'
-            //     }));
-            //     tg.close();
-            //     return;
-            // }
-            openCatalog(stepButton, platformButton);
-            return true;
-        } else {
-            openCatalog(stepButton);
+    if(isCatalogOpen == false) {
+        if(currentCatalog != -1 && currentCatalog != undefined) {
+            if(platformButton != null) {
+                // if(user.end*1000 < Date.now()) {
+                //     await fetch(URL + 'message?' + new URLSearchParams({
+                //         user: JSON.stringify(tg.initDataUnsafe.user),
+                //         message: 'Для просмотра каталога приобретите подписку или возьми пробный *период 7 дней*'
+                //     }));
+                //     tg.close();
+                //     return;
+                // }
+                openCatalog(stepButton, platformButton);
+                return true;
+            } else {
+                openCatalog(stepButton);
+            }
+            
         }
-        
     }
-
+    
+    isCatalogOpen = false;
 	tg.MainButton.hide();
     // openPage('main-buy');
     

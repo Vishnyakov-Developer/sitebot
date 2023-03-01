@@ -10,6 +10,10 @@ var(--tg-theme-button-text-color)
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  padding-bottom: 52px;
+}
+
 .none {
   display: none !important;
   padding: 0;
@@ -73,11 +77,11 @@ body {
   margin-top: 2.5px;
 }
 .main-catalog .search .search__panel .search__input svg path {
-  fill: #8A898E;
+  fill: #8a898e;
 }
 .main-catalog .search .search__panel .search__input input {
   width: 100%;
-  background: #F2F5F9;
+  background: #f2f5f9;
   border-radius: 20px;
   border: none;
   height: 38px;
@@ -87,19 +91,19 @@ body {
   font-weight: 400;
   font-size: 13px;
   line-height: 12px;
-  color: #8A898E;
+  color: #8a898e;
 }
 .main-catalog .search .search__panel .search__input input::-moz-placeholder {
   font-weight: 400;
   font-size: 13px;
   line-height: 12px;
-  color: #8A898E;
+  color: #8a898e;
 }
 .main-catalog .search .search__panel .search__input input::placeholder {
   font-weight: 400;
   font-size: 13px;
   line-height: 12px;
-  color: #8A898E;
+  color: #8a898e;
 }
 .main-catalog .products {
   margin-top: 13px;
@@ -111,12 +115,13 @@ body {
 }
 .main-catalog .products .products__list .products__item {
   width: 170px;
-  height: 300px;
+  height: 327px;
   box-sizing: content-box;
   overflow: hidden;
   color: var(--tg-theme-text-color);
 }
 .main-catalog .products .products__list .products__item .products__item__url {
+  padding: 3px 0;
   font-size: 10px;
   width: 100%;
   text-align: center;
@@ -136,17 +141,20 @@ body {
   transition: 0.5s all;
 }
 .main-catalog .products .products__list .products__item .products__item__name {
-  height: 26px;
+  height: 29px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 11.5px;
   box-sizing: border-box;
   overflow: hidden;
+  padding-top: 5px;
 }
 .main-catalog .products .products__list .products__item .products__item__descr {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   font-size: 12.5px;
+  padding-top: 11px;
+  align-items: center;
 }
 .main-catalog .products .products__list .products__item .products__item__descr > * {
   gap: 5.5px;
@@ -156,7 +164,7 @@ body {
   align-self: center;
 }
 .main-catalog .products .products__list .products__item .products__item__price {
-  padding-top: 2px;
+  padding-top: 12px;
   display: flex;
   align-items: flex-end;
   gap: 9px;
@@ -188,9 +196,9 @@ body {
   font-weight: 700;
   font-size: 10px;
   line-height: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
   position: absolute;
-  background-color: #E43658;
+  background-color: #e43658;
   border-radius: 6px;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,36 @@
+.downpanel {
+  height: 52px;
+  width: 100vw;
+  background: rgb(78, 78, 78);
+  position: fixed;
+  bottom: 0;
+}
+.downpanel .downpanel__inner {
+  height: 100%;
+  width: 100%;
+}
+.downpanel .downpanel__inner .downpanel__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.downpanel .downpanel__inner .downpanel__list .downpanel__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  fill: white;
+  color: white;
+  gap: 5px;
+}
+.downpanel .downpanel__inner .downpanel__list .downpanel__item .downpanel__item__icon {
+  align-self: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 23.5px;
+  height: 23.5px;
+}
+.downpanel .downpanel__inner .downpanel__list .downpanel__item .downpanel__item__text {
+  font-size: 10px;
+}/*# sourceMappingURL=downpanel.css.map */
