@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="css/catalog/scroll.css">
     <link rel="stylesheet" href="css/catalog/arrow.css">
     <link rel="stylesheet" href="css/downpanel.css">
+    <link rel="stylesheet" href="css/favor/section.css">
+    <link rel="stylesheet" href="css/main/section.css">
+    <link rel="stylesheet" href="css/main/mainsec.css">
+    <link rel="stylesheet" href="css/helper/section.css">
+    <link rel="stylesheet" href="css/helper/quest-items.css">
+    <link rel="stylesheet" href="css/promocode/section.css">
+    <link rel="stylesheet" href="css/activesub/section.css">
+    <link rel="stylesheet" href="css/gosub/section.css">
+    <link rel="stylesheet" href="css/search.css">
+
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 
 </head>
@@ -21,109 +31,8 @@
 
 
 <body class="">
-    <div class="main-panel none page" category="start">
-        <div class="main-panel__container">
-            <div class="main-panel__wrapper">
-                <!-- <div id="" class="eCatalog main-panel__wrapper__button active"><span></span></div> -->
-                <div id="sub" class="let sub main-panel__wrapper__button"><span>Оформить подписку</span></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="main-panel none page" category="medium">
-        <div class="main-panel__container">
-            <div class="main-panel__wrapper">
-                <!-- <div id="" class="eCatalog main-panel__wrapper__button active"><span>еКаталог</span></div> -->
-                <div id="sub" class="does main-panel__wrapper__button"><span>Действие подписки до<br></span> <span class="date res">Оформить подписку</span></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="main-panel page none" category="end">
-        <div class="main-panel__container">
-            <div class="main-panel__time">
-                Действие подписки до<br><span class="date">11.11.23г. 11:22</span> 
-            </div>
-        </div>
-    </div>
-
-    <div class="main-pay none page" back-page="main-buy">
-        <div class="main-pay__container">
-            <div class="main-pay__title">Оплата</div>
-            <div class="main-pay__blocktext one">
-                <span>Подписка <span id="m">0</span> месяц(ев)</span>
-                <span id="price"><span id="rub">0</span> рублей</span>
-            </div>
-            <div class="main-pay__blocktext itogo">
-                <span id="itogo__">Итого</span>
-                <span id="pricetwo"><span id="rubtwo">0</span> ₽</span>
-            </div>
-            <div class="main-pay__blocktext two">
-                <input id="email" type="text" placeholder="Введите электронную почту">
-                <div class="politic">
-                    <input id="check" type="checkbox">
-                    <span class="pol">Я ознакомлен(а) с <a target="_blank" href="https://cloud.mail.ru/public/8B4L/1hycfS3uL">Политика конфиденциальности</a></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="main-buy page none" back-page="main-select">
-        <div class="main-buy__container">
-            <span class="main-buy__text">Выберите подписку!</span>
-            <div id="firstButton" class="main-buy__button">Действие подписки: <span class="date"></span> </div>
-            <div class="main-buy__button" price="169" m="1">Оформить 169 ₽ / месяц</div>
-            <!-- <div class="main-buy__button" price="656" m="6">Подключить за 656 руб. / 6 месяцев</div> -->
-            <div class="main-buy__button finish" price="790" m="12">Оформить 790 ₽ / год</div>
-        </div>
-        <div class="main-buy__quest container">
-            <div class="main-buy__item none">
-                <div class="main-buy__item__title">Вопрос номер 1</div>
-                <div class="main-buy__item__descr none">Ответ номер 1 ... ответ</div>
-                <svg width="60" height="46" viewBox="0 0 60 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M48.9979 43.6207C51.5113 46.7931 55.6016 46.7931 58.115 43.6207C60.6283 40.4483 60.6283 35.2853 58.115 32.1129L34.5585 2.37931C32.0452 -0.793103 27.9548 -0.793103 25.4415 2.37931L1.88501 32.1129C-0.628337 35.2853 -0.628337 40.4483 1.88501 43.6207C4.39836 46.7931 8.48871 46.7931 11.0021 43.6207L30 19.641L48.9979 43.6207Z" />
-                </svg>
-                <!-- <svg width="15" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.4433 7.65994C12.0281 8.21166 12.9799 8.21166 13.5647 7.65994C14.1495 7.10821 14.1495 6.21031 13.5647 5.65858L8.08336 0.487524C7.49854 -0.0642006 6.54676 -0.0642006 5.96193 0.487524L0.480612 5.65858C-0.104215 6.21031 -0.104215 7.10821 0.480612 7.65994C1.06544 8.21166 2.01722 8.21166 2.60204 7.65994L7.02265 3.48955L11.4433 7.65994Z" fill="#C4C3C3" fill-opacity="0.45"/>
-                </svg>   -->
-            </div>
-            
-        </div>
-        
-    </div>
-
-    <div class="main-category page none" back-page="main-select">
-        <div class="category_wrapper">
-            <div class="category_up"><span>%s</span></div>
-            <div class="category_list">
-                
-            </div>
-        </div>
-    </div>
-    <div class="main-select page">
-        <div class="container">
-            <div class="select-wrapper">
-                <div class="select-text">Начните покупать выгодно!</div>
-                <div class="select-flex">
-                    
-                    <span><img selectButton="true" step="-1" platform="2" id="wb" class="select-img" src="img/wb.jpg" alt=""><span class="text">Wildberries</span></span>
-                    <span><img selectButton="true" step="-1" platform="1" id="ozon" class="select-img" src="img/ozon.jpg" alt=""><span class="text">OZON</span></span>
-                    <span><img selectButton="true" step="-1" platform="3" id="lamoda" class="select-img" src="img/lamoda.jpg" alt=""><span class="text">Lamoda</span></span>
-                    
-                </div>
-                <div class="select-flex">
-                    <span><img selectButton="true" step="-1" platform="0" id="letual" class="select-img" src="img/letual.jpg" alt=""><span class="text">ЛЭТУАЛЬ</span></span>
-                    <span class="opacity0"><img selectButton="true" step="-1" platform="0" id="letual" class="select-img" src="img/letual.jpg" alt=""><span class="text">ЛЭТУАЛЬ</span></span>
-                    <span class="opacity0"><img selectButton="true" step="-1" platform="0" id="letual" class="select-img" src="img/letual.jpg" alt=""><span class="text">ЛЭТУАЛЬ</span></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="main-catalog page none" back-page="main-category">
-        <div class="arrow">
-            <div class="arrow-inner">...</div>
-        </div>
-        <div class="search">
+    <section class="section none" name="search">
+        <div class="search_2">
             <div class="search__panel">
                 <div class="search__input">
                     <input type="text" placeholder="Поиск товаров">
@@ -134,13 +43,15 @@
             </div>
         </div>
         <div class="products">
-            <div class="products__list fullpading">
+            <div class="products__list">
                 <div class="products__item template">
                     <div class="products__item__img">
                         <img src="img/template.png" alt="" class="original">
                         <div class="products__item__sale">
                             48%
                         </div>
+                        <img class="like none" like="true" src="img/like.png" alt="">
+                        <img class="like none" like="false" src="img/like2.png" alt="">
                     </div>
                     <div class="products__item__price">
                         <div class="products__item__price__sale">4 000 ₽</div>
@@ -161,23 +72,414 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="section none" name="promocode">
+        <div class="section__name">Активация промокода</div>
+        <div class="promocode">
+            <div class="promocode__block">
+                <input type="text" placeholder="Введите промокод" class="promocode__input">
+                <div class="promocode__text">Нажимая на кнопку, вы принимаете условия подписки</div>
+            </div>
+            <div class="promocode__block">
+                <div class="promocode__button">Применить</div>
+                <div class="promocode__aftertext none">Активирован</div>
+            </div>
+        </div>
+    </section>
+    <section class="section none" name="helper">
+        <div class="section__name">Помощь</div>
+        <div class="helper">
+            <div class="helper__container container">
+                <div class="helper__item none">
+                    <div class="helper__item__title">Вопрос номер 1</div>
+                    <div class="helper__item__descr none">Ответ номер 1 ... ответ</div>
+                    <svg width="60" height="46" viewBox="0 0 60 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.9979 43.6207C51.5113 46.7931 55.6016 46.7931 58.115 43.6207C60.6283 40.4483 60.6283 35.2853 58.115 32.1129L34.5585 2.37931C32.0452 -0.793103 27.9548 -0.793103 25.4415 2.37931L1.88501 32.1129C-0.628337 35.2853 -0.628337 40.4483 1.88501 43.6207C4.39836 46.7931 8.48871 46.7931 11.0021 43.6207L30 19.641L48.9979 43.6207Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section none" name="gosub">
+        <div class="gosub__list none">
+            <div class="gosub__item" style="height: 113px;">
+                <div class="gosub__item__title">Выгодные скидки - в одной подписке</div>
+                <div class="gosub__item__button">7 дней бесплатно</div>
+                <div class="gosub__item__descr">Далее 169 рублей в месяц</div>
+            </div>
+            <div class="gosub__item">
+                <div class="gosub__item__title left">1 месяц</div>
+                <div class="gosub__item__descr left">Обычная стоимость</div>
+                <div class="gosub__item__title left">169</div>
+                <div class="gosub__item__descr left">Цена за месяц при покупке</div>
+                <div class="gosub__item__button">1 мес за 169 ₽</div>
+            </div>
+            <div class="gosub__item sale">
+                <div class="gosub__item__title left">12 месяцев</div>
+                <div class="gosub__item__descr left">Экономия 103 ₽</div>
+                <div class="gosub__item__title left">66</div>
+                <div class="gosub__item__descr left">Цена за месяц при покупке</div>
+                <div class="gosub__item__button">12 мес за 799 ₽</div>
+            </div>
+        </div>
+        <div class="gosub__list">
+            <div class="gosub__title">Выгодные скидки - в одной подписке</div>
+            <div class="gosub__descr">Похоже, вы уже использовали бесплатный пробный период ранее. Выберите период продления. Чем больше срок, тем выгоднее.</div>
+            <div class="gosub__item">
+                <div class="gosub__item__title left">1 месяц</div>
+                <div class="gosub__item__descr left">Обычная стоимость</div>
+                <div class="gosub__item__title left">169</div>
+                <div class="gosub__item__descr left">Цена за месяц при покупке</div>
+                <div class="gosub__item__button">1 мес за 169 ₽</div>
+            </div>
+            <div class="gosub__item sale">
+                <div class="gosub__item__title left">12 месяцев</div>
+                <div class="gosub__item__descr left">Экономия 103 ₽</div>
+                <div class="gosub__item__title left">66</div>
+                <div class="gosub__item__descr left">Цена за месяц при покупке</div>
+                <div class="gosub__item__button">12 мес за 799 ₽</div>
+            </div>
+        </div>
+    </section>
+    <section class="section none" name="activesub">
+        <div class="section__name">Мои подписки</div>
+        <div class="section__list none">
+            <div class="section__list__title" id="text_sub_0">Подписка 7 дней</div>
+            <ul class="section__list__ul">
+                <li class="section__list__item" id="text_sub_1">До 28.03.2023 - 1 ₽</li>
+                <li class="section__list__item" id="text_sub_2">Затем 1 месяц - 169 ₽</li>
+            </ul>
+        </div>
+        <div class="section__description">
+            <div class="section__description__item">
+                <span id="end_status">Подписка активна</span>
+                <span class="grey">Следующее списание - <span id="end_next"></span></span>
+            </div>
+            <div class="section__description__item">
+                <span class="underline">Отменить</span>
+            </div>
+        </div>
+        <div class="activesub__bank">
+            <div class="activesub__bank__title">Мои банковские карты</div>
+            <div class="activesub__bank__block none">
+                <div class="activesub__bank__block__item">
+                    <span>*2333</span>
+                    <span>Отвязать</span>
+                </div>
+                <div class="activesub__bank__block__item">
+                    <span>*2333</span>
+                    <span>Отвязать</span>
+                </div>
+            </div>
+            <div class="activesub__bank__block">
+                <div class="activesub__bank__block__item">
+                    <span>У вас нет активных привязанных карт</span>
+                </div>
+            </div>
+            <div class="activesub__bank__button">Привязать карту</div>
+        </div>
+    </section>
+    <section class="section none" name="main">
+        <div class="mainsec" sub="true">
+            <div class="mainsec__profile">
+                <div class="mainsec__profile__img">
+                    <img src="img/mainsec/template.png" alt=""  class="avatar-profile" style="width: 50px; height: 50px; border-radius: 50%;">
+                </div>
+                <div class="mainsec__profile__text">
+                    <span class="name">Алина Котова</span>
+                    <span class="username">@7888alina</span>
+                    <span class="id">Алина Котова</span>
+                </div>
+            </div>
+            <div class="mainsec__friend" onMessage="Пригласить друга">Пригласи друга +14 дней бесплатно</div>
+            <div class="mainsec__list">
+                <div class="mainsec__item" openSection="activesub">
+                    <img src="img/mainsec/icon1.png" alt="">
+                    <span>Мои подписки</span>
+                </div>
+                <a href="" class="mainsec__item none friend">
+                    <img src="img/mainsec/icon6.png" alt="">
+                    <span>Пригласить друга</span>
+                </a>
+                <div class="mainsec__item" openSection="promocode">
+                    <img src="img/mainsec/icon2.png" alt="">
+                    <span>Активировать промокод</span>
+                </div>
+            </div>
+            <div class="mainsec__list">
+                <div class="mainsec__item" openSection="helper">
+                    <img src="img/mainsec/icon3.png" alt="">
+                    <span>Помощь</span>
+                </div>
+                <a href="https://eskidochka.ru/policy/" class="mainsec__item">
+                    <img src="img/mainsec/icon4.png" alt="">
+                    <span>Политика конфиденциальности </span>
+                </a>
+                <a href="https://eskidochka.ru/usloviya_podpiski/" class="mainsec__item">
+                    <img src="img/mainsec/icon5.png" alt="">
+                    <span>Условия подписки</span>
+                </a>
+            </div>
+            <a href="https://t.me/misha_na_laite" class="mainsec__help">
+                <div class="mainsec__img">
+                    <img src="img/mainsec/circle_question.png" alt="">
+                </div>
+                <div class="mainsec__text">
+                    <span class="one">Есть вопрос?</span>
+                    <span class="two">Чат с консультацией</span>
+                </div>
+            </a>
+        </div>
+        <div class="mainsec" sub="false">
+            <div class="mainsec__profile">
+                <div class="mainsec__profile__img">
+                    <img src="img/mainsec/template.png" alt=""  class="avatar-profile" style="width: 50px; height: 50px; border-radius: 50%;">
+                </div>
+                <div class="mainsec__profile__text">
+                    <span class="name">Алина Котова</span>
+                    <span class="username">@7888alina</span>
+                    <span class="id">Алина Котова</span>
+                </div>
+            </div>
+            <div class="mainsec__friend" style="background: #56B680; color: white" openSection="gosub">Оформить подписку</div>
+            <div class="mainsec__list">
+                <div class="mainsec__item" onMessage="Пригласить друга">
+                    <img src="img/mainsec/icon6.png" alt="">
+                    <span>Пригласить друга</span>
+                </div>
+                <a href="" class="mainsec__item none friend">
+                    <img src="img/mainsec/icon2.png" alt="">
+                    <span>Активировать промокод</span>
+                </a>
+                <div class="mainsec__item" openSection="promocode">
+                    <img src="img/mainsec/icon2.png" alt="">
+                    <span>Активировать промокод</span>
+                </div>
+            </div>
+            <div class="mainsec__list">
+                <div class="mainsec__item" openSection="helper">
+                    <img src="img/mainsec/icon3.png" alt="">
+                    <span>Помощь</span>
+                </div>
+                <a href="https://eskidochka.ru/policy/" class="mainsec__item">
+                    <img src="img/mainsec/icon4.png" alt="">
+                    <span>Политика конфиденциальности </span>
+                </a>
+                <a href="https://eskidochka.ru/usloviya_podpiski/" class="mainsec__item">
+                    <img src="img/mainsec/icon5.png" alt="">
+                    <span>Условия подписки</span>
+                </a>
+            </div>
+            <a href="https://t.me/misha_na_laite" class="mainsec__help">
+                <div class="mainsec__img">
+                    <img src="img/mainsec/circle_question.png" alt="">
+                </div>
+                <div class="mainsec__text">
+                    <span class="one">Есть вопрос?</span>
+                    <span class="two">Чат с консультацией</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="section none" name="favor">
+        <div class="products">
+            <div class="products__list">
+                <div class="products__item template">
+                    <div class="products__item__img">
+                        <img src="img/template.png" alt="" class="original">
+                        <div class="products__item__sale">
+                            48%
+                        </div>
+                        <img class="like none" like="true" src="img/like.png" alt="">
+                        <img class="like none" like="false" src="img/like2.png" alt="">
+                    </div>
+                    <div class="products__item__price">
+                        <div class="products__item__price__sale">4 000 ₽</div>
+                        <div class="products__item__price__original">16 000 ₽</div>
+                    </div>
+                    <div class="products__item__name">Спортивный костюм IHOMELUX большой размер</div>
+                    <div class="products__item__descr">
+                        <div class="products__item__rating">
+                            <img width="16px" height="16px" src="img/star.png" alt="">
+                            <span>4.8</span>
+                        </div>
+                        <div class="products__item__reviews">
+                            <img width="16px" height="16px" src="img/review.png" alt="">
+                            <span>118</span>
+                        </div>
+                    </div>
+                    <a href="https://yandex.ru" class="products__item__url">Открыть</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" name="shops">
+        <div class="main-panel none page" category="start">
+            <div class="main-panel__container">
+                <div class="main-panel__wrapper">
+                    <!-- <div id="" class="eCatalog main-panel__wrapper__button active"><span></span></div> -->
+                    <div id="sub" class="let sub main-panel__wrapper__button"><span>Оформить подписку</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-panel none page" category="medium">
+            <div class="main-panel__container">
+                <div class="main-panel__wrapper">
+                    <!-- <div id="" class="eCatalog main-panel__wrapper__button active"><span>еКаталог</span></div> -->
+                    <div id="sub" class="does main-panel__wrapper__button"><span>Действие подписки до<br></span> <span class="date res">Оформить подписку</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-panel page none" category="end">
+            <div class="main-panel__container">
+                <div class="main-panel__time">
+                    Действие подписки до<br><span class="date">11.11.23г. 11:22</span> 
+                </div>
+            </div>
+        </div>
+
+        <div class="main-pay none page" back-page="main-buy">
+            <div class="main-pay__container">
+                <div class="main-pay__title">Оплата</div>
+                <div class="main-pay__blocktext one">
+                    <span>Подписка <span id="m">0</span> месяц(ев)</span>
+                    <span id="price"><span id="rub">0</span> рублей</span>
+                </div>
+                <div class="main-pay__blocktext itogo">
+                    <span id="itogo__">Итого</span>
+                    <span id="pricetwo"><span id="rubtwo">0</span> ₽</span>
+                </div>
+                <div class="main-pay__blocktext two">
+                    <input id="email" type="text" placeholder="Введите электронную почту">
+                    <div class="politic">
+                        <input id="check" type="checkbox">
+                        <span class="pol">Я ознакомлен(а) с <a target="_blank" href="https://cloud.mail.ru/public/8B4L/1hycfS3uL">Политика конфиденциальности</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-buy page none" back-page="main-select">
+            <div class="main-buy__container">
+                <span class="main-buy__text">Выберите подписку!</span>
+                <div id="firstButton" class="main-buy__button">Действие подписки: <span class="date"></span> </div>
+                <div class="main-buy__button" price="169" m="1">Оформить 169 ₽ / месяц</div>
+                <!-- <div class="main-buy__button" price="656" m="6">Подключить за 656 руб. / 6 месяцев</div> -->
+                <div class="main-buy__button finish" price="790" m="12">Оформить 790 ₽ / год</div>
+            </div>
+            <div class="main-buy__quest container">
+                <div class="main-buy__item none">
+                    <div class="main-buy__item__title">Вопрос номер 1</div>
+                    <div class="main-buy__item__descr none">Ответ номер 1 ... ответ</div>
+                    <svg width="60" height="46" viewBox="0 0 60 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.9979 43.6207C51.5113 46.7931 55.6016 46.7931 58.115 43.6207C60.6283 40.4483 60.6283 35.2853 58.115 32.1129L34.5585 2.37931C32.0452 -0.793103 27.9548 -0.793103 25.4415 2.37931L1.88501 32.1129C-0.628337 35.2853 -0.628337 40.4483 1.88501 43.6207C4.39836 46.7931 8.48871 46.7931 11.0021 43.6207L30 19.641L48.9979 43.6207Z" />
+                    </svg>
+                    <!-- <svg width="15" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.4433 7.65994C12.0281 8.21166 12.9799 8.21166 13.5647 7.65994C14.1495 7.10821 14.1495 6.21031 13.5647 5.65858L8.08336 0.487524C7.49854 -0.0642006 6.54676 -0.0642006 5.96193 0.487524L0.480612 5.65858C-0.104215 6.21031 -0.104215 7.10821 0.480612 7.65994C1.06544 8.21166 2.01722 8.21166 2.60204 7.65994L7.02265 3.48955L11.4433 7.65994Z" fill="#C4C3C3" fill-opacity="0.45"/>
+                    </svg>   -->
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="main-category page none" back-page="main-select">
+            <div class="category_wrapper">
+                <div class="category_up"><span>%s</span></div>
+                <div class="category_list">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="main-select page">
+            <div class="container">
+                <div class="select-wrapper">
+                    <div class="select-text">Начните покупать выгодно!</div>
+                    <div class="select-flex">
+                        
+                        <span><img selectButton="true" step="-1" platform="2" id="wb" class="select-img" src="img/wb.jpg" alt=""><span class="text">Wildberries</span></span>
+                        <span><img selectButton="true" step="-1" platform="1" id="ozon" class="select-img" src="img/ozon.jpg" alt=""><span class="text">OZON</span></span>
+                        <span><img selectButton="true" step="-1" platform="3" id="lamoda" class="select-img" src="img/lamoda.jpg" alt=""><span class="text">Lamoda</span></span>
+                        
+                    </div>
+                    <div class="select-flex">
+                        <span><img selectButton="true" step="-1" platform="0" id="letual" class="select-img" src="img/letual.jpg" alt=""><span class="text">ЛЭТУАЛЬ</span></span>
+                        <span class="opacity0"><img selectButton="true" step="-1" platform="0" id="letual" class="select-img" src="img/letual.jpg" alt=""><span class="text">ЛЭТУАЛЬ</span></span>
+                        <span class="opacity0"><img selectButton="true" step="-1" platform="0" id="letual" class="select-img" src="img/letual.jpg" alt=""><span class="text">ЛЭТУАЛЬ</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-catalog page none" back-page="main-category">
+            <div class="arrow">
+                <div class="arrow-inner">...</div>
+            </div>
+            <div class="search">
+                <div class="search__panel">
+                    <div class="search__input">
+                        <input type="text" placeholder="Поиск товаров">
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.875 2.12506C5.38254 2.12506 4.89491 2.22205 4.43994 2.41051C3.98497 2.59896 3.57157 2.87519 3.22335 3.22341C2.87513 3.57163 2.59891 3.98502 2.41045 4.43999C2.222 4.89496 2.125 5.3826 2.125 5.87506C2.125 6.36751 2.222 6.85515 2.41045 7.31012C2.59891 7.76509 2.87513 8.17849 3.22335 8.52671C3.57157 8.87493 3.98497 9.15115 4.43994 9.33961C4.89491 9.52806 5.38254 9.62506 5.875 9.62506C6.86956 9.62506 7.82339 9.22997 8.52665 8.52671C9.22991 7.82345 9.625 6.86962 9.625 5.87506C9.625 4.8805 9.22991 3.92667 8.52665 3.22341C7.82339 2.52014 6.86956 2.12506 5.875 2.12506ZM0.875 5.87506C0.87503 5.07765 1.06578 4.29182 1.43133 3.58313C1.79688 2.87445 2.32662 2.26348 2.97636 1.8012C3.62609 1.33892 4.37697 1.03874 5.16633 0.925722C5.95568 0.812701 6.76062 0.890114 7.51397 1.1515C8.26732 1.41288 8.94723 1.85066 9.49695 2.42829C10.0467 3.00593 10.4503 3.70667 10.6741 4.47203C10.8978 5.23739 10.9353 6.04517 10.7834 6.82797C10.6315 7.61076 10.2945 8.34587 9.80062 8.97193L12.5625 11.6782C12.6212 11.7356 12.668 11.8041 12.7002 11.8796C12.7324 11.9552 12.7495 12.0363 12.7503 12.1184C12.7512 12.2005 12.7359 12.282 12.7053 12.3582C12.6747 12.4344 12.6293 12.5039 12.5719 12.5626C12.5144 12.6212 12.446 12.668 12.3704 12.7003C12.2949 12.7325 12.2138 12.7495 12.1316 12.7504C12.0495 12.7513 11.968 12.736 11.8918 12.7053C11.8156 12.6747 11.7462 12.6294 11.6875 12.5719L8.91 9.84881C8.16909 10.4147 7.28472 10.7622 6.35675 10.852C5.42877 10.9419 4.49417 10.7704 3.65848 10.3572C2.82278 9.94385 2.11929 9.30514 1.62743 8.51313C1.13558 7.72112 0.874955 6.80737 0.875 5.87506Z" fill="green"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="products__list fullpading">
+                    <div class="products__item template">
+                        <div class="products__item__img">
+                            <img src="img/template.png" alt="" class="original">
+                            <div class="products__item__sale">
+                                48%
+                            </div>
+                            <img class="like none" like="true" src="img/like.png" alt="">
+                            <img class="like none" like="false" src="img/like2.png" alt="">
+                        </div>
+                        <div class="products__item__price">
+                            <div class="products__item__price__sale">4 000 ₽</div>
+                            <div class="products__item__price__original">16 000 ₽</div>
+                        </div>
+                        <div class="products__item__name">Спортивный костюм IHOMELUX большой размер</div>
+                        <div class="products__item__descr">
+                            <div class="products__item__rating">
+                                <img width="16px" height="16px" src="img/star.png" alt="">
+                                <span>4.8</span>
+                            </div>
+                            <div class="products__item__reviews">
+                                <img width="16px" height="16px" src="img/review.png" alt="">
+                                <span>118</span>
+                            </div>
+                        </div>
+                        <a href="https://yandex.ru" class="products__item__url">Открыть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="downpanel">
         <div class="downpanel__inner">
             <div class="downpanel__list">
-                <div class="downpanel__item">
+                <div class="downpanel__item active" currentSection="shops" openSection="shops">
                     <svg width="20px" height="20px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="downpanel__item__icon">
                         <path d="M39.8883 20.5469C39.7811 20.8077 39.5991 21.031 39.3652 21.1886C39.1313 21.3462 38.8559 21.431 38.5738 21.4324H34.2876V35.7152C34.2876 36.8516 33.836 37.9414 33.0321 38.745C32.2283 39.5486 31.1381 40 30.0013 40H24.2863C23.9073 40 23.5439 39.8495 23.276 39.5817C23.008 39.3138 22.8575 38.9505 22.8575 38.5717V30.0021C22.8575 29.6233 22.707 29.26 22.439 28.9921C22.1711 28.7243 21.8077 28.5738 21.4288 28.5738H18.5712C18.1923 28.5738 17.8289 28.7243 17.561 28.9921C17.293 29.26 17.1425 29.6233 17.1425 30.0021V38.5717C17.1425 38.9505 16.992 39.3138 16.724 39.5817C16.4561 39.8495 16.0927 40 15.7137 40H9.99871C8.86192 40 7.77169 39.5486 6.96785 38.745C6.16402 37.9414 5.71244 36.8516 5.71244 35.7152V21.4324H1.42617C1.14409 21.431 0.868748 21.3462 0.634832 21.1886C0.400915 21.031 0.218895 20.8077 0.111709 20.5469C0.00229586 20.2868 -0.0275975 20.0001 0.025801 19.723C0.0791995 19.446 0.213497 19.1909 0.411748 18.9901L18.9856 0.422482C19.1184 0.288611 19.2764 0.182356 19.4505 0.109844C19.6246 0.0373326 19.8114 0 20 0C20.1886 0 20.3754 0.0373326 20.5495 0.109844C20.7236 0.182356 20.8816 0.288611 21.0144 0.422482L39.5883 18.9901C39.7865 19.1909 39.9208 19.446 39.9742 19.723C40.0276 20.0001 39.9977 20.2868 39.8883 20.5469Z"/>
                     </svg>    
                     <div class="downpanel__item__text">Главная</div>
                 </div>
-                <div class="downpanel__item">
+                <div class="downpanel__item" sub="true" currentSection="search" openSection="search">
                     <svg width="20px" height="20px" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" class="downpanel__item__icon">
                         <path d="M1.00054 17.2244C1.07208 26.1194 8.27307 33.2704 17.0902 33.2024C20.9016 33.1731 24.3851 31.8016 27.1137 29.5342L38.1734 40.517C38.8286 41.168 39.877 41.1599 40.5219 40.499C41.1667 39.8381 41.1583 38.7805 40.5028 38.1298L29.4433 27.1469C31.6475 24.3588 32.9519 20.8234 32.9209 16.9785C32.8495 8.0836 25.6483 0.932562 16.8312 1.00048C8.01413 1.0684 0.929082 8.33771 1.00054 17.2244ZM29.6054 17.004C29.6621 24.0461 24.0439 29.8038 17.0633 29.8577C10.0829 29.9115 4.37264 24.2409 4.31621 17.1989C4.25956 10.1567 9.87753 4.39906 16.8582 4.34529C23.8388 4.2915 29.5488 9.96192 29.6054 17.004Z" stroke-width="0.5"/>
                     </svg>                        
                     <div class="downpanel__item__text">Поиск</div>
                 </div>
-                <div class="downpanel__item">
+                <div class="downpanel__item" openSection="favor" currentSection="favor">
+                    <svg width="20px" height="20px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="downpanel__item__icon">
+                        <path d="M19.9325 40C19.2982 40 18.6638 39.7635 18.4523 39.2904L2.80398 20.1311C-1.00237 15.4004 -1.00237 8.06779 3.22691 3.57363C5.34155 1.20828 8.30204 -0.210927 11.474 0.0256078C14.4345 0.262143 17.395 1.91789 19.2982 4.51977L19.9325 5.46591L20.7784 4.51977C22.6816 1.91789 25.6421 0.262143 28.6026 0.0256078C31.5631 -0.210927 34.735 1.20828 36.8497 3.57363C40.8675 8.06779 41.0789 15.4004 37.2726 20.1311L21.6243 39.2904C21.2013 39.7635 20.5669 40 19.9325 40ZM10.8396 4.51977C8.93643 4.51977 7.45619 5.46591 6.1874 6.64858C3.64984 9.487 3.64984 13.7446 5.97594 16.8196L19.9325 34.0866L33.8892 16.8196C36.2153 13.9812 36.2153 9.487 33.6777 6.64858C32.4089 5.22938 30.5057 4.28324 28.6026 4.51977C26.6994 4.51977 25.0077 5.70244 23.9504 7.35819L21.6243 10.6697C20.7784 11.8524 19.0867 11.8524 18.2408 10.6697L15.9147 7.35819C14.646 5.70244 12.9542 4.75631 11.0511 4.51977H10.8396Z"/>
+                    </svg>
+                    <div class="downpanel__item__text">Избранное</div>
+                </div>
+                <div class="downpanel__item" onMessage="Чат/Канал">
                     <svg width="20px" height="20px" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" class="downpanel__item__icon">
                         <path d="M20.9791 0.75C9.85024 0.75 0.75 8.89351 0.75 18.9565C0.75 26.4941 5.89829 33.1977 13.6138 35.8935V40.0706C13.6138 40.2649 13.6586 40.4571 13.7451 40.6295C13.8317 40.802 13.958 40.9504 14.1142 41.0593C14.2706 41.1682 14.4515 41.2336 14.6403 41.2473C14.8291 41.261 15.0171 41.2224 15.1866 41.1364C15.1867 41.1364 15.1867 41.1364 15.1868 41.1364L23.2486 37.05C33.5034 36.0371 41.25 28.3071 41.25 18.9565C41.25 8.89304 32.1305 0.75 20.9791 0.75ZM22.863 34.7206C22.7308 34.7323 22.6023 34.7695 22.4834 34.8298L15.816 38.2098V35.0235C15.816 35.0235 15.816 35.0235 15.816 35.0235C15.816 34.7715 15.7407 34.5243 15.5987 34.3196C15.4564 34.1145 15.2537 33.9618 15.0184 33.8896C7.78359 31.6705 2.95213 25.6595 2.95213 18.9565C2.95213 10.2493 11.0086 3.10847 20.9791 3.10847C30.9732 3.10847 39.0479 10.2498 39.0479 18.9565C39.0479 27.0875 32.1172 33.8854 22.863 34.7206Z" stroke-width="0.5"/>
                         <path d="M14.2878 15.5884C13.7115 15.5884 13.1482 15.775 12.669 16.1245C12.1898 16.4741 11.8163 16.971 11.5957 17.5523C11.3751 18.1336 11.3173 18.7733 11.4297 19.3905C11.5421 20.0076 11.8195 20.5745 12.227 21.0196C12.6344 21.4646 13.1536 21.7677 13.7188 21.8905C14.284 22.0134 14.8699 21.9505 15.4024 21.7099C15.9349 21.4692 16.39 21.0615 16.7103 20.5384C17.0306 20.0153 17.2017 19.4003 17.2019 18.771C17.2013 17.9273 16.8941 17.1183 16.3478 16.5216C15.8014 15.9249 15.0606 15.5892 14.2878 15.5884ZM14.2878 20.0952C14.0482 20.0952 13.8139 20.0176 13.6146 19.8722C13.4153 19.7269 13.26 19.5203 13.1682 19.2785C13.0765 19.0368 13.0524 18.7708 13.0991 18.5141C13.1458 18.2575 13.2612 18.0217 13.4306 17.8366C13.6 17.6515 13.8158 17.5254 14.0509 17.4742C14.2859 17.4231 14.5296 17.4492 14.751 17.5492C14.9725 17.6492 15.1618 17.8186 15.2951 18.0361C15.4283 18.2536 15.4996 18.5093 15.4997 18.771C15.4991 19.1216 15.3711 19.4576 15.144 19.7054C14.9168 19.9531 14.6089 20.0925 14.2878 20.0928V20.0952Z"/>
@@ -186,8 +488,8 @@
                     </svg>                        
                     <div class="downpanel__item__text">Чат/канал</div>
                 </div>
-                <div class="downpanel__item">
-                    <img width="20px" height="20px" src="img/downpanel/profile.png" alt="" class="downpanel__item__icon"
+                <div class="downpanel__item" openSection="main" currentSection="main">
+                    <img width="20px" height="20px" src="img/downpanel/profile.png" alt="" class="downpanel__item__icon avatar-profile"
                     style="border-radius: 50%;">
                     <div class="downpanel__item__text">Профиль</div>
                 </div>
@@ -197,11 +499,6 @@
     <div id="log">log2</div>
     <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
     </div>
-
-
-
-
-
     
     <script>window.onerror = function(msg, url, linenumber) {
         ('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
@@ -211,8 +508,8 @@
         /* ------------ GENERATION API JS -------- */
         var isCatalogOpen   = false;
         const URL           = 'https://124699124.online:85/';
-        const list          = document.querySelector('.products__list');
-        var count           = 70;
+        const list          = document.querySelector('section[name="shops"] .products__list');
+        var count           = 200;
         var nextProducts    = () => {};
         var backProducts    = () => {};
         var lastProducts    = () => {};
@@ -222,7 +519,8 @@
         /* ------------___________________-------- */
 
         /* ------------ SEARCH JS ---------------- */
-        const input         = document.querySelector('.search__input input');
+        const input         = document.querySelector('.search .search__input input');
+        const inputSearch   = document.querySelector('.search_2 .search__input input');
         const catalogid     = undefined; 
         const search        = undefined;
         /* ------------___________________-------- */
@@ -237,21 +535,30 @@
 
         /* ------------ INDEX-CATALOG JS ---------------- */
         const ELEMENT_ARROW         = document.querySelector('.arrow');
-        const ELEMENT_ARROW_INNER   = document.querySelector('.arrow-inner'); 
-        const CATALOG_URL           = 'https://124699124.online:85/'
+        const ELEMENT_ARROW_INNER   = document.querySelector('.arrow-inner');
+        const CATALOG_URL           = 'https://124699124.online:85/';
+        /* ------------___________________-------- */
+
+        /* ------------ INDEX-CATALOG JS ---------------- */
+        const listFavor          = document.querySelector('section[name="favor"] .products__list');
+        const listSearch         = document.querySelector('section[name="search"] .products__list');
         /* ------------___________________-------- */
 
     </script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="js/script.js"></script>
-    
-
     <script type="text/javascript" src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script>
     <script type="text/javascript" src="js/catalog/search.js"></script>
     <script type="text/javascript" src="js/catalog/generation-api.js"></script>
     <script type="text/javascript" src="js/catalog/autoloader.js"></script>
     <script type="text/javascript" src="js/catalog/telegram-listener.js"></script>
     <script type="text/javascript" src="js/catalog/test.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/favor/showProductsFavor.js"></script>
+    <script type="text/javascript" src="js/helper/showFaq.js"></script>
+    <script type="text/javascript" src="js/startWeb.js"></script>
+    <script type="text/javascript" src="js/promocode/index.js"></script>
     <script defer type="text/javascript" src="js/catalog/index.js"></script>
 </body>
 </html>

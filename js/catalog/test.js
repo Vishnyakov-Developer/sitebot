@@ -1,6 +1,5 @@
 const testProductsShow = async function (from, limit, catalogid, search = '', prepend = false) {
 
-    // console.log(from, limit, catalogid);
     
     const products = (await axios({
         method: 'GET',

@@ -24,8 +24,13 @@
   color: rgb(185, 185, 185);
   gap: 5px;
 }
+.downpanel .downpanel__inner .downpanel__list .downpanel__item.active {
+  fill: white;
+  color: white;
+}
 .downpanel .downpanel__inner .downpanel__list .downpanel__item .downpanel__item__icon {
   align-self: center;
+  cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
   width: 23.5px;

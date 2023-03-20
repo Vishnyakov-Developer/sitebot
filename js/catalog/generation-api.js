@@ -1,6 +1,26 @@
 /* Вывод данных по API и генерация товаров по списку */
 
+// ⬇️ Добавить продукт в избранное по клику
+document.addEventListener('click', async (ctx) => {
+    const element = ctx.target;
+    
+    if(element.classList.contains('like')) {
+        const product = element.parentNode.parentNode;
+        const link = element.getAttribute('like') == 'true' ? CATALOG_URL + 'del_favor' : CATALOG_URL + 'add_favor';
+        console.log(USER_ID);
+        await axios({
+            method: 'GET',
+            url: link,
+            params: {
+                userid: USER_ID,
+                url: product.querySelector('.products__item__url').href
+            }
+        });
 
+        product.querySelector('.like.none').classList.remove('none');
+        element.classList.add('none');
+    }
+})
 
 const getCountProducts = async function(catalogid, search = '') {
     const result = (await axios({
@@ -17,7 +37,16 @@ const getCountProducts = async function(catalogid, search = '') {
 
 const showProducts = async function (from, limit, catalogid, search = '', prepend = false) {
 
-    console.log('show_products... | from: ', from);
+    const favors = (await axios({
+        method: 'GET',
+        url: CATALOG_URL + 'get_favor',
+        params: {
+            userid: USER_ID
+        }
+    })).data;
+
+    console.log(favors);    
+
     
     const products = (await axios({
         method: 'GET',
@@ -29,14 +58,24 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
             catalogid: catalogid,
             search: search
         }
-    })).data;
+    })).data.map(product => {
+        for(let i = 0; i<favors.length; i++) {
+            if(product.url == favors[i].product_url) {
+                product.like = true;
+                console.log('OOOK');
+                return product;
+            }
+        }
 
+        product.like = false;
+        return product;
+    });
     
     if(prepend == true) {
         products.reverse();
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index));
+        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like));
     } else {
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index));
+        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like));
     }
     
     
@@ -88,7 +127,7 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         nextProducts = () => {};
         clearProducts(500);
 
-        await showProducts(parseInt(countProducts)-limit, limit, catalogid, search, false);
+        await showProducts(parseInt(countProducts)-limit, count, catalogid, search, false);
         document.documentElement.scrollTop = document.documentElement.scrollHeight;
     }
     
@@ -121,7 +160,7 @@ function clearProducts(count, startWithEnd = false) {
     
 }
 
-function appendProduct(image, name, rate, reviews, url, prepend = false, index = 0) {
+function appendProduct(image, name, rate, reviews, url, prepend = false, index = 0, like = false) {
     let block = list.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -134,6 +173,13 @@ function appendProduct(image, name, rate, reviews, url, prepend = false, index =
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
     block.querySelector('.products__item__url').href = url;
+
+    if(like == true) {
+        block.querySelector('.like[like="true"]').classList.remove('none');
+    } else {
+        block.querySelector('.like[like="false"]').classList.remove('none');
+    }
+
     block.setAttribute('index', index);
 
     list.querySelectorAll('.products__item:not(.template)').forEach((item, index) => {

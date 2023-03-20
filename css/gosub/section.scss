@@ -1,0 +1,67 @@
+section[name="gosub"] {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 9px 2px;
+    font-family: Inter Tight;
+    color: var(--tg-theme-text-color);
+    .gosub__title {
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+    }
+    .gosub__descr {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 400;
+        opacity: 0.61;
+    }
+    .gosub__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .gosub__item {
+            &.sale {
+                position: relative;
+                &::after {
+                    content: 'Выгодно';
+                    padding: 7px 14px;
+                    background: #E43658;
+                    color: white;
+                    font-size: 10px;
+                    font-weight: 800;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    border-radius: 8px;
+                }
+            }
+            text-align: center;
+            border-radius: 25px;
+            color: var(--tg-theme-text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 6px;
+            height: 155px;
+            background: var(--tg-theme-secondary-bg-color);
+            padding: 10px 18px;
+            font-size: 19px;
+            .gosub__item__button {
+                background: #F3CE7B;
+                border-radius: 10px;
+                color: black;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .gosub__item__descr {
+                font-size: 12px;
+                opacity: 0.61;
+            }
+            .left {
+                text-align: left;
+            }
+        }
+    }
+}

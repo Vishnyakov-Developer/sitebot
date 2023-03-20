@@ -1,0 +1,110 @@
+.mainsec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Inter Tight;
+}
+.mainsec .mainsec__help {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.mainsec .mainsec__help .mainsec__img img {
+  width: 105px;
+  height: 105px;
+}
+.mainsec .mainsec__help .mainsec__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+  color: var(--tg-theme-text-color);
+}
+.mainsec .mainsec__help .mainsec__text .one {
+  font-size: 15px;
+}
+.mainsec .mainsec__help .mainsec__text .two {
+  font-size: 12px;
+  opacity: 0.6;
+}
+.mainsec .mainsec__profile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--tg-theme-text-color);
+}
+.mainsec .mainsec__profile .mainsec__profile__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3.1px;
+}
+.mainsec .mainsec__profile .mainsec__profile__text .name {
+  font-size: 15px;
+}
+.mainsec .mainsec__profile .mainsec__profile__text .username {
+  font-size: 12px;
+}
+.mainsec .mainsec__profile .mainsec__profile__text .id {
+  font-size: 12px;
+}
+.mainsec .mainsec__friend {
+  width: 100%;
+  background: #F3CE7B;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: friend 3s forwards;
+}
+.mainsec .mainsec__list {
+  background: var(--tg-theme-secondary-bg-color);
+  border-radius: 10px;
+}
+.mainsec .mainsec__list .mainsec__item {
+  cursor: pointer;
+  position: relative;
+  padding: 9px 13px;
+  color: var(--tg-theme-text-color);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.mainsec .mainsec__list .mainsec__item::before {
+  content: "";
+  background: url("../../img/mainsec/arrow_right.png");
+  position: absolute;
+  width: 5px;
+  height: 11px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 30px;
+}
+.mainsec .mainsec__list .mainsec__item:not(:last-child)::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  background: var(--tg-theme-text-color);
+  height: 1px;
+  opacity: 0.33;
+  width: 80%;
+  right: 20px;
+}
+.mainsec .mainsec__list .mainsec__item img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes friend {
+  0% {
+    transform: scaleY(0);
+  }
+  30% {
+    transform: scaleY(0.75deg);
+  }
+  70% {
+    transform: scaleY(0.9);
+  }
+}/*# sourceMappingURL=mainsec.css.map */

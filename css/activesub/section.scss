@@ -1,0 +1,112 @@
+section[name="activesub"] {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 9px 2px;
+    font-family: Inter Tight;
+    color: var(--tg-theme-text-color);
+    .section__name {
+        color: var(--tg-theme-text-color);
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            height: 1px;
+            width: 100%;
+            opacity: 0.43;
+            background: var(--tg-theme-text-color);
+            left: 0;
+        }
+    }
+
+    .section__list {
+        margin-top: 17px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            height: 1px;
+            width: 100%;
+            opacity: 0.43;
+            background: var(--tg-theme-text-color);
+            left: 0;
+        }
+        .section__list__ul {
+            padding: 0 19px;
+            margin: 10px 0;
+        }
+    }
+
+    .section__description {
+        margin: 20px 0;
+        display: flex;
+        font-size: 13.5px;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            height: 1px;
+            width: 100%;
+            opacity: 0.43;
+            background: var(--tg-theme-text-color);
+            left: 0;
+        }
+        .section__description__item {
+            display: flex;
+            flex-direction: column;
+            .grey {
+                opacity: 0.65;
+            }
+            .underline {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+    .activesub__bank {
+        .activesub__bank__button {
+            cursor: pointer;
+            padding: 10px 15px;
+            background: rgb(0, 97, 0);
+            color: white;
+            font-size: 13px;
+            width: 35%;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .activesub__bank__block {
+            margin: 10px 0;
+            padding: 10px 14px;
+            font-size: 14px;
+            background: var(--tg-theme-secondary-bg-color);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 10px;
+            .activesub__bank__block__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                padding: 10px 0;
+                &:not(:last-child)::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -6.5px;
+                    height: 1px;
+                    width: 100%;
+                    opacity: 0.43;
+                    background: var(--tg-theme-text-color);
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+

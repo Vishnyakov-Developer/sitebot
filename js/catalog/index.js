@@ -3,8 +3,6 @@ let timerArrowInner     = undefined;
 
 const startApplication = async function (from, limit, catalogid, search, end = false) {
 
-    console.log('start...');
-
     clearInterval(timerApplication);
     timerApplication = setTimeout(() => {
         const scrollElement = document.querySelector('.search');
@@ -28,7 +26,6 @@ const startApplication = async function (from, limit, catalogid, search, end = f
                     }
                 }
             } catch(e) {
-                console.log(e);
             }
             
         });

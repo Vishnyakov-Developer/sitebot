@@ -1,0 +1,75 @@
+.helper__container {
+  margin: 25px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.helper__container .helper__item {
+  position: relative;
+  cursor: pointer;
+  color: var(--tg-theme-text-color);
+  padding: 5px 10px 10px 0;
+  font-family: ABeeZee;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.helper__container .helper__item svg {
+  fill: var(--tg-theme-text-color);
+  position: absolute;
+  width: 17px;
+  height: 10px;
+  right: 1px;
+  transition: 0.5s all;
+  transform: rotate(180deg);
+  top: 25%;
+  opacity: 0.4;
+}
+.helper__container .helper__item.prependItem .helper__item__title {
+  max-width: 100%;
+}
+.helper__container .helper__item.prependItem svg {
+  display: none;
+}
+.helper__container .helper__item:not(:last-child) {
+  border-bottom: 1px solid var(--tg-theme-text-color);
+}
+.helper__container .helper__item.active {
+  opacity: 1;
+}
+.helper__container .helper__item.active svg {
+  transition: 0.5s all;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.helper__container .helper__item.active .helper__item__title {
+  opacity: 1;
+  color: var(--tg-theme-text-color);
+}
+.helper__container .helper__item.prependItem {
+  opacity: 0.6;
+  border: none;
+}
+.helper__container .helper__item .helper__item__title {
+  max-width: 90%;
+  position: relative;
+  opacity: 0.7;
+}
+.helper__container .helper__item .helper__item__title.prepend {
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.helper__container .helper__item .helper__item__title.prepend::after {
+  display: none;
+}
+.helper__container .helper__item .helper__item__descr {
+  max-width: 90%;
+  font-size: 13.4px;
+  padding: 10px 0;
+  font-family: ABeeZee;
+  font-size: 16px;
+  opacity: 1;
+  margin: 10px 0;
+}/*# sourceMappingURL=quest-items.css.map */

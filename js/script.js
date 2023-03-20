@@ -1,5 +1,4 @@
 //
-
 window.onerror = function(msg, url, linenumber) {
     alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
     return true;
@@ -20,7 +19,6 @@ const getUrlParameter = function getUrlParameter(sParam) {
     }
     return false;
 };
-console.log('123');
 
 
 let tg = window.Telegram.WebApp;
@@ -58,7 +56,6 @@ const start = async () => {
             document.querySelector('.let.sub.main-panel__wrapper__button').classList.add('none');
         }
     } catch (e) {
-        console.log(e);
         log(JSON.stringify(e));
     }
     
@@ -100,7 +97,6 @@ const start = async () => {
             }
         }))
     } catch(e) {
-        console.log(e);
     }
 
 
@@ -145,7 +141,6 @@ currentPlatform,
 currentCatalog;
 
 document.addEventListener('click', async event => {
-    console.log(event);
     if(event.target.getAttribute('linker') != null) {
         const cID = event.target.getAttribute('linker');
         windowCatalog(cID);
@@ -174,7 +169,6 @@ document.addEventListener('click', async event => {
                 tg.close();
                 return;
             } else if(user.end*1000 > Date.now()) {
-                console.log('step' ,event.target.getAttribute('step'));
                 openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));    
             }
             
@@ -252,7 +246,6 @@ function openCatalog(catalogid, platformid) {
     openPage('main-category');
 
     const catalog = catalogs[catalogid];
-    console.log(catalog);
     try {
         document.querySelector('.category_up span').textContent = catalog?.up_name || catalog.name;
     } catch {
@@ -260,7 +253,6 @@ function openCatalog(catalogid, platformid) {
     }
     
     createList(catalogid);
-    console.log('catalogid = ', catalogid);
     
     
 }
@@ -299,7 +291,6 @@ function createList(catalogid) {
             catalogBlock.setAttribute('step', catalog.catalogId);
             catalogBlock.setAttribute('platform', catalog.platform);
         }
-        console.log(isHaveChild);
 
         catalogElement.appendChild(catalogBlock);
     })
@@ -375,7 +366,6 @@ document.querySelector('#firstButton').addEventListener('click', async () => {
         user: JSON.stringify(tg.initDataUnsafe.user),
         message: '7 дней подписки бесплатно'
     }));
-    console.log('test');
     tg.close();
 });
 
@@ -436,6 +426,18 @@ Telegram.WebApp.onEvent('mainButtonClicked', async function(){
 });
 
 Telegram.WebApp.onEvent('backButtonClicked', function(){
+    try {
+        stopApplication();
+    } catch (e) {}
+    
+    if(currentSection != sections.shops) {
+        for(let section in sections) {
+            if(currentSection == sections[section]) {
+                backButtonHandl[section]();
+                return true;
+            }
+        }
+    }
     // if(returnButton != null) {
     //     // openCatalog(-1, event.target.getAttribute('return'))
     //     firstSection.classList.remove('none');

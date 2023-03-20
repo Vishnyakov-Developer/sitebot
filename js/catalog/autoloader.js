@@ -4,7 +4,6 @@ let autoloaderInterval = undefined;
 
 function stopAutoLoader() {
     clearInterval(autoloaderInterval);
-    console.log('authoLoaderInterval is stopped.');
     clearTimeout(timerPage);
     clearTimeout(timerPageBack);
 }
@@ -27,7 +26,7 @@ function autoloaderStart() {
             timerPage = undefined;
         }
     
-        if(scroll < scrollDrop) {
+        if(scroll < 9000) {
             
             if(timerPageBack == undefined) {
                 timerPageBack = setTimeout(async () => {
