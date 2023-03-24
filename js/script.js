@@ -161,17 +161,7 @@ document.addEventListener('click', async event => {
     }
     if(event.target.getAttribute('step') != null) {
         if(event.target.getAttribute('platform') != null) {
-            if(user.end*1000 < Date.now()) {
-                await fetch(URL + 'message?' + new URLSearchParams({
-                    user: JSON.stringify(tg.initDataUnsafe.user),
-                    message: 'Для просмотра каталога приобретите подписку или возьми пробный *период 7 дней*'
-                }));
-                tg.close();
-                return;
-            } else if(user.end*1000 > Date.now()) {
-                openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));    
-            }
-            
+            openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));    
         } else {
             if(user.end*1000 > Date.now()) {
                 openCatalog(event.target.getAttribute('step'));

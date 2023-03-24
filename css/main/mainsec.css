@@ -15,6 +15,14 @@
   width: 105px;
   height: 105px;
 }
+.mainsec .mainsec__help .mainsec__img svg {
+  width: 105px;
+  height: 105px;
+  fill: var(--tg-theme-text-color);
+}
+.mainsec .mainsec__help .mainsec__img svg path[stroke=white] {
+  stroke: var(--tg-theme-text-color) !important;
+}
 .mainsec .mainsec__help .mainsec__text {
   display: flex;
   flex-direction: column;
@@ -55,7 +63,7 @@
   text-align: center;
   border-radius: 15px;
   cursor: pointer;
-  animation: friend 3s forwards;
+  color: inherit !important;
 }
 .mainsec .mainsec__list {
   background: var(--tg-theme-secondary-bg-color);

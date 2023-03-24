@@ -12,7 +12,7 @@ const showProductsFavor = async () => {
     console.log(products);
 
     for(let i = 0; i<products.length; i++) {
-        appendProductFavor(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true);
+        appendProductFavor(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse);
         console.log(i);
     }
 }
@@ -50,7 +50,7 @@ const showProductsSearch = async (text = '') => {
     });
 
     for(let i = 0; i<products.length; i++) {
-        appendProductSearch(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like);
+        appendProductSearch(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse);
         console.log(i);
     }
 }
@@ -75,7 +75,7 @@ const clearProductsSearch = async () => {
     })
 }
 
-function appendProductFavor(image, name, rate, reviews, url, index = 0, like = false) {
+function appendProductFavor(image, name, rate, reviews, url, index = 0, like = false, date) {
     let block = listFavor.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -88,6 +88,10 @@ function appendProductFavor(image, name, rate, reviews, url, index = 0, like = f
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
     block.querySelector('.products__item__url').href = url;
+
+    block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
+    block.setAttribute('date', date);
+    block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:MM');
 
     if(like == true) {
         block.querySelector('.like[like="true"]').classList.remove('none');
@@ -111,7 +115,8 @@ function appendProductFavor(image, name, rate, reviews, url, index = 0, like = f
     listFavor.prepend(block);
 }
 
-function appendProductSearch(image, name, rate, reviews, url, index = 0, like = false) {
+function appendProductSearch(image, name, rate, reviews, url, index = 0, like = false, date) {
+    
     let block = listSearch.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -124,6 +129,9 @@ function appendProductSearch(image, name, rate, reviews, url, index = 0, like = 
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
     block.querySelector('.products__item__url').href = url;
+    block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
+    block.setAttribute('date', date);
+    block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:MM');
 
     if(like == true) {
         block.querySelector('.like[like="true"]').classList.remove('none');

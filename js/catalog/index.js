@@ -24,6 +24,7 @@ const startApplication = async function (from, limit, catalogid, search, end = f
                     if(parseInt(block.getAttribute('index')) > parseInt(watchCount)) {
                         setWatch(USER_ID, catalogid, parseInt(block.getAttribute('index'))+1);
                     }
+                    document.querySelector('.products__date .inner').textContent = block.getAttribute('date_string');
                 }
             } catch(e) {
             }

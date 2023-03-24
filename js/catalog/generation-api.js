@@ -73,9 +73,9 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
     
     if(prepend == true) {
         products.reverse();
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like));
+        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse));
     } else {
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like));
+        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse));
     }
     
     
@@ -160,7 +160,7 @@ function clearProducts(count, startWithEnd = false) {
     
 }
 
-function appendProduct(image, name, rate, reviews, url, prepend = false, index = 0, like = false) {
+function appendProduct(image, name, rate, reviews, url, prepend = false, index = 0, like = false, date) {
     let block = list.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -173,6 +173,10 @@ function appendProduct(image, name, rate, reviews, url, prepend = false, index =
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
     block.querySelector('.products__item__url').href = url;
+
+    block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
+    block.setAttribute('date', date);
+    block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:MM');
 
     if(like == true) {
         block.querySelector('.like[like="true"]').classList.remove('none');
@@ -199,6 +203,5 @@ function appendProduct(image, name, rate, reviews, url, prepend = false, index =
         list.appendChild(block);
     }
 }
-
 
 /* Вывод данных по API и генерация товаров по списку */

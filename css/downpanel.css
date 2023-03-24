@@ -1,7 +1,9 @@
 .downpanel {
   height: 52px;
   width: 100vw;
-  background: rgb(78, 78, 78);
+  position: relative;
+  z-index: 200;
+  background: var(--tg-theme-bg-color);
   position: fixed;
   bottom: 0;
 }
@@ -20,13 +22,13 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  fill: rgb(185, 185, 185);
-  color: rgb(185, 185, 185);
+  color: var(--tg-theme-text-color);
+  fill: var(--tg-theme-text-color);
+  opacity: 0.5;
   gap: 5px;
 }
 .downpanel .downpanel__inner .downpanel__list .downpanel__item.active {
-  fill: white;
-  color: white;
+  opacity: 1;
 }
 .downpanel .downpanel__inner .downpanel__list .downpanel__item .downpanel__item__icon {
   align-self: center;

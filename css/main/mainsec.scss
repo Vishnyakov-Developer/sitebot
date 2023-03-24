@@ -14,6 +14,14 @@
                 width: 105px;
                 height: 105px;
             }
+            svg {
+                width: 105px;
+                height: 105px;
+                fill: var(--tg-theme-text-color); 
+                path[stroke="white"] {
+                    stroke: var(--tg-theme-text-color) !important;
+                }
+            }
         }
         .mainsec__text {
             display: flex;
@@ -57,7 +65,9 @@
         text-align: center;
         border-radius: 15px;
         cursor: pointer;
-        animation: friend 3s forwards;
+        color: inherit !important;
+        
+        // animation: friend 3s forwards;
     }
 
     .mainsec__list {

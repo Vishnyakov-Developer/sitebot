@@ -67,7 +67,32 @@ const openSection = async function (section) {
     const prevSection = currentSection;
     currentSection = section;
     handlerSection(section, prevSection);
+    closeModal();
+}
+
+let timerActiveOpacity = undefined;
+const elementOpacity   = document.querySelector('.products__date');
+window.onscroll = () => {
     
+    elementOpacity.classList.add('active');
+    clearTimeout(timerActiveOpacity);
+    timerActiveOpacity = setTimeout(() => {
+        elementOpacity.classList.remove('active');
+    }, 2000)
+}
+
+const sendCloseMessage = async function (message) {
+    const link = CATALOG_URL + 'message';
+    await axios({
+        method: 'GET',
+        url: link,
+        params: {
+            user: JSON.stringify(tg.initDataUnsafe.user),
+            message: message
+        }
+    });
+    tg.close();
+    return true;
 }
 
 const closeMessage = async function (nameMessage) {
@@ -119,6 +144,20 @@ document.querySelectorAll(`[openSection]`).forEach(block => {
         openSection(section);
     })
 })
+
+// ⬇️ Открытие модального окна по привязанному атрибуту openModal
+document.body.addEventListener('click', ctx => {
+    const element = ctx.target;
+    if(!element.getAttribute('openModal')) {
+        return true;
+    }
+
+    closeModal();
+    openModal(element.getAttribute('openModal'));
+})
+document.querySelectorAll('[openModal]').forEach(block => {
+
+});
 
 // ⬇️ Закрытие WebApp с последующим выводом сообщения бота
 document.querySelectorAll(`[closeMessage]`).forEach(block => {

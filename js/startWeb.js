@@ -37,25 +37,56 @@ async function webApplicationStart() {
         }
 
 
-        document.querySelectorAll('[sub]').forEach(block => {
-            if(user.end < Date.now()/1000) {
-                if(block.getAttribute('sub') == 'true') {
-                    block.classList.add('none');
-                } else {
-                    block.classList.remove('none');   
-                }
-            } else {
-                if(block.getAttribute('sub') == 'true') {
-                    block.classList.remove('none');
-                } else {
-                    block.classList.add('none');   
-                }
-            }
-        })
+        updateElementsForTags();    
+
+        document.querySelectorAll('a[href="ref"]').forEach(element => {
+            element.setAttribute('href', `https://telegram.me/share/url?url=Ekatalog_life_bot.t.me?start=${user.id}`);
+        });
+
+        setInterval(() => {
+            updateElementsForTags();
+        }, 670);
 
     }, 1200);
 
     
+}
+
+// ⬇ Индивидуально скрывает/показывает определенные блоки
+const updateElementsForTags = () => {
+    document.querySelectorAll('[sub]').forEach(block => {
+        if(user.end < Date.now()/1000) {
+            if(block.getAttribute('sub') == 'true') {
+                block.classList.add('none');
+            } else {
+                block.classList.remove('none');   
+            }
+        } else {
+            if(block.getAttribute('sub') == 'true') {
+                block.classList.remove('none');
+            } else {
+                block.classList.add('none');   
+            }
+        }
+    });
+
+    document.querySelectorAll('[demo]').forEach(block => {
+        if(user.demo == 0) {
+            if(block.getAttribute('demo') == 'false') {
+                block.classList.remove('none');
+            } else {
+                block.classList.add('none');
+            }
+        } else {
+            if(block.getAttribute('demo') == 'true') {
+                block.classList.remove('none');
+            } else {
+                block.classList.add('none');
+            }
+        }
+    });  
+
+    return true;
 }
 
 // ⤵️ Запуск WEB впервые или нет
