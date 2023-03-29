@@ -1,0 +1,13 @@
+.stats {
+  margin-top: 30px;
+}
+.stats .stats__text {
+  padding: 5px 10px;
+  border: 1px solid silver;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 200px;
+}/*# sourceMappingURL=stats.css.map */

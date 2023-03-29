@@ -1,0 +1,67 @@
+.main__absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 25px;
+  border: 2px solid silver;
+  border-radius: 5px;
+  background-color: azure;
+  color: black;
+  text-decoration: none;
+}
+
+.main__panel {
+  padding: 25px 0;
+  width: 100%;
+  text-align: center;
+  background-color: cornsilk;
+  display: flex;
+  justify-content: center;
+}
+.main__panel .main__picker {
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+.main__panel .main__picker .picker {
+  text-align: center;
+}
+.main__panel .main__picker:focus {
+  border: none;
+  outline: none;
+}
+.main__panel .main__panel__container {
+  display: flex;
+}
+.main__panel .main__raz {
+  background: wheat;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.main__panel .main__buttons {
+  margin: 20px auto 0 auto;
+  display: flex;
+}
+.main__panel .main__buttons .main__button {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 1px silver solid;
+  cursor: pointer;
+}
+.main__panel .main__buttons .main__button.active {
+  background: antiquewhite;
+}
+.main__panel .main__buttons .main__button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.main__panel .main__buttons .main__button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.main__panel .main__buttons .main__button:hover {
+  transition: all 0.5s;
+  opacity: 0.77;
+  color: brown;
+}/*# sourceMappingURL=main-panel.css.map */
