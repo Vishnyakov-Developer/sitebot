@@ -7,6 +7,12 @@ section[name=promocode] {
   padding: 9px 2px;
   font-family: Inter Tight;
 }
+@media (max-width: 359px) {
+  section[name=promocode] {
+    max-width: inherit;
+    width: 85%;
+  }
+}
 section[name=promocode] .section__name {
   color: var(--tg-theme-text-color);
   position: relative;
@@ -56,12 +62,22 @@ section[name=promocode] .promocode .promocode__block .promocode__button {
   border-radius: 10px;
   cursor: pointer;
 }
+@media (max-width: 350px) {
+  section[name=promocode] .promocode .promocode__block .promocode__button {
+    padding: 7px 4px;
+    margin-left: 4px;
+  }
+}
 section[name=promocode] .promocode .promocode__block .promocode__text {
   color: var(--tg-theme-text-color);
   font-size: 12px;
   text-align: center;
   width: 80%;
   margin-top: 15px;
+}
+section[name=promocode] .promocode .promocode__block .promocode__text a {
+  text-decoration: underline;
+  color: inherit;
 }
 section[name=promocode] .promocode .promocode__block .promocode__aftertext {
   font-size: 10px;

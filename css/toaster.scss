@@ -1,0 +1,52 @@
+.toaster {
+    transition: all 4s;
+    &.toaster__none {
+        opacity: 0;
+        transition: all 4s;
+        animation: ani__none 3s forwards;
+    }
+    opacity: 0;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    padding: 5px 10px;
+    width: 80%;
+    color: var(--tg-theme-text-color);
+    font-family: Inter;
+    margin: 0 auto;
+    z-index: 1000;
+    background-color: rgba(48, 48, 48, 0.843);
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    bottom: 15%;
+    left: 7%;
+    border-radius: 10px;
+    animation: ani 3s forwards;
+    .toaster__img {
+        padding: 8px;
+        background: rgba(251, 73, 73, 0.4);
+        border-radius: 5px;
+    }
+    .toaster__right {
+        position: absolute;
+        right: 3%;
+        top: 29%;
+        height: 15px;
+        width: 9px;
+
+    }
+}
+
+@keyframes ani {
+    0% {transform: translateX(-150%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes ani__none {
+    0% {transform: translateX(0); opacity: 1;}
+    99% {transform: translateY(-150%); opacity: 0;}
+    100% {transform: translateY(-150%); opacity: 0; display: none;}
+}

@@ -3,6 +3,9 @@ section[name="gosub"] {
     height: 100%;
     max-width: 350px;
     margin: 0 auto;
+    @media(max-width: 350px) {
+        padding: 9px 0;
+    }
     padding: 9px 2px;
     font-family: Inter Tight;
     color: var(--tg-theme-text-color);
@@ -22,6 +25,7 @@ section[name="gosub"] {
         flex-direction: column;
         gap: 10px;
         .gosub__item {
+            
             &.sale {
                 position: relative;
                 &::after {
@@ -48,12 +52,14 @@ section[name="gosub"] {
             background: var(--tg-theme-secondary-bg-color);
             padding: 10px 18px;
             font-size: 19px;
+            
             .gosub__item__button {
                 background: #F3CE7B;
                 border-radius: 10px;
                 color: black;
                 text-align: center;
                 padding: 10px 0;
+                cursor: pointer;
             }
             .gosub__item__descr {
                 font-size: 12px;
@@ -62,6 +68,14 @@ section[name="gosub"] {
             .left {
                 text-align: left;
             }
+        }
+    }
+    .gosub__usl {
+        font-size: 12px;
+        text-align: center;
+        a {
+            color: inherit !important;
+            text-decoration: underline;
         }
     }
 }

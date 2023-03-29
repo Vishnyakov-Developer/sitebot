@@ -1,5 +1,6 @@
 .mainsec {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -39,6 +40,7 @@
         
     }
     .mainsec__profile {
+        margin-top: 15px;
         display: flex;
         align-items: center;
         gap: 13px;
@@ -66,6 +68,7 @@
         border-radius: 15px;
         cursor: pointer;
         color: inherit !important;
+        font-weight: 600;
         
         // animation: friend 3s forwards;
     }
@@ -73,6 +76,10 @@
     .mainsec__list {
         background: var(--tg-theme-secondary-bg-color);
         border-radius: 10px;
+        font-size: 16.5px;
+        @media(max-width: 350px) {
+            font-size: 14px;
+        }
         .mainsec__item {
             cursor: pointer;
             &::before {
@@ -88,7 +95,6 @@
             }
             position: relative;
             &:not(:last-child) {
-                
                     &::after {
                     content: '';
                     display: flex;
@@ -107,8 +113,8 @@
             align-items: center;
             gap: 16px;
             img {
-                width: 20px;
-                height: 20px;
+                width: 23px;
+                height: 23px;
             }
         }
     }
@@ -124,5 +130,4 @@
     70% {
         transform: scaleY(0.90)
     }
-
-  }
+}

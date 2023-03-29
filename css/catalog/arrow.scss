@@ -19,6 +19,9 @@
 
     top: 83%;
     left: 79%;
+    @media(max-height: 500px) {
+        top: 71%;
+    }
     .arrow-inner {
         width: 50%;
         height: 41%;

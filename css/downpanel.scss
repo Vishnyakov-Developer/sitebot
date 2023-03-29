@@ -19,6 +19,7 @@
             align-items: center;
 
             .downpanel__item {
+                text-align: center;
                 &.active {
                     opacity: 1;
                 }
@@ -26,14 +27,15 @@
                 justify-content: center;
                 flex-direction: column;
                 color: var(--tg-theme-text-color);
-                fill: var(--tg-theme-text-color);
                 opacity: 0.5;
                 gap: 5px;
                 .downpanel__item__icon {
                     align-self: center;
                     cursor: pointer;
                     object-fit: cover;
-
+                    
+                    fill: var(--tg-theme-text-color);
+                    stroke: var(--tg-theme-text-color);
                     width: 23.5px;
                     height: 23.5px;
                 }

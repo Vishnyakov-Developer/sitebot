@@ -7,6 +7,17 @@ section[name=activesub] {
   font-family: Inter Tight;
   color: var(--tg-theme-text-color);
 }
+@media (max-width: 359px) {
+  section[name=activesub] {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 350px) {
+  section[name=activesub] {
+    padding: 9px 0;
+  }
+}
 section[name=activesub] .section__name {
   color: var(--tg-theme-text-color);
   position: relative;
@@ -60,6 +71,7 @@ section[name=activesub] .section__description::after {
 section[name=activesub] .section__description .section__description__item {
   display: flex;
   flex-direction: column;
+  font-size: 15px;
 }
 section[name=activesub] .section__description .section__description__item .grey {
   opacity: 0.65;
@@ -68,12 +80,20 @@ section[name=activesub] .section__description .section__description__item .under
   cursor: pointer;
   text-decoration: underline;
 }
+section[name=activesub] .activesub__bank .activesub__bank__tariff {
+  background-color: #AB9EE0;
+  padding: 10px 20px;
+  margin: 15px auto 0 auto;
+  display: table;
+  border-radius: 10px;
+  cursor: pointer;
+}
 section[name=activesub] .activesub__bank .activesub__bank__button {
   cursor: pointer;
   padding: 10px 15px;
   background: rgb(0, 97, 0);
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   width: 35%;
   text-align: center;
   border-radius: 10px;

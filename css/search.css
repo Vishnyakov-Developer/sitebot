@@ -5,6 +5,11 @@ section[name=search] {
   margin: 0 auto;
   padding: 9px 2px;
 }
+@media (max-width: 350px) {
+  section[name=search] {
+    padding: 9px 0;
+  }
+}
 section[name=search] .search_2 {
   background: var(--tg-theme-bg-color);
 }

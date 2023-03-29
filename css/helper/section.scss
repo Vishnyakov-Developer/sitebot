@@ -9,16 +9,19 @@ section[name="helper"] {
     .section__name {
         color: var(--tg-theme-text-color);
         position: relative;
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -9px;
-            height: 1px;
-            width: 97%;
-            opacity: 0.43;
-            background: var(--tg-theme-text-color);
-            left: 0;
-        }
+        font-weight: 800;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--tg-theme-text-color);
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: -9px;
+        //     height: 1px;
+        //     width: 97%;
+        //     opacity: 0.43;
+        //     background: var(--tg-theme-text-color);
+        //     left: 0;
+        // }
     }
 }
 

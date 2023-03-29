@@ -1,5 +1,5 @@
 .helper__container {
-  margin: 25px auto 0 auto;
+  margin: 10px auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,14 +16,15 @@
   opacity: 0.7;
 }
 .helper__container .helper__item svg {
-  fill: var(--tg-theme-text-color);
+  stroke: var(--tg-theme-text-color);
+  fill: none;
   position: absolute;
   width: 17px;
   height: 10px;
   right: 1px;
   transition: 0.5s all;
   transform: rotate(180deg);
-  top: 25%;
+  top: 7px;
   opacity: 0.4;
 }
 .helper__container .helper__item.prependItem .helper__item__title {

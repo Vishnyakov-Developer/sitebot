@@ -4,4 +4,9 @@ section[name=favor] {
   max-width: 350px;
   margin: 0 auto;
   padding: 9px 2px;
+}
+@media (max-width: 350px) {
+  section[name=favor] {
+    padding: 9px 0;
+  }
 }/*# sourceMappingURL=section.css.map */

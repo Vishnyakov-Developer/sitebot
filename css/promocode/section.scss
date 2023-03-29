@@ -5,7 +5,10 @@ section[name="promocode"] {
     margin: 0 auto;
     padding: 9px 2px;
     font-family: Inter Tight;
-
+    @media(max-width: 359px) {
+        max-width: inherit;
+        width: 85%;
+    }
     .section__name {
         color: var(--tg-theme-text-color);
         position: relative;
@@ -42,6 +45,10 @@ section[name="promocode"] {
                 }
             }
             .promocode__button {
+                @media(max-width: 350px) {
+                    padding: 7px 4px;
+                    margin-left: 4px;
+                }
                 background-color: #326FE0;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 color: white;
@@ -55,6 +62,10 @@ section[name="promocode"] {
                 text-align: center;
                 width: 80%;
                 margin-top: 15px;
+                a {
+                    text-decoration: underline;
+                    color: inherit;
+                }
                 // margin: 10px auto 0 auto;
             }
             .promocode__aftertext {

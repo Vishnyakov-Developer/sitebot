@@ -1,8 +1,15 @@
 section[name="activesub"] {
+    @media(max-width: 359px) {
+        width: 85%;
+        margin: 0 auto;
+    }
     width: 100%;
     height: 100%;
     max-width: 350px;
     margin: 0 auto;
+    @media(max-width: 350px) {
+        padding: 9px 0;
+    }
     padding: 9px 2px;
     font-family: Inter Tight;
     color: var(--tg-theme-text-color);
@@ -60,6 +67,7 @@ section[name="activesub"] {
         .section__description__item {
             display: flex;
             flex-direction: column;
+            font-size: 15px;
             .grey {
                 opacity: 0.65;
             }
@@ -70,12 +78,20 @@ section[name="activesub"] {
         }
     }
     .activesub__bank {
+        .activesub__bank__tariff {
+            background-color: #AB9EE0;
+            padding: 10px 20px;
+            margin: 15px auto 0 auto;
+            display: table;
+            border-radius: 10px;
+            cursor: pointer;
+        }
         .activesub__bank__button {
             cursor: pointer;
             padding: 10px 15px;
             background: rgb(0, 97, 0);
             color: white;
-            font-size: 13px;
+            font-size: 15px;
             width: 35%;
             text-align: center;
             border-radius: 10px;
