@@ -16,7 +16,7 @@ const showFaq = async (clear = false) => {
         const element = listFaq.querySelector('.helper__item').cloneNode(true);
 
         element.querySelector('.helper__item__title').textContent = answ.vopros;
-        element.querySelector('.helper__item__descr').textContent = answ.otvet;
+        element.querySelector('.helper__item__descr').innerHTML = answ.otvet;
 
         listFaq.appendChild(element);
         element.classList.remove('none');

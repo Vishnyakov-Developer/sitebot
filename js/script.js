@@ -22,7 +22,7 @@ const getUrlParameter = function getUrlParameter(sParam) {
 
 
 let tg = window.Telegram.WebApp;
-const USER_ID               = tg.initDataUnsafe.user.id;
+const USER_ID = tg.initDataUnsafe.user.id;
 tg.expand(); 
 let backPage = '';
 let platformButton = null, returnButton = null, stepButton = null;
@@ -47,6 +47,7 @@ const start = async () => {
     try {
         
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
+            // id: 5178264021
             id: tg.initDataUnsafe.user.id
         }), {mode: 'cors'})
         user = await data.json();
@@ -72,6 +73,7 @@ const start = async () => {
             document.querySelector('.main-buy__quest').appendChild(element);
             element.classList.remove('none');
         })
+
 
         const element = document.querySelector('.main-buy__item.none').cloneNode(true);
         element.querySelector('.main-buy__item__title').textContent = "ВОПРОС - ОТВЕТ";
@@ -161,6 +163,8 @@ document.addEventListener('click', async event => {
     }
     if(event.target.getAttribute('step') != null) {
         if(event.target.getAttribute('platform') != null) {
+            currentPlatform = parseInt(event.target.getAttribute('platform'));
+            
             openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));    
         } else {
             if(user.end*1000 > Date.now()) {
@@ -210,11 +214,49 @@ function openPage(page) {
 }
 
 function windowCatalog(catalogid, platform) {
+    if(currentPlatform == '0') {
+        document.querySelectorAll('.section[name="shops"] .products__item__url').forEach(elem => {
+            elem.textContent = 'Летуаль';
+        })
+    } else if(currentPlatform == '1') {
+        document.querySelectorAll('.section[name="shops"] .products__item__url').forEach(elem => {
+            elem.textContent = 'Ozon';
+        })
+    } else if(currentPlatform == '2') {
+        document.querySelectorAll('.section[name="shops"] .products__item__url').forEach(elem => {
+            elem.textContent = 'Wb';
+        })
+    } else if(currentPlatform == '3') {
+        document.querySelectorAll('.section[name="shops"] .products__item__url').forEach(elem => {
+            elem.textContent = 'Lamoda';
+        })
+    }
     startApplication(0, 70, catalogid, '');
     isCatalogOpen = true;
+
+    switch(currentPlatform) {
+        case '2': {
+            document.querySelector('.edittext').textContent = 'WB';
+            break;
+        }
+        case '0': {
+            document.querySelector('.edittext').textContent = 'Летуаль';
+            break;
+        }
+        case '1': {
+            document.querySelector('.edittext').textContent = 'OZON';
+            break;
+        }
+        case '3': {
+            document.querySelector('.edittext').textContent = 'Lamoda';
+            break;
+        }
+    }
 }
 
 function openCatalog(catalogid, platformid) {
+    
+
     hidePanel();
     currentCatalog = catalogid;
     currentPlatform = platformid;
@@ -230,6 +272,27 @@ function openCatalog(catalogid, platformid) {
         catalogElement.removeChild(cat);
     })
 
+    if(catalogid != '-1') {
+        switch(currentPlatform) {
+            case '2': {
+                document.querySelector('.edittext').textContent = 'Каталог WB';
+                break;
+            }
+            case '0': {
+                document.querySelector('.edittext').textContent = 'Каталог Летуаль';
+                break;
+            }
+            case '1': {
+                document.querySelector('.edittext').textContent = 'Каталог OZON';
+                break;
+            }
+            case '3': {
+                document.querySelector('.edittext').textContent = 'Каталог Lamoda';
+                break;
+            }
+        }
+    }
+
     // firstSection.classList.add('none');
     // categorySection.classList.remove('none');
 
@@ -240,6 +303,27 @@ function openCatalog(catalogid, platformid) {
         document.querySelector('.category_up span').textContent = catalog?.up_name || catalog.name;
     } catch {
         document.querySelector('.category_up span').textContent = 'Категории'
+    }
+
+    if(catalogid == '-1') {
+        switch(currentPlatform) {
+            case '0': {
+                document.querySelector('.category_up span').textContent = 'Категории Летуаль';
+                break;
+            }
+            case '1': {
+                document.querySelector('.category_up span').textContent = 'Категории OZON';
+                break;
+            }
+            case '2': {
+                document.querySelector('.category_up span').textContent = 'Категории WB';
+                break;
+            }
+            case '3': {
+                document.querySelector('.category_up span').textContent = 'Категории Ламода';
+                break;
+            }
+        }
     }
     
     createList(catalogid);
@@ -298,13 +382,13 @@ function createList(catalogid) {
 
     if(catalogid == -1) {
         if(currentPlatform == 0) {
-            catalogBlock.setAttribute('linker', '-1');
+            catalogBlock.setAttribute('linker', '0');
         } else if(currentPlatform == 1) {
-            catalogBlock.setAttribute('linker', '-2');
+            catalogBlock.setAttribute('linker', '-1');
         } else if(currentPlatform == 2) {
-            catalogBlock.setAttribute('linker', '-3');
+            catalogBlock.setAttribute('linker', '-2');
         } else if(currentPlatform == 3) {
-            catalogBlock.setAttribute('linker', '-4');
+            catalogBlock.setAttribute('linker', '-3');
         }
         catalogBlock.setAttribute('selectbutton', 'true');
         
@@ -383,8 +467,6 @@ document.querySelectorAll('.main-buy__button').forEach(button => {
 })
 
 Telegram.WebApp.onEvent('mainButtonClicked', async function(){
-    
-    
 
 	const form = document.querySelector('.main-pay__container');
     const check = document.querySelector('#check');
@@ -409,7 +491,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', async function(){
             user: JSON.stringify(user),
             mounth: m,
             price: price,
-            mail: mail.value
+            mail: 'robin32125@bk.ru'
         }))
         tg.close();
     }

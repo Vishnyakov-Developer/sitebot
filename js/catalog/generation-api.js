@@ -3,11 +3,14 @@
 // ⬇️ Добавить продукт в избранное по клику
 document.addEventListener('click', async (ctx) => {
     const element = ctx.target;
+
+    if(element.getAttribute('like') == 'false') {
+        new Toaster('Добавленно в избранное', 3000);
+    }
     
     if(element.classList.contains('like')) {
         const product = element.parentNode.parentNode;
         const link = element.getAttribute('like') == 'true' ? CATALOG_URL + 'del_favor' : CATALOG_URL + 'add_favor';
-        console.log(USER_ID);
         await axios({
             method: 'GET',
             url: link,
@@ -45,8 +48,6 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         }
     })).data;
 
-    console.log(favors);    
-
     
     const products = (await axios({
         method: 'GET',
@@ -62,7 +63,6 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         for(let i = 0; i<favors.length; i++) {
             if(product.url == favors[i].product_url) {
                 product.like = true;
-                console.log('OOOK');
                 return product;
             }
         }
@@ -70,14 +70,13 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         product.like = false;
         return product;
     });
-    
+
     if(prepend == true) {
         products.reverse();
         await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse));
     } else {
         await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse));
     }
-    
     
     window.localStorage.setItem('catalog_id', catalogid);
     list.classList.remove('fullpading');

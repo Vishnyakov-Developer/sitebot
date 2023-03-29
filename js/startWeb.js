@@ -17,11 +17,14 @@ async function webApplicationStart() {
         const textSub = user.text_sub.split('|');
 
         if(user.end < Date.now()/1000) {
-            console.log('yes');
             document.querySelector('#end_status').textContent = 'Подписка неактивна';
             document.querySelector('#end_next').textContent = 'отсутствует';
         } else {
-            document.querySelector('#end_next').textContent = getCurrentDate(false);
+            const date = moment(
+                new Date(user.next*1000).toLocaleString("en-US", { timeZone: "Europe/Moscow" })
+            ).format("DD/MM/YYYY");
+            
+            document.querySelector('#end_next').textContent = date;
 
             if(textSub[0] != '.') {
                 document.querySelector('#text_sub_0').textContent = textSub[0];
@@ -29,7 +32,7 @@ async function webApplicationStart() {
                 document.querySelector('#text_sub_2').textContent = textSub[2];
                 document.querySelector('.section__list.none').classList.toggle('none');
             } else {
-                document.querySelector('#end_next').textContent = 'отсутствует';
+                
             }
 
             document.querySelector('.activesub__bank__block__item span').textContent = user.last_card

@@ -1,6 +1,6 @@
 // ⬇️ Получить и вывести в HTML список продукты "избранное"
 const showProductsFavor = async () => {
-    console.log('showProductsFavor');
+    console.log(1);
     const products = (await axios({
         method: 'GET',
         url: CATALOG_URL + 'get_favor_products',
@@ -8,17 +8,15 @@ const showProductsFavor = async () => {
             userid: USER_ID
         }
     })).data;
-
-    console.log(products);
+    console.log(2);
 
     for(let i = 0; i<products.length; i++) {
         appendProductFavor(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse);
-        console.log(i);
     }
+    
 }
 
 const showProductsSearch = async (text = '') => {
-    console.log('showProductsSearch');
     const favors = (await axios({
         method: 'GET',
         url: CATALOG_URL + 'get_favor',
@@ -51,7 +49,6 @@ const showProductsSearch = async (text = '') => {
 
     for(let i = 0; i<products.length; i++) {
         appendProductSearch(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse);
-        console.log(i);
     }
 }
 
