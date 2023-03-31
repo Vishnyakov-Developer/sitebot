@@ -63,6 +63,7 @@ section[name=gosub] .gosub__list .gosub__item .gosub__item__button {
   color: black;
   text-align: center;
   padding: 10px 0;
+  font-weight: 800;
   cursor: pointer;
 }
 section[name=gosub] .gosub__list .gosub__item .gosub__item__descr {

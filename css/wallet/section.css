@@ -38,6 +38,7 @@ section[name=wallet] .wallet__input {
   margin-top: 20px;
 }
 section[name=wallet] .wallet__button {
+  font-weight: 800;
   cursor: pointer;
   background-color: #56B680;
   padding: 15px 0;

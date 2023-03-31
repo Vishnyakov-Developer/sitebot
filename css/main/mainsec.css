@@ -65,7 +65,7 @@
   text-align: center;
   border-radius: 15px;
   cursor: pointer;
-  color: inherit !important;
+  color: var(--tg-theme-text-color) !important;
   font-weight: 600;
 }
 .mainsec .mainsec__list {

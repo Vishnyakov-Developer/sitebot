@@ -154,6 +154,7 @@ body.two {
 }
 
 .main-panel {
+  display: none;
   width: 100%;
   opacity: 1;
   border-radius: 10px;

@@ -177,7 +177,7 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 10px;
-  transition: all 10s;
+  transition: all 4s;
   opacity: 0;
   z-index: 6;
   position: relative;
@@ -260,7 +260,7 @@ body {
   background: var(--tg-theme-button-color);
   border-radius: 8px;
   margin-top: 6px;
-  color: white;
+  color: var(--tg-theme-text-color);
   opacity: 0.9;
   transition: 0.5s all;
 }
