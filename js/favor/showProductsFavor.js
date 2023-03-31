@@ -11,7 +11,7 @@ const showProductsFavor = async () => {
     console.log(2);
 
     for(let i = 0; i<products.length; i++) {
-        appendProductFavor(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse);
+        appendProductFavor(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse, products[i].platform);
     }
     
 }
@@ -48,7 +48,7 @@ const showProductsSearch = async (text = '') => {
     });
 
     for(let i = 0; i<products.length; i++) {
-        appendProductSearch(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse);
+        appendProductSearch(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse, products[i].platform);
     }
 }
 
@@ -72,7 +72,7 @@ const clearProductsSearch = async () => {
     })
 }
 
-function appendProductFavor(image, name, rate, reviews, url, index = 0, like = false, date) {
+function appendProductFavor(image, name, rate, reviews, url, index = 0, like = false, date, platform) {
     let block = listFavor.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -85,6 +85,24 @@ function appendProductFavor(image, name, rate, reviews, url, index = 0, like = f
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
     block.querySelector('.products__item__url').href = url;
+
+    if(platform == '0') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Летуаль';
+        })
+    } else if(platform == '1') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Ozon';
+        })
+    } else if(platform == '2') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Wb';
+        })
+    } else if(platform == '3') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Lamoda';
+        })
+    }
 
     block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
     block.setAttribute('date', date);
@@ -112,7 +130,7 @@ function appendProductFavor(image, name, rate, reviews, url, index = 0, like = f
     listFavor.prepend(block);
 }
 
-function appendProductSearch(image, name, rate, reviews, url, index = 0, like = false, date) {
+function appendProductSearch(image, name, rate, reviews, url, index = 0, like = false, date, platform) {
     
     let block = listSearch.querySelector('.template').cloneNode(true);
     let continueNext = true;
@@ -134,6 +152,24 @@ function appendProductSearch(image, name, rate, reviews, url, index = 0, like = 
         block.querySelector('.like[like="true"]').classList.remove('none');
     } else {
         block.querySelector('.like[like="false"]').classList.remove('none');
+    }
+
+    if(platform == '0') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Летуаль';
+        })
+    } else if(platform == '1') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Ozon';
+        })
+    } else if(platform == '2') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Wb';
+        })
+    } else if(platform == '3') {
+        block.querySelectorAll('.products__item__url').forEach(elem => {
+            elem.textContent = 'Lamoda';
+        })
     }
 
     block.setAttribute('index', index);

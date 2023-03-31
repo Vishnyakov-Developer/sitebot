@@ -82,7 +82,7 @@ window.onscroll = () => {
     clearTimeout(timerActiveOpacity);
     timerActiveOpacity = setTimeout(() => {
         elementOpacity.classList.remove('active');
-    }, 2000)
+    }, 100)
 }
 
 const sendCloseMessage = async function (message) {

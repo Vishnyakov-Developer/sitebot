@@ -17,7 +17,19 @@ const startApplication = async function (from, limit, catalogid, search, end = f
         const watchCount     = await getWatch(USER_ID, catalogid);
         const lengthProducts = parseInt(await getCountProducts(catalogid));
 
-        ELEMENT_ARROW_INNER.textContent = lengthProducts-watchCount;
+        const prodCount = lengthProducts-watchCount;
+        ELEMENT_ARROW_INNER.textContent = prodCount;
+        
+        console.log('e', list.querySelector(`.products__item[index="${lengthProducts-1}"]`), lengthProducts-1)
+        try {
+            if(isVisible(list.querySelector(`.products__item[index="${lengthProducts-1}"]`))) {
+                document.querySelector('.arrow').classList.add('none');
+            } else {
+                document.querySelector('.arrow').classList.remove('none');
+            }
+        } catch {}
+        
+
         list.querySelectorAll('.products__item:not(.template)').forEach((block, index) => {
             try {
                 if(isVisible(block)) {
@@ -92,6 +104,7 @@ async function getWatch(userid, category) {
 }
 
 async function setWatch(userid, category, count) {
+    
     const result = (await axios({
         method: 'GET',
         url: CATALOG_URL + 'set_watch',
