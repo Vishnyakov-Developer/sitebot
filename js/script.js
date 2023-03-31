@@ -22,8 +22,8 @@ const getUrlParameter = function getUrlParameter(sParam) {
 
 
 let tg = window.Telegram.WebApp;
-const USER_ID = 5178264021;
-// const USER_ID = tg.initDataUnsafe.user.id;
+// const USER_ID = 5178264021;
+const USER_ID = tg.initDataUnsafe.user.id;
 tg.expand(); 
 let backPage = '';
 let platformButton = null, returnButton = null, stepButton = null;
@@ -48,8 +48,8 @@ const start = async () => {
     try {
         
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
-            id: 5178264021
-            // id: tg.initDataUnsafe.user.id
+            // id: 5178264021
+            id: tg.initDataUnsafe.user.id
         }), {mode: 'cors'})
         user = await data.json();
         if(user.end < Date.now()/1000) {
