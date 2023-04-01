@@ -36,7 +36,10 @@ var backButtonHandl = {
         tg.BackButton.hide();
     },
     wallet: () => {
-        openSection(sections.main)
+        openSection(sections.gosub)
+    },
+    search: () => {
+        openSection(sections.shops)
     }
     // shops: () => {
     //     tg.BackButton.hide();
@@ -222,6 +225,7 @@ function handlerSection(section, prevSection, argObject = {}) {
             break;
         } 
         case sections.favor: {
+            document.querySelector('.null').classList.remove('none');
             clearProductsFavor();
             showProductsFavor();
             break;

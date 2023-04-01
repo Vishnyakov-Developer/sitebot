@@ -16,7 +16,7 @@ document.addEventListener('click', async (ctx) => {
             url: link,
             params: {
                 userid: USER_ID,
-                url: product.querySelector('.products__item__url').href
+                id: product.getAttribute('product_id')
             }
         });
 
@@ -61,7 +61,7 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         }
     })).data.map(product => {
         for(let i = 0; i<favors.length; i++) {
-            if(product.url == favors[i].product_url) {
+            if(product.id == favors[i].product_id) {
                 product.like = true;
                 return product;
             }
@@ -73,9 +73,9 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
 
     if(prepend == true) {
         products.reverse();
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse));
+        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse, product.id));
     } else {
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse));
+        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id));
     }
     
     window.localStorage.setItem('catalog_id', catalogid);
@@ -159,7 +159,7 @@ function clearProducts(count, startWithEnd = false) {
     
 }
 
-function appendProduct(image, name, rate, reviews, url, prepend = false, index = 0, like = false, date) {
+function appendProduct(image, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id) {
     let block = list.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -188,6 +188,7 @@ function appendProduct(image, name, rate, reviews, url, prepend = false, index =
         block.querySelector('.like[like="false"]').classList.remove('none');
     }
 
+    block.setAttribute('product_id', id);
     block.setAttribute('index', index);
 
     list.querySelectorAll('.products__item:not(.template)').forEach((item, index) => {

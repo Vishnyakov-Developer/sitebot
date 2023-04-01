@@ -21,7 +21,7 @@ async function webApplicationStart() {
         } else {
             const date = moment(
                 new Date(user.next*1000).toLocaleString("en-US", { timeZone: "Europe/Moscow" })
-            ).format("DD/MM/YYYY");
+            ).format("DD.MM.YYYY");
             
             document.querySelector('#end_next').textContent = date;
 
@@ -48,7 +48,11 @@ async function webApplicationStart() {
         setInterval(() => {
             updateElementsForTags();
         }, 670);
-        hideLoad();
+
+        setTimeout(() => {
+            hideLoad();
+        }, 650)
+        
     }, 1200);
 
     

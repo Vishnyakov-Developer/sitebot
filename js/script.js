@@ -145,8 +145,10 @@ currentCatalog;
 
 document.addEventListener('click', async event => {
     if(event.target.getAttribute('linker') != null) {
+        showLoad();
         const cID = event.target.getAttribute('linker');
-        windowCatalog(cID);
+        await windowCatalog(cID);
+        hideLoad();
         return false;
     }
     if(event.target.getAttribute('selectButton') == null) return false;
@@ -214,7 +216,7 @@ function openPage(page) {
 
 }
 
-function windowCatalog(catalogid, platform) {
+async function windowCatalog(catalogid, platform) {
     if(currentPlatform == '0') {
         document.querySelectorAll('.section[name="shops"] .products__item__url').forEach(elem => {
             elem.textContent = 'Летуаль';
@@ -232,7 +234,7 @@ function windowCatalog(catalogid, platform) {
             elem.textContent = 'Lamoda';
         })
     }
-    startApplication(0, 70, catalogid, '');
+    await startApplication(0, 70, catalogid, '');
     isCatalogOpen = true;
 
     switch(currentPlatform) {
@@ -276,19 +278,19 @@ function openCatalog(catalogid, platformid) {
     if(catalogid != '-1') {
         switch(currentPlatform) {
             case '2': {
-                document.querySelector('.edittext').textContent = 'Каталог WB';
+                document.querySelector('.edittext').textContent = 'WB';
                 break;
             }
             case '0': {
-                document.querySelector('.edittext').textContent = 'Каталог Летуаль';
+                document.querySelector('.edittext').textContent = 'Летуаль';
                 break;
             }
             case '1': {
-                document.querySelector('.edittext').textContent = 'Каталог OZON';
+                document.querySelector('.edittext').textContent = 'OZON';
                 break;
             }
             case '3': {
-                document.querySelector('.edittext').textContent = 'Каталог Lamoda';
+                document.querySelector('.edittext').textContent = 'Lamoda';
                 break;
             }
         }
@@ -499,6 +501,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', async function(){
 });
 
 Telegram.WebApp.onEvent('backButtonClicked', function(){
+    document.querySelector('.edittext').textContent = 'Поиск';
     try {
         stopApplication();
     } catch (e) {}

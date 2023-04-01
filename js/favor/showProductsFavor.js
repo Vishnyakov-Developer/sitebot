@@ -10,8 +10,12 @@ const showProductsFavor = async () => {
     })).data;
     console.log(2);
 
+    if(products.length > 0) {
+        document.querySelector('.null').classList.add('none');
+    }
+
     for(let i = 0; i<products.length; i++) {
-        appendProductFavor(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse, products[i].platform);
+        appendProductFavor(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse, products[i].platform, products[i].id);
     }
     
 }
@@ -37,7 +41,7 @@ const showProductsSearch = async (text = '') => {
         }
     })).data.map(product => {
         for(let i = 0; i<favors.length; i++) {
-            if(product.url == favors[i].product_url) {
+            if(product.id == favors[i].product_id) {
                 product.like = true;
                 return product;
             }
@@ -48,7 +52,7 @@ const showProductsSearch = async (text = '') => {
     });
 
     for(let i = 0; i<products.length; i++) {
-        appendProductSearch(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse, products[i].platform);
+        appendProductSearch(products[i].image, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse, products[i].platform, products[i].id);
     }
 }
 
@@ -72,7 +76,7 @@ const clearProductsSearch = async () => {
     })
 }
 
-function appendProductFavor(image, name, rate, reviews, url, index = 0, like = false, date, platform) {
+function appendProductFavor(image, name, rate, reviews, url, index = 0, like = false, date, platform, id) {
     let block = listFavor.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -85,7 +89,7 @@ function appendProductFavor(image, name, rate, reviews, url, index = 0, like = f
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
     block.querySelector('.products__item__url').href = url;
-
+    block.setAttribute('product_id', id);
     if(user.channelMember == 0 && user.countsub > 1) {
         block.querySelector('.products__item__url').href = '#';
         block.querySelector('.products__item__url').setAttribute('openModal', 'gochannel');
@@ -135,7 +139,7 @@ function appendProductFavor(image, name, rate, reviews, url, index = 0, like = f
     listFavor.prepend(block);
 }
 
-function appendProductSearch(image, name, rate, reviews, url, index = 0, like = false, date, platform) {
+function appendProductSearch(image, name, rate, reviews, url, index = 0, like = false, date, platform, id) {
     
     let block = listSearch.querySelector('.template').cloneNode(true);
     let continueNext = true;
@@ -163,6 +167,8 @@ function appendProductSearch(image, name, rate, reviews, url, index = 0, like = 
     } else {
         block.querySelector('.like[like="false"]').classList.remove('none');
     }
+
+    block.setAttribute('product_id', id);
 
     if(platform == '0') {
         block.querySelectorAll('.products__item__url').forEach(elem => {
