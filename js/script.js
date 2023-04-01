@@ -38,7 +38,7 @@ function log(str) {
 let user = {};
 
 const start = async () => {
-
+    showLoad();
     const argumentReturn = getUrlParameter('return');
 
     if(argumentReturn != false) {
@@ -563,6 +563,16 @@ Telegram.WebApp.onEvent('backButtonClicked', function(){
     }
     
 });
+
+function showLoad() {
+    document.querySelector('.loader').classList.remove('none');
+    return true;
+}
+
+function hideLoad() {
+    document.querySelector('.loader').classList.add('none');
+    return true;
+}
 
 const catalogs = [
     {

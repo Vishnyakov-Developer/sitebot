@@ -1,5 +1,4 @@
 async function webApplicationStart() {
-
     document.querySelector('.mainsec__item.friend').href = `https://telegram.me/share/url?url=Ekatalog_life_bot.t.me?start=${USER_ID}`;
     isWebApplicationStarted();
 
@@ -49,7 +48,7 @@ async function webApplicationStart() {
         setInterval(() => {
             updateElementsForTags();
         }, 670);
-
+        hideLoad();
     }, 1200);
 
     

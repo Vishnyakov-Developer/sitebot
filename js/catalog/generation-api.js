@@ -177,6 +177,11 @@ function appendProduct(image, name, rate, reviews, url, prepend = false, index =
     block.setAttribute('date', date);
     block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:MM');
 
+    if(user.channelMember == 0 && user.countsub > 1) {
+        block.querySelector('.products__item__url').href = '#';
+        block.querySelector('.products__item__url').setAttribute('openModal', 'gochannel');
+    }
+
     if(like == true) {
         block.querySelector('.like[like="true"]').classList.remove('none');
     } else {

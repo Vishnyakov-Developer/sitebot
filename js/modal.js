@@ -1,16 +1,18 @@
 let currentModal = undefined;
 
-document.querySelector('.modal').addEventListener('click', (ctx) => {
-    const element = ctx.target;
-
-    if(element.classList.contains('modal')) {
-        closeModal();
-    }
-
-    if(element.classList.contains('two')) {
-        closeModal();
-    }
-});
+document.querySelectorAll('.modal').forEach(e => {
+    e.addEventListener('click', (ctx) => {
+        const element = ctx.target;
+    
+        if(element.classList.contains('modal')) {
+            closeModal();
+        }
+    
+        if(element.classList.contains('two')) {
+            closeModal();
+        }
+    });
+})
 
 function closeModal() {
     try {

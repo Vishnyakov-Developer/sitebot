@@ -148,15 +148,23 @@ document.querySelectorAll(`[openSection]`).forEach(block => {
     })
 })
 
+var elementer = undefined;
 // ⬇️ Открытие модального окна по привязанному атрибуту openModal
 document.body.addEventListener('click', ctx => {
     const element = ctx.target;
-    if(!element.getAttribute('openModal')) {
+    elementer = element;
+    console.log(element);
+    if(!element.getAttribute('openModal') && !element.getAttribute('openmodal')) {
         return true;
     }
-
+    
     closeModal();
-    openModal(element.getAttribute('openModal'));
+    try {
+        openModal(element.getAttribute('openModal'));
+    } catch {
+        openModal(element.getAttribute('openmodal'));
+    }
+    
 })
 document.querySelectorAll('[openModal]').forEach(block => {
 
