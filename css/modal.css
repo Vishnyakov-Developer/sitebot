@@ -1,3 +1,21 @@
+.loader {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(1.5px) brightness(0.8);
+          backdrop-filter: blur(1.5px) brightness(0.8);
+  z-index: 2000;
+}
+.loader > * {
+  margin: 0 auto;
+}
+
 .modal {
   height: 100vh;
   width: 100vw;
