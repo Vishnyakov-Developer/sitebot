@@ -36,10 +36,10 @@ section[name="promocode"] {
                 background: var(--tg-theme-secondary-bg-color);
                 font-size: 14px;
                 text-align: center;
-                color:bisque;
+                color:var(--tg-theme-text-color);
                 border-radius: 10px;
                 &::placeholder {
-                    color:bisque;
+                    color:var(--tg-theme-text-color);
                     font-size: 13px;
                     text-align: center;
                 }

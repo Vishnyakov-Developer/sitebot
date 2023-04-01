@@ -1,3 +1,13 @@
+.null {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--tg-theme-text-color);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
 .toaster {
     transition: all 4s;
     &.toaster__none {

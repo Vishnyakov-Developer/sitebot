@@ -85,6 +85,9 @@ body.two {
   font-family: Karla;
 }
 
+.main-category {
+  background: var(--tg-theme-secondary-bg-color);
+}
 .main-category .category_wrapper {
   color: var(--tg-theme-text-color);
   padding-bottom: 20px;

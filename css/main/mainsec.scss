@@ -61,13 +61,16 @@
         }
     }
     .mainsec__friend {
+        &[href] {
+            color: black !important;
+        }
         width: 100%;
         background: #F3CE7B;
         padding: 10px 0;
         text-align: center;
         border-radius: 15px;
         cursor: pointer;
-        color: var(--tg-theme-text-color) !important;
+        color: white !important;
         font-weight: 600;
         
         // animation: friend 3s forwards;

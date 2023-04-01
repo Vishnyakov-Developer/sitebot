@@ -3,4 +3,8 @@ section[name=main] {
   height: 100%;
   max-width: 350px;
   margin: 0 auto;
+}
+
+section[name=shops] {
+  background: var(--tg-theme-bg-color);
 }/*# sourceMappingURL=section.css.map */

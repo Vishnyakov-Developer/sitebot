@@ -151,10 +151,12 @@ body {
 // }
 
 .main-category {
+    background: var(--tg-theme-secondary-bg-color);
     .category_wrapper {
         color: var(--tg-theme-text-color);
         padding-bottom: 20px;
         text-align: center;
+        
         .category_up {
             &.wb {
                 // background: #481285;    
