@@ -27,6 +27,7 @@
   align-items: center;
 }
 .downpanel .downpanel__inner .downpanel__list .downpanel__item {
+  width: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
