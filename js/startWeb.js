@@ -1,5 +1,5 @@
 async function webApplicationStart() {
-    document.querySelector('.mainsec__item.friend').href = `https://telegram.me/share/url?url=Ekatalog_life_bot.t.me?start=${USER_ID}`;
+    document.querySelector('.mainsec__item.friend').href = `https://telegram.me/share/url?url=eSkidka_bot.t.me?start=${USER_ID}`;
     isWebApplicationStarted();
 
     setTimeout(async () => {
@@ -42,7 +42,7 @@ async function webApplicationStart() {
         updateElementsForTags();    
 
         document.querySelectorAll('a[href="ref"]').forEach(element => {
-            element.setAttribute('href', `https://telegram.me/share/url?url=Ekatalog_life_bot.t.me?start=${user.id}`);
+            element.setAttribute('href', `https://telegram.me/share/url?url=eSkidka_bot.t.me?start=${user.id}`);
         });
 
         setInterval(() => {
