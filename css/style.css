@@ -6,10 +6,6 @@
 body {
   background: var(--tg-theme-bg-color);
 }
-body.two {
-  background: var(--tg-theme-secondary-bg-color);
-}
-
 .center {
   text-align: right;
   -moz-text-align-last: center !important;
