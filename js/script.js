@@ -207,7 +207,7 @@ function openPage(page) {
     }
 
     if(currentPage().classList.contains('main-pay')) {
-        fetch(URL + 'notification?' + new URLSearchParams({
+        fetch(URL + 'notifications?' + new URLSearchParams({
             userid: user.id,
             type: 0,
             date: parseInt(Date.now()/1000)
