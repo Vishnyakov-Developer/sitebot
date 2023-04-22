@@ -10,6 +10,10 @@ var(--tg-theme-button-text-color)
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+#cancel_pan {
+  cursor: pointer;
+}
+
 body {
   padding-bottom: 52px;
 }
@@ -91,7 +95,7 @@ body {
 }
 .main-catalog .search .search__panel .search__input input {
   width: 100%;
-  background: #f2f5f9;
+  background: var(--tg-theme-secondary-bg-color);
   border-radius: 20px;
   border: none;
   height: 38px;
@@ -144,7 +148,7 @@ body {
 }
 .search_2 .search__panel .search__input input {
   width: 100%;
-  background: #f2f5f9;
+  background: var(--tg-theme-secondary-bg-color);
   border-radius: 20px;
   border: none;
   height: 38px;
@@ -368,8 +372,8 @@ body {
   }
 }
 .products .products__list .products__item .products__item__img .like {
-  width: 17px;
-  height: 16px;
+  width: 22px;
+  height: 21px;
   position: absolute;
   top: 8px;
   right: 9px;
