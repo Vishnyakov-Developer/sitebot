@@ -1,6 +1,5 @@
 // ⬇️ Получить и вывести в HTML список продукты "избранное"
 const showProductsFavor = async () => {
-    console.log(1);
     const products = (await axios({
         method: 'GET',
         url: CATALOG_URL + 'get_favor_products',
@@ -8,7 +7,6 @@ const showProductsFavor = async () => {
             userid: USER_ID
         }
     })).data;
-    console.log(2);
 
     if(products.length > 0) {
         document.querySelector('.null').classList.add('none');

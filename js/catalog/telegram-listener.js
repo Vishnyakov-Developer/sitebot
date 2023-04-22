@@ -25,12 +25,14 @@ document.body.addEventListener('click', async ctx => {
         const summa = parseInt(element.getAttribute('summa'));
         const next = parseInt(element.getAttribute('next'));
         const price = parseInt(element.getAttribute('price'));
+        const nextPaymentDays = parseInt(element.getAttribute('nextPaymentDays'));
 
         const data = await fetch(URL + 'payment?' + new URLSearchParams({
             user: JSON.stringify(user),
             end: next+1000*60*60*24*1,
             price: price,
             summa: summa,
+            nextPaymentDays: nextPaymentDays,
             next: next,
             mail: document.querySelector('.wallet__input').value
         }))

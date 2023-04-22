@@ -156,7 +156,6 @@ var elementer = undefined;
 document.body.addEventListener('click', ctx => {
     const element = ctx.target;
     elementer = element;
-    console.log(element);
     if(!element.getAttribute('openModal') && !element.getAttribute('openmodal')) {
         return true;
     }
@@ -239,6 +238,7 @@ function handlerSection(section, prevSection, argObject = {}) {
                     sections.wallet.querySelector('.wallet__button').setAttribute('next', Date.now()+1000*60*60*24*6);
                     sections.wallet.querySelector('.wallet__button').setAttribute('summa', 169);
                     sections.wallet.querySelector('.wallet__button').setAttribute('price', 1);
+                    sections.wallet.querySelector('.wallet__button').setAttribute('nextPaymentDays', 30);
                     break;
                 }
                 case 1: {
@@ -248,6 +248,7 @@ function handlerSection(section, prevSection, argObject = {}) {
                     sections.wallet.querySelector('.wallet__button').setAttribute('next', Date.now()+1000*60*60*24*29);
                     sections.wallet.querySelector('.wallet__button').setAttribute('summa', 169);
                     sections.wallet.querySelector('.wallet__button').setAttribute('price', 169);
+                    sections.wallet.querySelector('.wallet__button').setAttribute('nextPaymentDays', 30);
                     break;
                 }
                 case 2: {
@@ -257,6 +258,7 @@ function handlerSection(section, prevSection, argObject = {}) {
                     sections.wallet.querySelector('.wallet__button').setAttribute('next', Date.now()+1000*60*60*24*364);
                     sections.wallet.querySelector('.wallet__button').setAttribute('summa', 799);
                     sections.wallet.querySelector('.wallet__button').setAttribute('price', 799);
+                    sections.wallet.querySelector('.wallet__button').setAttribute('nextPaymentDays', 365);
                     break;
                 }
             }
