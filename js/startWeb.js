@@ -34,7 +34,12 @@ async function webApplicationStart() {
                 new Date(user.next*1000).toLocaleString("en-US", { timeZone: "Europe/Moscow" })
             ).format("DD.MM.YYYY");
             
-            document.querySelector('#end_next').textContent = date;
+            if(user.next > Date.now()/1000) {
+                document.querySelector('#end_next').textContent = date;
+            } else {
+                document.querySelector('#end_next').textContent = 'отсутствует';
+            }
+            
 
             if(textSub[0] != '.') {
                 document.querySelector('#text_sub_0').textContent = textSub[0];
