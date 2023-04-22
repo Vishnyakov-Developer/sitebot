@@ -25,7 +25,7 @@ document.body.addEventListener('click', async ctx => {
         const summa = parseInt(element.getAttribute('summa'));
         const next = parseInt(element.getAttribute('next'));
         const price = parseInt(element.getAttribute('price'));
-        const nextPaymentDays = parseInt(element.getAttribute('nextpaymentday'));
+        const nextPaymentDays = parseInt(element.getAttribute('nextpaymentdays'));
 
         const data = await fetch(URL + 'payment?' + new URLSearchParams({
             user: JSON.stringify(user),
