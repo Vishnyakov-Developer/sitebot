@@ -18,7 +18,18 @@ async function webApplicationStart() {
         if(user.end < Date.now()/1000) {
             document.querySelector('#end_status').textContent = 'Подписка неактивна';
             document.querySelector('#end_next').textContent = 'отсутствует';
+            
         } else {
+            if(user.pan.length > 5) {
+                document.querySelector('#mycard').innerHTML = `<span>${user.pan}</span><span id="cancel_pan">Отвязать</span>`
+                document.querySelector('#cancel_pan').addEventListener('click', async () => {
+                    await fetch(URL + 'remove_card?' + new URLSearchParams({
+                        user: JSON.stringify(user)
+                    }))
+                    tg.close();
+                })
+            }
+
             const date = moment(
                 new Date(user.next*1000).toLocaleString("en-US", { timeZone: "Europe/Moscow" })
             ).format("DD.MM.YYYY");
