@@ -1,3 +1,12 @@
+input {
+  border: none !important;
+  outline: none !important;
+}
+input:hover {
+  border: none !important;
+  outline: none !important;
+}
+
 .mainsec {
   width: 95%;
   margin: 0 auto;
@@ -99,7 +108,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  right: 30px;
+  right: 14px;
 }
 .mainsec .mainsec__list .mainsec__item:not(:last-child)::after {
   content: "";

@@ -1,3 +1,12 @@
+input {
+    border: none !important;
+    outline: none !important;
+    &:hover {
+        border: none !important;
+        outline: none !important;
+    }
+}
+
 .mainsec {
     width: 95%;
     margin: 0 auto;
@@ -94,7 +103,7 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                right: 30px;
+                right: 14px;
             }
             position: relative;
             &:not(:last-child) {
