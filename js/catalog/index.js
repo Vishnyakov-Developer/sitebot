@@ -92,6 +92,8 @@ function isVisible(elem) {
 
 async function getWatch(userid, category) {
     
+    console.log('getwatch category - ', category);
+
     const result = (await axios({
         method: 'GET',
         url: CATALOG_URL + 'get_watch',
@@ -100,6 +102,7 @@ async function getWatch(userid, category) {
             userid: userid,
         }
     })).data;
+
     return result;
 }
 

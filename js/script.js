@@ -385,13 +385,13 @@ function createList(catalogid) {
 
     if(catalogid == -1) {
         if(currentPlatform == 0) {
-            catalogBlock.setAttribute('linker', '0');
+            catalogBlock.setAttribute('linker', '1000');
         } else if(currentPlatform == 1) {
-            catalogBlock.setAttribute('linker', '-1');
+            catalogBlock.setAttribute('linker', '1001');
         } else if(currentPlatform == 2) {
-            catalogBlock.setAttribute('linker', '-2');
+            catalogBlock.setAttribute('linker', '1002');
         } else if(currentPlatform == 3) {
-            catalogBlock.setAttribute('linker', '-3');
+            catalogBlock.setAttribute('linker', '1003');
         }
         catalogBlock.setAttribute('selectbutton', 'true');
         

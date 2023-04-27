@@ -71,11 +71,13 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         return product;
     });
 
+
+
     if(prepend == true) {
         products.reverse();
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse, product.id));
+        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.views, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse, product.id));
     } else {
-        await products.forEach((product, index) => appendProduct(product.image, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id));
+        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.views, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id));
     }
     
     window.localStorage.setItem('catalog_id', catalogid);
@@ -159,7 +161,7 @@ function clearProducts(count, startWithEnd = false) {
     
 }
 
-function appendProduct(image, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id) {
+function appendProduct(image, price, oldPrice, views, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id) {
     let block = list.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -169,13 +171,27 @@ function appendProduct(image, name, rate, reviews, url, prepend = false, index =
 
     block.querySelector('.products__item__img img').src = image;
     block.querySelector('.products__item__name').textContent = name;
-    block.querySelector('.products__item__rating span').textContent = rate;
-    block.querySelector('.products__item__reviews span').textContent = reviews;
+
+    if(rate == 'undefined') {
+        rate = 0;
+    }
+
+    if(reviews == 'undefined') {
+        reviews = 0;
+    }
+
+    block.querySelector('.products__item__rating span').textContent = rate ?? 0
+    block.querySelector('.products__item__reviews span').textContent = reviews ?? 0;
+    block.querySelector('.products__item__price__sale').textContent = price + ' ₽';
+    block.querySelector('.products__item__price__original').textContent = oldPrice + ' ₽';
     block.querySelector('.products__item__url').href = url;
+    block.querySelector('.views').textContent = views;
+    
+    block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:mm');
+    block.querySelector('.products__item__sale').textContent = parseInt(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
 
     block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
     block.setAttribute('date', date);
-    block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:MM');
 
     if(user.channelMember == 0 && user.countsub > 1) {
         block.querySelector('.products__item__url').href = '#';

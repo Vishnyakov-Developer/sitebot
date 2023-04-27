@@ -31,6 +31,11 @@ document.addEventListener('click', ctx => {
         const block = element.parentElement;
         block.querySelector('.helper__item__descr').classList.toggle('none');
     }
+
+    if(element.tagName == 'svg' && element?.parentElement?.classList?.contains('helper__item')) {
+        const block = element.parentElement;
+        block.querySelector('.helper__item__descr').classList.toggle('none');
+    }
 })
 
 // document.querySelectorAll('.main-buy__item').forEach(item => item.addEventListener('click', () => {

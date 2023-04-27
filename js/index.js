@@ -224,7 +224,6 @@ function handlerSection(section, prevSection, argObject = {}) {
             break;
         } 
         case sections.favor: {
-            document.querySelector('.null').classList.remove('none');
             clearProductsFavor();
             showProductsFavor();
             break;
@@ -264,4 +263,9 @@ function handlerSection(section, prevSection, argObject = {}) {
             }
         }
     }
+}
+
+
+function randomInt(max) {
+    return Math.floor(Math.random() * max+1); // генерация целого числа от 0 до 20000 включительно
 }
