@@ -501,6 +501,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', async function(){
 });
 
 Telegram.WebApp.onEvent('backButtonClicked', function(){
+    document.documentElement.scrollTop = 0;
     document.querySelector('.edittext').textContent = 'Поиск';
     try {
         stopApplication();

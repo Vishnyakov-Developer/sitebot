@@ -37,15 +37,24 @@ async function webApplicationStart() {
             if(user.next > Date.now()/1000) {
                 document.querySelector('#end_next').textContent = date;
             } else {
-                document.querySelector('#end_next').textContent = 'отсутствует';
+                if(user.end > Date.now()/1000) {
+                    const date2 = moment(
+                        new Date(user.end*1000).toLocaleString("en-US", { timeZone: "Europe/Moscow" })
+                    ).format("DD.MM.YYYY");
+                    document.querySelector('#end_next').textContent = date2;
+                    document.querySelector('#does').textContent = `Действие подписки до `
+                } else {
+                    document.querySelector('#end_next').textContent = 'отсутствует';
+                }
             }
             
-
+            console.log(textSub)
             if(textSub[0] != '.') {
+                console.log('TEXTSUB')
                 document.querySelector('#text_sub_0').textContent = textSub[0];
                 document.querySelector('#text_sub_1').textContent = textSub[1];
                 document.querySelector('#text_sub_2').textContent = textSub[2];
-                document.querySelector('.section__list.none').classList.toggle('none');
+                document.querySelector('.section__list.none').classList.remove('none');
             } else {
                 
             }

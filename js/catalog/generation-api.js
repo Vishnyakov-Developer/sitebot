@@ -182,8 +182,8 @@ function appendProduct(image, price, oldPrice, views, name, rate, reviews, url, 
 
     block.querySelector('.products__item__rating span').textContent = rate ?? 0
     block.querySelector('.products__item__reviews span').textContent = reviews ?? 0;
-    block.querySelector('.products__item__price__sale').textContent = price + ' ₽';
-    block.querySelector('.products__item__price__original').textContent = oldPrice + ' ₽';
+    block.querySelector('.products__item__price__sale').textContent = parseInt(price).toLocaleString() + ' ₽';
+    block.querySelector('.products__item__price__original').textContent = parseInt(oldPrice).toLocaleString() + ' ₽';
     block.querySelector('.products__item__url').href = url;
     block.querySelector('.views').textContent = views;
     

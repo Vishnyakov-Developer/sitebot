@@ -16,29 +16,37 @@ const sections = {
 var currentSection = sections.shops;
 var backButtonHandl = {
     favor: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.shops);
         tg.BackButton.hide();
     },
     promocode: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.main);
     },
     activesub: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.main);
     },
     helper: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.main)
     },
     gosub: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.main)
     },
     main: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.shops);
         tg.BackButton.hide();
     },
     wallet: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.gosub)
     },
     search: () => {
+        document.documentElement.scrollTop = 0;
         openSection(sections.shops)
     }
     // shops: () => {

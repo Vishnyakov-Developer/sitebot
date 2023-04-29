@@ -99,8 +99,8 @@ function appendProductFavor(image,  price, oldPrice, views, name, rate, reviews,
     block.querySelector('.products__item__name').textContent = name;
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
-    block.querySelector('.products__item__price__sale').textContent = price + ' ₽';
-    block.querySelector('.products__item__price__original').textContent = oldPrice + ' ₽';
+    block.querySelector('.products__item__price__sale').textContent = parseInt(price).toLocaleString() + ' ₽';
+    block.querySelector('.products__item__price__original').textContent = parseInt(oldPrice).toLocaleString() + ' ₽';
     block.querySelector('.views').textContent = views;
     block.querySelector('.products__item__url').href = url;
     block.setAttribute('product_id', id);
@@ -174,8 +174,8 @@ function appendProductSearch(image, price, oldPrice, views, name, rate, reviews,
     block.querySelector('.products__item__name').textContent = name;
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
-    block.querySelector('.products__item__price__sale').textContent = price + ' ₽';
-    block.querySelector('.products__item__price__original').textContent = oldPrice + ' ₽';
+    block.querySelector('.products__item__price__sale').textContent = parseInt(price).toLocaleString() + ' ₽';
+    block.querySelector('.products__item__price__original').textContent = parseInt(oldPrice).toLocaleString() + ' ₽';
     block.querySelector('.views').textContent = views;
     block.querySelector('.products__item__url').href = url;
     block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))

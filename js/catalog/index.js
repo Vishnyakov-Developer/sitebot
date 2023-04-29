@@ -19,14 +19,27 @@ const startApplication = async function (from, limit, catalogid, search, end = f
 
         const prodCount = lengthProducts-watchCount;
         ELEMENT_ARROW_INNER.textContent = prodCount;
-        
+        console.log('1232131312');
         try {
             if(isVisible(list.querySelector(`.products__item[index="${lengthProducts-1}"]`))) {
                 document.querySelector('.arrow').classList.add('none');
+                console.log('123213131');
             } else {
-                document.querySelector('.arrow').classList.remove('none');
+                console.log('123213131');
+                if(lengthProducts > 0) {
+                    document.querySelector('.arrow').classList.remove('none');
+                } else {
+                    document.querySelector('.arrow').classList.add('none');
+                }
+                
             }
-        } catch {}
+        } catch {
+            if(lengthProducts > 0) {
+                document.querySelector('.arrow').classList.remove('none');
+            } else {
+                document.querySelector('.arrow').classList.add('none');
+            }
+        }
         
 
         list.querySelectorAll('.products__item:not(.template)').forEach((block, index) => {
