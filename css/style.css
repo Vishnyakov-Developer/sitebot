@@ -120,7 +120,7 @@ body {
 }
 .main-category .category_wrapper .category_list .category_list-item {
   position: relative;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 2px solid rgba(158, 158, 158, 0.5568627451);
   width: 100%;
   font-size: 14px;

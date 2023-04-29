@@ -1,9 +1,9 @@
 input {
-  border: none !important;
+  border: 1px solid silver !important;
   outline: none !important;
 }
-input:hover {
-  border: none !important;
+input:active {
+  border: 1px solid silver;
   outline: none !important;
 }
 
@@ -118,8 +118,8 @@ input:hover {
   background: var(--tg-theme-text-color);
   height: 1px;
   opacity: 0.33;
-  width: 80%;
-  right: 20px;
+  width: 82.5%;
+  right: 9px;
 }
 .mainsec .mainsec__list .mainsec__item img {
   width: 23px;

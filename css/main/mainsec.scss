@@ -1,10 +1,15 @@
 input {
-    border: none !important;
+    border: 1px solid silver !important;
     outline: none !important;
-    &:hover {
-        border: none !important;
+    &:active {
+        border: 1px solid silver;
         outline: none !important;
     }
+    
+    // &:hover {
+    //     border: none !important;
+    //     outline: none !important;
+    // }
 }
 
 .mainsec {
@@ -115,8 +120,8 @@ input {
                     background: var(--tg-theme-text-color);
                     height: 1px;
                     opacity: 0.33;
-                    width: 80%;
-                    right: 20px;
+                    width: 82.5%;
+                    right: 9px;
                 }
             }
             padding: 9px 13px;

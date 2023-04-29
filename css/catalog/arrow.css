@@ -1,7 +1,7 @@
 .arrow {
   width: 50px;
   height: 50px;
-  position: sticky;
+  position: fixed;
   background: url("../../img/circle.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +13,7 @@
   /* box-sizing: border-box; */
   /* overflow: -webkit-paged-y; */
   border-radius: 100%;
-  top: 83%;
+  top: 74%;
   left: 79%;
 }
 @media (max-height: 500px) {
