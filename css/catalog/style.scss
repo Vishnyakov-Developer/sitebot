@@ -104,8 +104,8 @@ body {
         width: 100%;
         max-width: 350px;
         margin: 0 auto;
-        top: 0;
-        padding-top: 21px;
+        top: -1.5px;
+        padding-top: 10px;
         padding-bottom: 12px;
         .search__panel {
             .search__input {
@@ -159,8 +159,8 @@ body {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
-    top: 0;
-    padding-top: 21px;
+    top: -1.5px;
+    padding-top: 10px;
     padding-bottom: 12px;
     .search__panel {
         .search__input {
@@ -221,8 +221,8 @@ body {
             width: 80px;
             text-align: center;
             padding: 6.5px 10px;
-            background: var(--tg-theme-text-color);
-            color: var(--tg-theme-secondary-bg-color);
+            background: var(--tg-theme-bg-color);
+            color: var(--tg-theme-button-text-color);
             font-size: 9.5px;
             position: fixed;
             z-index: 5;

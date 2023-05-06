@@ -34,15 +34,18 @@ section[name=promocode] .promocode {
 }
 section[name=promocode] .promocode .promocode__block {
   gap: 15px;
+  width: 47%;
+  max-width: 50%;
 }
 section[name=promocode] .promocode .promocode__block .promocode__input {
-  padding: 9px 10px;
+  padding: 9px 0;
   border: none;
   background: var(--tg-theme-secondary-bg-color);
   font-size: 14px;
   text-align: center;
   color: var(--tg-theme-text-color);
   border-radius: 10px;
+  max-width: 100%;
 }
 section[name=promocode] .promocode .promocode__block .promocode__input::-moz-placeholder {
   color: var(--tg-theme-text-color);
@@ -58,9 +61,13 @@ section[name=promocode] .promocode .promocode__block .promocode__button {
   background-color: #326FE0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: white;
-  padding: 7px 8px;
+  padding: 7px 9px;
+  max-width: 100%;
   border-radius: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 350px) {
   section[name=promocode] .promocode .promocode__block .promocode__button {
@@ -74,6 +81,8 @@ section[name=promocode] .promocode .promocode__block .promocode__text {
   text-align: center;
   width: 80%;
   margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 section[name=promocode] .promocode .promocode__block .promocode__text a {
   text-decoration: underline;

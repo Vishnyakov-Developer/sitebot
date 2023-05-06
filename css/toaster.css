@@ -34,7 +34,7 @@
 .toaster.toaster__none {
   opacity: 0;
   transition: all 4s;
-  animation: ani__none 3s forwards;
+  animation: ani__none 6.5s forwards;
 }
 .toaster .toaster__img {
   padding: 8px;
@@ -64,12 +64,16 @@
     transform: translateX(0);
     opacity: 1;
   }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
   99% {
-    transform: translateY(-150%);
+    transform: translateY(-25%);
     opacity: 0;
   }
   100% {
-    transform: translateY(-150%);
+    transform: translateY(-25%);
     opacity: 0;
     display: none;
   }

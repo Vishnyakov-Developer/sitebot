@@ -1,10 +1,7 @@
 .arrow {
-  width: 50px;
-  height: 50px;
+  width: 38px;
+  height: 38px;
   position: fixed;
-  background: url("../../img/circle.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   z-index: 2;
   right: 11%;
   cursor: pointer;
@@ -13,22 +10,37 @@
   /* box-sizing: border-box; */
   /* overflow: -webkit-paged-y; */
   border-radius: 100%;
+  background: var(--tg-theme-secondary-bg-color);
   top: 74%;
   left: 79%;
+  border: 1.75px solid var(--tg-theme-button-text-color);
+  color: var(--tg-theme-button-text-color);
 }
 @media (max-height: 500px) {
   .arrow {
     top: 71%;
   }
 }
+.arrow .arrow-arrow {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 18%;
+  left: 21%;
+  width: 60%;
+  height: 70%;
+}
+.arrow .arrow-arrow path {
+  fill: var(--tg-theme-button-text-color);
+}
 .arrow .arrow-inner {
-  width: 50%;
-  height: 41%;
+  width: 95%;
+  height: 39%;
   background: rgb(254, 81, 111);
-  border-radius: 46%;
+  border-radius: 45%;
   position: relative;
-  left: 67%;
-  top: -11%;
+  left: 4%;
+  top: -17%;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.21);
   z-index: 0;
   font-size: 9px;
