@@ -201,7 +201,7 @@ body {
   font-size: 9.5px;
   position: fixed;
   z-index: 5;
-  top: 15%;
+  top: 11%;
 }
 .products .products__date.active {
   z-index: 6;
