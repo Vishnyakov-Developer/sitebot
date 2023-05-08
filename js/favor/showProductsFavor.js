@@ -102,9 +102,9 @@ function appendProductFavor(image,  price, oldPrice, views, name, rate, reviews,
     block.querySelector('.products__item__price__sale').textContent = parseInt(price).toLocaleString() + ' ₽';
     block.querySelector('.products__item__price__original').textContent = parseInt(oldPrice).toLocaleString() + ' ₽';
     block.querySelector('.views').textContent = views;
-    block.querySelector('.products__item__url').href = url;
+    block.querySelector('.products__item__url').href = url.replace('//product', '/product');
     block.setAttribute('product_id', id);
-    block.querySelector('.products__item__sale').textContent = parseInt(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
+    block.querySelector('.products__item__sale').textContent = Math.ceil(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
     if(user.channelMember == 0 && user.countsub > 1) {
         block.querySelector('.products__item__url').href = '#';
         block.querySelector('.products__item__url').setAttribute('openModal', 'gochannel');
@@ -137,7 +137,7 @@ function appendProductFavor(image,  price, oldPrice, views, name, rate, reviews,
         block.querySelector('.like[like="false"]').classList.remove('none');
     }
 
-    block.setAttribute('index', index);
+    // block.setAttribute('index', index);
 
     listFavor.querySelectorAll('.products__item:not(.template)').forEach((item, index) => {
         if(item.querySelector('.products__item__url').href == url) {
@@ -177,11 +177,11 @@ function appendProductSearch(image, price, oldPrice, views, name, rate, reviews,
     block.querySelector('.products__item__price__sale').textContent = parseInt(price).toLocaleString() + ' ₽';
     block.querySelector('.products__item__price__original').textContent = parseInt(oldPrice).toLocaleString() + ' ₽';
     block.querySelector('.views').textContent = views;
-    block.querySelector('.products__item__url').href = url;
+    block.querySelector('.products__item__url').href = url.replace('//product', '/product');;
     block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
     block.setAttribute('date', date);
     block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:mm');
-    block.querySelector('.products__item__sale').textContent = parseInt(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
+    block.querySelector('.products__item__sale').textContent = Math.ceil(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
 
     if(user.channelMember == 0 && user.countsub > 1) {
         block.querySelector('.products__item__url').href = '#';
@@ -214,7 +214,7 @@ function appendProductSearch(image, price, oldPrice, views, name, rate, reviews,
         })
     }
 
-    block.setAttribute('index', index);
+    // block.setAttribute('index', index);
 
     listSearch.querySelectorAll('.products__item:not(.template)').forEach((item, index) => {
         if(item.querySelector('.products__item__url').href == url) {

@@ -126,9 +126,21 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
     lastProducts = async () => {
         backProducts = () => {};
         nextProducts = () => {};
-        clearProducts(500);
+        
 
-        await showProducts(parseInt(countProducts)-limit, count, catalogid, search, false);
+        if(parseInt(countProducts)-limit < 0) {
+            console.log(1)
+            // await showProducts(parseInt(countProducts), count, catalogid, search, false);
+            // console.log(parseInt(countProducts), count, catalogid, search, false)
+            document.documentElement.scrollTop = document.documentElement.scrollHeight;
+            
+        } else {
+            console.log(2)
+            clearProducts(500);
+            await showProducts(parseInt(countProducts)-limit, count, catalogid, search, false);
+        }
+
+        
         document.documentElement.scrollTop = document.documentElement.scrollHeight;
     }
     
@@ -184,11 +196,11 @@ function appendProduct(image, price, oldPrice, views, name, rate, reviews, url, 
     block.querySelector('.products__item__reviews span').textContent = reviews ?? 0;
     block.querySelector('.products__item__price__sale').textContent = parseInt(price).toLocaleString() + ' ₽';
     block.querySelector('.products__item__price__original').textContent = parseInt(oldPrice).toLocaleString() + ' ₽';
-    block.querySelector('.products__item__url').href = url;
+    block.querySelector('.products__item__url').href = url.replace('//product', '/product');;
     block.querySelector('.views').textContent = views;
     
     block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:mm');
-    block.querySelector('.products__item__sale').textContent = parseInt(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
+    block.querySelector('.products__item__sale').textContent = Math.ceil(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
 
     block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
     block.setAttribute('date', date);

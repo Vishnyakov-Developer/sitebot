@@ -17,7 +17,10 @@ const startApplication = async function (from, limit, catalogid, search, end = f
         const watchCount     = await getWatch(USER_ID, catalogid);
         const lengthProducts = parseInt(await getCountProducts(catalogid));
 
-        const prodCount = lengthProducts-watchCount;
+        let prodCount = lengthProducts-watchCount;
+        if(prodCount < 0) {
+            prodCount = 0;
+        }
         ELEMENT_ARROW_INNER.textContent = prodCount;
         console.log('1232131312');
         try {
