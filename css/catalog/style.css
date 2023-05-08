@@ -197,7 +197,7 @@ body {
   text-align: center;
   padding: 6.5px 10px;
   background: var(--tg-theme-bg-color);
-  color: var(--tg-theme-button-text-color);
+  color: var(--tg-theme-text-color);
   font-size: 9.5px;
   position: fixed;
   z-index: 5;

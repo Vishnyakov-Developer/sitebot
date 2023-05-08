@@ -98,6 +98,6 @@ section[name=promocode] .promocode .promocode__block .promocode__aftertext.succe
   content: "Активирован";
 }
 section[name=promocode] .promocode .promocode__block .promocode__aftertext.error {
-  color: green;
+  color: red;
   content: "Ошибка";
 }/*# sourceMappingURL=section.css.map */

@@ -17,8 +17,8 @@
     /* overflow: -webkit-paged-y; */
     border-radius: 100%;
     background: var(--tg-theme-secondary-bg-color);
-    top: 74%;
-    left: 79%;
+    top: 81%;
+    left: 86%;
     border: 1.75px solid var(--tg-theme-button-text-color);
     color: var(--tg-theme-button-text-color);
     @media(max-height: 500px) {
@@ -28,7 +28,7 @@
         position: absolute;
         object-fit: cover;
         path {
-            fill: var(--tg-theme-button-text-color);
+            fill: var(--tg-theme-text-color);
         }
         
         top: 18%;
