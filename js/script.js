@@ -234,6 +234,8 @@ async function windowCatalog(catalogid, platform) {
             elem.textContent = 'Lamoda';
         })
     }
+    // zdes
+
     await startApplication(0, 70, catalogid, '');
     isCatalogOpen = true;
 
@@ -401,6 +403,28 @@ function createList(catalogid) {
     // catalogElement.appendChild(catalogBlock);
 }
 
+async function setHistory(catalogId, value) {
+    const favors = (await axios({
+        method: 'GET',
+        url: CATALOG_URL + 'set_hist',
+        params: {
+            userid: USER_ID,
+            catalogId: catalogId,
+            from: value
+        }
+    })).data;
+}
+async function getHistory(catalogId) {
+    return (await axios({
+        method: 'GET',
+        url: CATALOG_URL + 'get_hist',
+        params: {
+            userid: USER_ID,
+            catalogId: catalogId
+        }
+    })).data;
+}
+
 function openPanel(category, end = 0) {
     document.querySelectorAll('.main-panel').forEach(panel => {
         panel.classList.add('none');
@@ -411,7 +435,6 @@ function openPanel(category, end = 0) {
                 dateElement.textContent = dating.toLocaleString();
             })
         }
-
     })
 }
 

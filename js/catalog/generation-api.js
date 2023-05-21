@@ -39,7 +39,7 @@ const getCountProducts = async function(catalogid, search = '') {
 } 
 
 const showProducts = async function (from, limit, catalogid, search = '', prepend = false) {
-
+    setHistory(catalogid, from);
     const favors = (await axios({
         method: 'GET',
         url: CATALOG_URL + 'get_favor',
@@ -75,9 +75,9 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
 
     if(prepend == true) {
         products.reverse();
-        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.views, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse, product.id));
+        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.views, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse, product.id, product.saleProcents, product.change_procents));
     } else {
-        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.views, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id));
+        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.views, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id, product.saleProcents, product.change_procents));
     }
     
     window.localStorage.setItem('catalog_id', catalogid);
@@ -173,9 +173,23 @@ function clearProducts(count, startWithEnd = false) {
     
 }
 
-function appendProduct(image, price, oldPrice, views, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id) {
+function appendProduct(image, price, oldPrice, views, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id, saleOriginal = 0, changeProcents = 0) {
     let block = list.querySelector('.template').cloneNode(true);
     let continueNext = true;
+
+    if(changeProcents != 0) {
+        block.querySelector('.products__item__price__change').classList.remove('none');
+        block.querySelector('.products__item__price__change .value').textContent = `${changeProcents}%`;
+        
+        if(changeProcents > 0) {
+            block.querySelector('.products__item__price__change #tr').style.borderBottom = `9px solid green`;
+        } else {
+            block.querySelector('.products__item__price__change #tr').style.transform = `rotateZ(180deg)`;
+        }
+
+    } else {
+        // return true;
+    }
 
     image.replace('///', '//');
 
@@ -200,7 +214,12 @@ function appendProduct(image, price, oldPrice, views, name, rate, reviews, url, 
     block.querySelector('.views').textContent = views;
     
     block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:mm');
-    block.querySelector('.products__item__sale').textContent = Math.ceil(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
+    if(saleOriginal > 0) {
+        block.querySelector('.products__item__sale').textContent = saleOriginal + '%';
+    } else {
+        block.querySelector('.products__item__sale').textContent = Math.ceil(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
+    }
+    
 
     block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
     block.setAttribute('date', date);
