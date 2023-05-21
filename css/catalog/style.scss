@@ -349,11 +349,24 @@ body {
                 display: flex;
                 align-items: flex-end;
                 gap: 9px;
+                .products__item__price__change {
+                    display: flex;
+                    align-items: center;
+                    gap: 3.5px;
+                    font-size: 10px;
+                    #tr {
+                        width: 0;
+                        height: 0;
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        border-bottom: 9px solid red;
+                    }
+                }
                 .products__item__price__sale {
                     @media(max-width: 350px) {
-                        font-size: 12px;
+                        font-size: 11px;
                     }
-                    font-size: 14px;
+                    font-size: 11px;
                     font-weight: 700;
                 }
                 .products__item__price__original {
