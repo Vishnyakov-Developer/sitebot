@@ -16,7 +16,7 @@ const showProductsFavor = async () => {
     
     for(let i = 0; i<products.length; i++) {
         
-        appendProductFavor(products[i].image, products[i].price, products[i].oldPrice, products[i].views, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse, products[i].platform, products[i].id);
+        appendProductFavor(products[i].image, products[i].price, products[i].oldPrice, products[i].startPrice, products[i].views, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, true, products[i].date_parse, products[i].platform, products[i].id, products[i].saleProcents, products[i].change_procents);
     }
     
 }
@@ -30,7 +30,8 @@ const showProductsSearch = async (text = '') => {
         }
     })).data;
     
-    const startProd = randomInt(20000);
+    // const startProd = randomInt(20000);
+    const startProd = randomInt(0);
 
     const products = (await axios({
         method: 'GET',
@@ -55,7 +56,7 @@ const showProductsSearch = async (text = '') => {
     });
 
     for(let i = 0; i<products.length; i++) {
-        appendProductSearch(products[i].image, products[i].price, products[i].oldPrice, products[i].views, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse, products[i].platform, products[i].id);
+        appendProductSearch(products[i].image, products[i].price, products[i].oldPrice, products[i].startPrice, products[i].views, products[i].name, products[i].rate, products[i].reviews, products[i].url, i+1, products[i].like, products[i].date_parse, products[i].platform, products[i].id, products[i].saleProcents, products[i].change_procents);
     }
 }
 
@@ -79,7 +80,7 @@ const clearProductsSearch = async () => {
     })
 }
 
-function appendProductFavor(image,  price, oldPrice, views, name, rate, reviews, url, index = 0, like = false, date, platform, id) {
+function appendProductFavor(image,  price, oldPrice, startPrice, views, name, rate, reviews, url, index = 0, like = false, date, platform, id, saleOriginal = 0, changeProcents = 0) {
     let block = listFavor.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -94,7 +95,19 @@ function appendProductFavor(image,  price, oldPrice, views, name, rate, reviews,
     }
 
     block.classList.remove('template', 'none');
+    if(changeProcents != 0) {
+        block.querySelector('.products__item__price__change').classList.remove('none');
+        block.querySelector('.products__item__price__change .value').textContent = `${changeProcents}%`;
+        
+        if(changeProcents > 0) {
+            // block.querySelector('.products__item__price__change #tr').style.borderBottom = `9px solid green`;
+        } else {
+            // block.querySelector('.products__item__price__change #tr').style.transform = `rotateZ(180deg)`;
+        }
 
+    } else {
+        // return true;
+    }
     block.querySelector('.products__item__img img').src = image;
     block.querySelector('.products__item__name').textContent = name;
     block.querySelector('.products__item__rating span').textContent = rate;
@@ -103,7 +116,9 @@ function appendProductFavor(image,  price, oldPrice, views, name, rate, reviews,
     block.querySelector('.products__item__price__original').textContent = parseInt(oldPrice).toLocaleString() + ' ₽';
     block.querySelector('.views').textContent = views;
     block.querySelector('.products__item__url').href = url.replace('//product', '/product');
+    block.querySelector('.products__item__url').setAttribute('target', '_blank');
     block.setAttribute('product_id', id);
+    block.querySelector('.products__item__price__tr .value').textContent = ` ${startPrice-price} ₽`;
     block.querySelector('.products__item__sale').textContent = Math.ceil(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
     if(user.channelMember == 0 && user.countsub > 1) {
         block.querySelector('.products__item__url').href = '#';
@@ -153,7 +168,7 @@ function appendProductFavor(image,  price, oldPrice, views, name, rate, reviews,
     listFavor.prepend(block);
 }
 
-function appendProductSearch(image, price, oldPrice, views, name, rate, reviews, url, index = 0, like = false, date, platform, id) {
+function appendProductSearch(image, price, oldPrice, startPrice, views, name, rate, reviews, url, index = 0, like = false, date, platform, id, saleOriginal = 0, changeProcents = 0) {
     
     let block = listSearch.querySelector('.template').cloneNode(true);
     let continueNext = true;
@@ -169,7 +184,19 @@ function appendProductSearch(image, price, oldPrice, views, name, rate, reviews,
     }
 
     block.classList.remove('template', 'none');
+    if(changeProcents != 0) {
+        block.querySelector('.products__item__price__change').classList.remove('none');
+        block.querySelector('.products__item__price__change .value').textContent = `${changeProcents}%`;
+        
+        if(changeProcents > 0) {
+            // block.querySelector('.products__item__price__change #tr').style.borderBottom = `9px solid green`;
+        } else {
+            // block.querySelector('.products__item__price__change #tr').style.transform = `rotateZ(180deg)`;
+        }
 
+    } else {
+        // return true;
+    }
     block.querySelector('.products__item__img img').src = image;
     block.querySelector('.products__item__name').textContent = name;
     block.querySelector('.products__item__rating span').textContent = rate;
@@ -179,6 +206,8 @@ function appendProductSearch(image, price, oldPrice, views, name, rate, reviews,
     block.querySelector('.views').textContent = views;
     block.querySelector('.products__item__url').href = url.replace('//product', '/product');;
     block.setAttribute('date_string', moment(date).locale('ru').format('D MMMM'))
+    block.querySelector('.products__item__url').setAttribute('target', '_blank');
+    block.querySelector('.products__item__price__tr .value').textContent = ` ${startPrice-price} ₽`;
     block.setAttribute('date', date);
     block.querySelector('.products__item__time').textContent = moment(date).locale('ru').format('HH:mm');
     block.querySelector('.products__item__sale').textContent = Math.ceil(100-parseInt(price)/(parseInt(oldPrice)/100)) + '%';
