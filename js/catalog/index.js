@@ -72,6 +72,7 @@ const startApplication = async function (from, limit, catalogid, search, end = f
         return false;
     }
 
+    console.log('from', from);
     await showProducts(from, limit, catalogid, search);
 
     setTimeout(() => {

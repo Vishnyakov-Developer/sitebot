@@ -71,6 +71,8 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         return product;
     });
 
+    console.log(products)
+
 
 
     if(prepend == true) {
