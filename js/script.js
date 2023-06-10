@@ -337,7 +337,7 @@ function openCatalog(catalogid, platformid) {
 }
 
 function createList(catalogid) {
-    const filterCatalogs = catalogs.filter(catalog => (((catalog.parent == catalogid)) && catalog.platform == currentPlatform));
+    const filterCatalogs = catalogs.filter(catalog => (((catalog.parent == catalogid)) && catalog.platform == currentPlatform && catalog?.isWork != 'none'));
     
     
     filterCatalogs.forEach(catalog => {
@@ -1204,7 +1204,7 @@ const catalogs = [
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "1. Женщинам",
+        "name": "Женщинам",
         "channel": "-1779369810",
         "platform": 2,
         "parent": -1,
@@ -1226,28 +1226,16 @@ const catalogs = [
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "2. Блузки и рубашки",
+        "name": "Все подкатегории",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
         "catalogId": 67,
-        "link": "https://t.me/+oI-KJJ2twrw5YTdi",
-        "urls": [
-            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=benefit&cardSize=c516x688&page=1",
-            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=priceup&cardSize=c516x688&page=1",
-            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
-        ],
-        api: 1,
-        catId: 8126,
-        catName: 'bl_shirts',
-        publications: [
-            {channel: '-1817408131', catalogId: 1002}
-        ]
+        
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "3. Женские брюки",
+        "name": "Блузки и рубашки",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1260,15 +1248,17 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8127,
-        catName: 'pants',
+        catId: 8126,
+        catName: 'bl_shirts',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
+            // {catalogId: 1002}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "4. Верхняя одежда",
+        "name": "Женские брюки",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1284,12 +1274,13 @@ const catalogs = [
         catId: 8127,
         catName: 'pants',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "5. Женские джемперы и кардиганы",
+        "name": "Верхняя одежда",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1302,15 +1293,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8130,
-        catName: 'jumpers_cardigans',
+        catId: 8127,
+        catName: 'pants',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "6. Женские джинсы и джеггинсы",
+        "name": "Женские джемперы и кардиганы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1323,15 +1315,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8131,
-        catName: 'jeanst1',
+        catId: 8130,
+        catName: 'jumpers_cardigans',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "7. Комбинезоны",
+        "name": "Женские джинсы и джеггинсы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1344,15 +1337,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8133,
-        catName: 'overalls',
+        catId: 8131,
+        catName: 'jeanst1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "8. Костюмы",
+        "name": "Комбинезоны",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1365,15 +1359,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8134,
-        catName: 'costumes',
+        catId: 8133,
+        catName: 'overalls',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "9. Лонгсливы",
+        "name": "Костюмы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1386,15 +1381,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 9411,
-        catName: 'sweatshirts_hoodies',
+        catId: 8134,
+        catName: 'costumes',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "10. Женские пиджаки и жакеты",
+        "name": "Лонгсливы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1407,15 +1403,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8136,
-        catName: 'blazers_wamuses',
+        catId: 9411,
+        catName: 'sweatshirts_hoodies',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "11. Платья",
+        "name": "Женские пиджаки и жакеты",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1428,15 +1425,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8137,
-        catName: 'dresses',
+        catId: 8136,
+        catName: 'blazers_wamuses',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "12. Толстовки",
+        "name": "Платья",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1449,15 +1447,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8140,
-        catName: 'sweatshirts_hoodies',
+        catId: 8137,
+        catName: 'dresses',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "13. Туники",
+        "name": "Толстовки",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1470,15 +1469,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8141,
+        catId: 8140,
         catName: 'sweatshirts_hoodies',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "14. Футболки и топы",
+        "name": "Туники",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1491,15 +1491,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8142,
-        catName: 'tops_tshirts1',
+        catId: 8141,
+        catName: 'sweatshirts_hoodies',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "15. Халаты",
+        "name": "Футболки и топы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1512,15 +1513,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 128996,
-        catName: 'women_bathrobes',
+        catId: 8142,
+        catName: 'tops_tshirts1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "16. Шорты",
+        "name": "Халаты",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1533,15 +1535,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 10567,
-        catName: 'shorts',
+        catId: 128996,
+        catName: 'women_bathrobes',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "17. Юбки",
+        "name": "Шорты",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1554,15 +1557,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 8143,
-        catName: 'skirts',
+        catId: 10567,
+        catName: 'shorts',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "18. Белье",
+        "name": "Юбки",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1575,14 +1579,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        search: 'Женское%20белье',
+        catId: 8143,
+        catName: 'skirts',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "19. Большие размеры",
+        "name": "Белье",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1595,14 +1601,15 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        search: 'Женская%20одежда%20больших%20размеров',
+        search: 'Женское%20белье',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "20. Будущие мамы",
+        "name": "Большие размеры",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1615,15 +1622,15 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 349,
-        catName: 'moms',
+        search: 'Женская%20одежда%20больших%20размеров',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "21. Для высоких",
+        "name": "Будущие мамы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1636,14 +1643,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        search: 'Женская%20одежда%20для%20высоких',
+        catId: 349,
+        catName: 'moms',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "22. Для невысоких",
+        "name": "Для высоких",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1656,15 +1665,15 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 60897,
-        catName: 'short-tall2',
+        search: 'Женская%20одежда%20для%20высоких',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "23. Одежда для дома",
+        "name": "Для невысоких",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1677,14 +1686,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        search: 'Женская%20домашняя%20одежда',
+        catId: 60897,
+        catName: 'short-tall2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "24. Офис",
+        "name": "Одежда для дома",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1697,15 +1708,15 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 10460,
-        catName: 'office_bigroot',
+        search: 'Женская%20домашняя%20одежда',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "25. Пляжная",
+        "name": "Офис",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1718,15 +1729,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 10043,
-        catName: 'beach1',
+        catId: 10460,
+        catName: 'office_bigroot',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "26. Религиозная",
+        "name": "Пляжная",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1739,15 +1751,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 61439,
-        catName: 'religion',
+        catId: 10043,
+        catName: 'beach1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "27. Для свадьбы",
+        "name": "Религиозная",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1760,15 +1773,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 10016,
-        catName: 'wedding',
+        catId: 61439,
+        catName: 'religion',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "28. Спецодежда и СИЗы",
+        "name": "Для свадьбы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1781,15 +1795,16 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        catId: 7404,
-        catName: 'work_clothes',
+        catId: 10016,
+        catName: 'wedding',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
         "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
-        "name": "29. Подарки",
+        "name": "Спецодежда и СИЗы",
         "channel": "-1779369810",
         "platform": 2,
         "parent": 66,
@@ -1802,16 +1817,39 @@ const catalogs = [
             "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
         ],
         api: 1,
-        search: 'Подарки%20для%20женщин',
+        catId: 7404,
+        catName: 'work_clothes',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
         ]
     },
     {
-        "name": "30. Обувь",
+        "url": "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
+        "name": "Подарки",
+        "channel": "-1779369810",
+        "platform": 2,
+        "parent": 66,
+        "catalogId": 95,
+        "link": "https://t.me/+oI-KJJ2twrw5YTdi",
+        "urls": [
+            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=newly&cardSize=c516x688&page=1",
+            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=benefit&cardSize=c516x688&page=1",
+            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=priceup&cardSize=c516x688&page=1",
+            "https://www.wildberries.ru/catalog/obuv/aksessuary-dlya-obuvi?sort=rate&cardSize=c516x688&page=1",
+        ],
+        api: 1,
+        search: 'Подарки%20для%20женщин',
+        publications: [
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 67}
+        ]
+    },
+    {
+        "name": "Обувь",
         "platform": 2,
         "parent": -1,
-        "catalogId": 95,
+        "catalogId": 96,
         "up_name": "Обувь",
         api: 1,
         publications: [
@@ -1819,292 +1857,339 @@ const catalogs = [
         ]
     },
     {
-        "name": "31. Детская",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 95,
-        "catalogId": 96,
+        "parent": 96,
+        "catalogId": 97,
+        api: 1,
+    },
+    {
+        "name": "Детская",
+        "platform": 2,
+        "parent": 96,
+        "catalogId": 98,
         api: 1,
         catId: 128330,
         catName: 'children_shoes',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 97}
         ]
     },
     {
-        "name": "32. Для новорожденных",
+        "name": "Для новорожденных",
         "platform": 2,
-        "parent": 95,
-        "catalogId": 97,
+        "parent": 96,
+        "catalogId": 99,
         api: 1,
         catId: 8225,
         catName: 'children_shoes',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 97}
         ]
     },
     {
-        "name": "32. Женская",
+        "name": "Женская",
         "platform": 2,
-        "parent": 95,
-        "catalogId": 98,
+        "parent": 96,
+        "catalogId": 100,
         api: 1,
         search: 'Женская%20обувь',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 97}
         ]
     },
     {
-        "name": "33. Мужская",
+        "name": "Мужская",
         "platform": 2,
-        "parent": 95,
-        "catalogId": 99,
+        "parent": 96,
+        "catalogId": 101,
         api: 1,
         catId: 751,
         catName: 'men_shoes',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 97}
         ]
     },
     {
-        "name": "34. Ортопедическая обувь",
+        "name": "Ортопедическая обувь",
         "platform": 2,
-        "parent": 95,
-        "catalogId": 100,
+        "parent": 96,
+        "catalogId": 102,
         api: 1,
         catId: 128335,
         catName: 'shealth1t1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 97}
         ]
     },
     {
-        "name": "35. Аксессуары для обуви",
+        "name": "Аксессуары для обуви",
         "platform": 2,
-        "parent": 95,
-        "catalogId": 101,
+        "parent": 96,
+        "catalogId": 103,
         api: 1,
         catId: 128335,
         catName: 'shoes_accessories1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 97}
         ]
     },
     {
-        "name": "36. Детям",
+        "name": "Детям",
         "platform": 2,
         "parent": -1,
         "up_name": "Детям",
-        "catalogId": 102,
+        "catalogId": 104,
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "37. Для девочек",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 103,
+        "parent": 104,
+        "catalogId": 105,
+        api: 1,
+    },
+    {
+        "name": "Для девочек",
+        "platform": 2,
+        "parent": 104,
+        "catalogId": 106,
         api: 1,
         search: 'Одежда%20для%20девочек',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "38. Для мальчиков",
+        "name": "Для мальчиков",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 104,
+        "parent": 104,
+        "catalogId": 107,
         api: 1,
         search: 'Одежда%20для%20мальчиков',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "39. Для новорожденных",
+        "name": "Для новорожденных",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 105,
+        "parent": 104,
+        "catalogId": 108,
         api: 1,
         catId: 199,
         catName: 'babies1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "40. Детская электроника",
+        "name": "Детская электроника",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 106,
+        "parent": 104,
+        "catalogId": 109,
         api: 1,
         catId: 58513,
         catName: 'electronic19',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "41. Конструкторы",
+        "name": "Конструкторы",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 107,
+        "parent": 104,
+        "catalogId": 110,
         api: 1,
         catId: 0,
+        subject: 945,
         catName: 'toys1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "42. Детский транспорт",
+        "name": "Детский транспорт",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 108,
+        "parent": 104,
+        "catalogId": 111,
         api: 1,
         catId: 9374,
         catName: 'sport27',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "43. Детское питание",
+        "name": "Детское питание",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 109,
+        "parent": 104,
+        "catalogId": 112,
         api: 1,
         catId: 0,
+        subject: 2638,
         catName: 'children_things2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "44. Детская религиозная одежда",
+        "name": "Детская религиозная одежда",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 110,
+        "parent": 104,
+        "catalogId": 113,
         api: 1,
         catId: 61448,
         catName: 'children_things2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "45. Товары для малышей",
+        "name": "Товары для малышей",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 111,
+        "parent": 104,
+        "catalogId": 114,
         api: 1,
         catId: 243,
         catName: 'children_things3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "46. Товары для малышей",
+        "name": "Товары для малышей",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 112,
+        "parent": 104,
+        "catalogId": 115,
         api: 1,
         catId: 243,
         catName: 'children_things3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "47. Подгузники",
+        "name": "Подгузники",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 113,
+        "parent": 104,
+        "catalogId": 116,
         api: 1,
         catId: 7107,
         catName: 'children_things2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "48. Подарки для детей",
+        "name": "Подарки для детей",
         "platform": 2,
-        "parent": 102,
-        "catalogId": 114,
+        "parent": 104,
+        "catalogId": 117,
         api: 1,
         search: 'Подарки%20для%20детей',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 105}
         ]
     },
     {
-        "name": "49. Мужчинам",
+        "name": "Мужчинам",
         "platform": 2,
         "parent": -1,
-        "catalogId": 115,
+        "catalogId": 118,
         "up_name": "Мужчинам",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "49. Брюки",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 116,
+        "parent": 118,
+        "catalogId": 119,
+        api: 1,
+    },
+    {
+        "name": "Брюки",
+        "platform": 2,
+        "parent": 118,
+        "catalogId": 120,
         api: 1,
         catId: 8144,
         catName: 'men_clothes1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "50. Верхняя одежда",
+        "name": "Верхняя одежда",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 117,
+        "parent": 118,
+        "catalogId": 121,
         api: 1,
         catId: 63011,
         catName: 'men_clothes1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "51. Джемперы, водолазки и кардиганы",
+        "name": "Джемперы, водолазки и кардиганы",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 118,
+        "parent": 118,
+        "catalogId": 122,
         api: 1,
         catId: 8148,
         catName: 'men_clothes1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "52. Джинсы",
+        "name": "Джинсы",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 119,
+        "parent": 118,
+        "catalogId": 123,
         api: 1,
         catId: 8149,
         catName: 'men_clothes2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "53. Комбинезоны и полукомбинезоны",
+        "name": "Комбинезоны и полукомбинезоны",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 120,
+        "parent": 118,
+        "catalogId": 124,
         api: 1,
         catId: 8152,
         catName: 'men_clothes2',
@@ -2113,787 +2198,870 @@ const catalogs = [
         ]
     },
     {
-        "name": "54. Костюмы",
+        "name": "Костюмы",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 121,
+        "parent": 118,
+        "catalogId": 125,
         api: 1,
         catId: 8153,
         catName: 'men_clothes2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "55. Лонгсливы",
+        "name": "Лонгсливы",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 122,
+        "parent": 118,
+        "catalogId": 126,
         api: 1,
         catId: 9412,
         catName: 'men_clothes3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "56. Майки",
+        "name": "Майки",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 123,
+        "parent": 118,
+        "catalogId": 127,
         api: 1,
         catId: 129176,
         catName: 'men_clothes3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "57. Пиджаки, жилеты и жакеты",
+        "name": "Пиджаки, жилеты и жакеты",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 124,
+        "parent": 118,
+        "catalogId": 128,
         api: 1,
         catId: 8155,
         catName: 'men_clothes3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "58. Пижамы",
+        "name": "Пижамы",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 124,
+        "parent": 118,
+        "catalogId": 129,
         api: 1,
         catId: 129258,
         catName: 'men_clothes3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "59. Рубашки",
+        "name": "Рубашки",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 125,
+        "parent": 118,
+        "catalogId": 130,
         api: 1,
         catId: 8156,
         catName: 'men_clothes3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "60. Толстовки, свитшоты и худи",
+        "name": "Толстовки, свитшоты и худи",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 126,
+        "parent": 118,
+        "catalogId": 131,
         api: 1,
         catId: 8158,
         catName: 'men_clothes3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "61. Футболки",
+        "name": "Футболки",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 127,
+        "parent": 118,
+        "catalogId": 132,
         api: 1,
         catId: 8159,
         catName: 'men_clothes6',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "62. Футболки-поло",
+        "name": "Футболки-поло",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 128,
+        "parent": 118,
+        "catalogId": 133,
         api: 1,
         catId: 129257,
         catName: 'men_clothes5',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "63. Шорты",
+        "name": "Шорты",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 129,
+        "parent": 118,
+        "catalogId": 134,
         api: 1,
         catId: 11428,
         catName: 'men_clothes5',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
         "name": "64. Белье",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 130,
+        "parent": 118,
+        "catalogId": 135,
         api: 1,
         catId: 567,
         catName: 'men_mixtape',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "65. Большие размеры",
+        "name": "Большие размеры",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 131,
+        "parent": 118,
+        "catalogId": 136,
         api: 1,
         catId: 9002,
         catName: 'men_mixtape',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "66. Для высоких",
+        "name": "Для высоких",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 132,
+        "parent": 118,
+        "catalogId": 137,
         api: 1,
         catId: 60898,
         catName: 'men_clothes7',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "67. Для невысоких",
+        "name": "Для невысоких",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 133,
+        "parent": 118,
+        "catalogId": 138,
         api: 1,
         catId: 60899,
         catName: 'men_clothes7',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "68. Одежда для дома",
+        "name": "Одежда для дома",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 134,
+        "parent": 118,
+        "catalogId": 139,
         api: 1,
         catId: 8154,
         catName: 'men_clothes8',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "69. Офис",
+        "name": "Офис",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 135,
+        "parent": 118,
+        "catalogId": 140,
         api: 1,
         catId: 10471,
         catName: 'men_clothes5',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "70. Пляжная одежда",
+        "name": "Пляжная одежда",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 136,
+        "parent": 118,
+        "catalogId": 141,
         api: 1,
         catId: 10039,
         catName: 'men_mixtape',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "71. Религиозная",
+        "name": "Религиозная",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 137,
+        "parent": 118,
+        "catalogId": 142,
         api: 1,
         catId: 61446,
         catName: 'men_clothes5',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "72. Свадьба",
+        "name": "Свадьба",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 138,
+        "parent": 118,
+        "catalogId": 143,
         api: 1,
         catId: 10017,
         catName: 'wedding',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "73. Спецодежда и СИЗы",
+        "name": "Спецодежда и СИЗы",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 139,
+        "parent": 118,
+        "catalogId": 144,
         api: 1,
         catId: 7405,
         catName: 'work_clothes',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "74. Подарки мужчинам",
+        "name": "Подарки мужчинам",
         "platform": 2,
-        "parent": 115,
-        "catalogId": 140,
+        "parent": 118,
+        "catalogId": 145,
         api: 1,
         search: 'Подарки%20мужчинам',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 119}
         ]
     },
     {
-        "name": "75. Дом",
+        "name": "Дом",
         "platform": 2,
         "parent": -1,
-        "catalogId": 141,
+        "catalogId": 146,
         "up_name": "Дом",
         api: 1,
         
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 2,
+        "parent": 146,
+        "catalogId": 147,
+        api: 1,
     },
     {
         "name": "76. Ванная",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 142,
+        "parent": 146,
+        "catalogId": 148,
         api: 1,
         search: 'Товары%20для%20ванной',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "77. Кухня",
+        "name": "Кухня",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 143,
+        "parent": 146,
+        "catalogId": 149,
         api: 1,
         search: 'Товары%20для%20кухни',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "78. Предметы интерьера",
+        "name": "Предметы интерьера",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 144,
+        "parent": 146,
+        "catalogId": 150,
         api: 1,
         search: 'Предметы%20интерьера',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "79. Товары для спальни",
+        "name": "Товары для спальни",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 145,
+        "parent": 146,
+        "catalogId": 151,
         api: 1,
         search: 'Товары%20для%20спальни',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "80. Товары для гостиной",
+        "name": "Товары для гостиной",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 146,
+        "parent": 146,
+        "catalogId": 152,
         api: 1,
         search: 'Товары%20для%20гостиной',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "81. Детская",
+        "name": "Детская",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 147,
+        "parent": 146,
+        "catalogId": 153,
         api: 1,
         search: 'Товары%20для%20детской%20комнаты',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "82. Досуг",
+        "name": "Досуг",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 148,
+        "parent": 146,
+        "catalogId": 154,
         api: 1,
         search: 'Товары%20для%20досуга%20и%20творчества',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "83. Для праздника",
+        "name": "Для праздника",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 149,
+        "parent": 146,
+        "catalogId": 155,
         api: 1,
         search: 'Товары%20для%20праздника',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "84. Зеркала",
+        "name": "Зеркала",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 150,
+        "parent": 146,
+        "catalogId": 156,
         api: 1,
         catId: 0,
+        subject: 198,
         catName: 'interior3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "85. Коврики",
+        "name": "Коврики",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 151,
+        "parent": 146,
+        "catalogId": 157,
         api: 1,
         catId: 8459,
         catName: 'interior3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "86. Кронштейны",
+        "name": "Кронштейны",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 152,
+        "parent": 146,
+        "catalogId": 158,
         api: 1,
         catId: 10027,
         catName: 'housecraft6',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "87. Освещение",
+        "name": "Освещение",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 153,
+        "parent": 146,
+        "catalogId": 159,
         api: 1,
         search: 'Освещение%20для%20квартиры',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "88. Для курения",
+        "name": "Для курения",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 154,
+        "parent": 146,
+        "catalogId": 160,
         api: 1,
         catId: 0,
         catName: 'housecraft4',
+        subject: 6249,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "89. Отдых на природе",
+        "name": "Отдых на природе",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 155,
+        "parent": 146,
+        "catalogId": 161,
         api: 1,
         search: 'Отдых%20на%20природе',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "90. Парфюмерия для дома",
+        "name": "Парфюмерия для дома",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 156,
+        "parent": 146,
+        "catalogId": 162,
         api: 1,
         catId: 9183,
         catName: 'interior3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "91. Прихожая",
+        "name": "Прихожая",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 157,
+        "parent": 146,
+        "catalogId": 163,
         api: 1,
         catId: 60590,
         catName: 'hallway1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "92. Прихожая",
+        "name": "Прихожая",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 158,
+        "parent": 146,
+        "catalogId": 164,
         api: 1,
         catId: 7395,
         catName: 'religion',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "93. Сувенирная продукция",
+        "name": "Сувенирная продукция",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 159,
+        "parent": 146,
+        "catalogId": 165,
         api: 1,
         catId: 17135,
         catName: 'interior4',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "94. Хозяйственные товары",
+        "name": "Хозяйственные товары",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 160,
+        "parent": 146,
+        "catalogId": 166,
         api: 1,
         search: 'Хозяйственные%20товары',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "95. Хранение вещей",
+        "name": "Хранение вещей",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 161,
+        "parent": 146,
+        "catalogId": 167,
         api: 1,
         catId: 62506,
         catName: 'housecraft4',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "96. Цветы, вазы и кашпо",
+        "name": "Цветы, вазы и кашпо",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 162,
+        "parent": 146,
+        "catalogId": 168,
         api: 1,
         catId: 295,
         catName: 'interior4',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "97. Шторы",
+        "name": "Шторы",
         "platform": 2,
-        "parent": 141,
-        "catalogId": 163,
+        "parent": 146,
+        "catalogId": 169,
         api: 1,
         catId: 62836,
         catName: 'housecraft5',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 147}
         ]
     },
     {
-        "name": "98. Красота",
+        "name": "Красота",
         "platform": 2,
         "parent": -1,
-        "catalogId": 164,
+        "catalogId": 170,
         api: 1,
         "up_name": "Красота",
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "99. Аксессуары",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 165,
+        "parent": 170,
+        "catalogId": 171,
+        api: 1,
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 2,
+        "parent": 170,
+        "catalogId": 172,
         api: 1,
         catId: 4872,
         catName: 'beauty7',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "100. Волосы",
+        "name": "Волосы",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 166,
+        "parent": 170,
+        "catalogId": 173,
         api: 1,
         catId: 8961,
         catName: 'beauty8',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "101. Аптечная косметика",
+        "name": "Аптечная косметика",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 167,
+        "parent": 170,
+        "catalogId": 174,
         api: 1,
         catId: 8727,
         catName: 'beauty8',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "102. Детская декоративная косметика",
+        "name": "Детская декоративная косметика",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 168,
+        "parent": 170,
+        "catalogId": 175,
         api: 1,
         catId: 9454,
         catName: 'beauty1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "103. Для загара",
+        "name": "Для загара",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 169,
+        "parent": 170,
+        "catalogId": 176,
         api: 1,
         catId: 8988,
         catName: 'beauty9',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "104. Для мам и малышей",
+        "name": "Для мам и малышей",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 170,
+        "parent": 170,
+        "catalogId": 177,
         api: 1,
         catId: 6837,
         catName: 'beauty9',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "105. Израильская косметика",
+        "name": "Израильская косметика",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 171,
+        "parent": 170,
+        "catalogId": 178,
         api: 1,
         catId: 60751,
         catName: 'beauty1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "106. Инструменты для парикмахеров",
+        "name": "Инструменты для парикмахеров",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 172,
+        "parent": 170,
+        "catalogId": 179,
         api: 1,
         catId: 60506,
         catName: 'beauty10',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "107. Корейские бренды",
+        "name": "Корейские бренды",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 172,
+        "parent": 170,
+        "catalogId": 180,
         api: 1,
         catId: 58217,
         catName: 'beauty11',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "108. Косметические аппараты",
+        "name": "Косметические аппараты",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 173,
+        "parent": 170,
+        "catalogId": 181,
         api: 1,
         catId: 5381,
         catName: 'appliances1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "109. Макияж",
+        "name": "Макияж",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 174,
+        "parent": 170,
+        "catalogId": 182,
         api: 1,
         catId: 8924,
         catName: 'beauty13',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "110. Мужская линия",
+        "name": "Мужская линия",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 175,
+        "parent": 170,
+        "catalogId": 183,
         api: 1,
         catId: 8999,
         catName: 'beauty14',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "111. Наборы для ухода",
+        "name": "Наборы для ухода",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 176,
+        "parent": 170,
+        "catalogId": 184,
         api: 1,
         catId: 0,
+        subject: 403,
         catName: 'beauty2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "112. Ногти",
+        "name": "Ногти",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 177,
+        "parent": 170,
+        "catalogId": 185,
         api: 1,
         catId: 8951,
         catName: 'beauty18',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "113. Органическая косметика",
+        "name": "Органическая косметика",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 178,
+        "parent": 170,
+        "catalogId": 186,
         api: 1,
         catId: 10012,
         catName: 'beauty16',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "114. Парфюмерия",
+        "name": "Парфюмерия",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 179,
+        "parent": 170,
+        "catalogId": 187,
         api: 1,
         search: 'Парфюмерия',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "115. Подарочные наборы",
+        "name": "Подарочные наборы",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 180,
+        "parent": 170,
+        "catalogId": 188,
         api: 1,
         catId: 59860,
         catName: 'beauty2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "116. Профессиональная косметика",
+        "name": "Профессиональная косметика",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 181,
+        "parent": 170,
+        "catalogId": 189,
         api: 1,
         catId: 7036,
         catName: 'beauty2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "117. Средства личной гигиены",
+        "name": "Средства личной гигиены",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 182,
+        "parent": 170,
+        "catalogId": 190,
         api: 1,
         catId: 8997,
         catName: 'beauty2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "118. Гигиена полости рта",
+        "name": "Гигиена полости рта",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 183,
+        "parent": 170,
+        "catalogId": 191,
         api: 1,
         catId: 8996,
         catName: 'beauty2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "119. Гигиена полости рта",
+        "name": "Уход за кожей",
         "platform": 2,
-        "parent": 164,
-        "catalogId": 184,
+        "parent": 170,
+        "catalogId": 192,
         api: 1,
         search: 'Косметика%20по%20уходу%20за%20кожей',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 171}
         ]
     },
     {
-        "name": "120. Аксессуары",
+        "name": "Аксессуары",
         "platform": 2,
         "parent": -1,
-        "catalogId": 185,
+        "catalogId": 193,
         "up_name": "Аксессуары",
         api: 1,
         publications: [
@@ -2901,1099 +3069,1217 @@ const catalogs = [
         ]
     },
     {
-        "name": "121. Аксессуары для волос",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 186,
+        "parent": 193,
+        "catalogId": 194,
+        api: 1,
+    },
+    {
+        "name": "Аксессуары для волос",
+        "platform": 2,
+        "parent": 193,
+        "catalogId": 195,
         api: 1,
         catId: 0,
+        subject: 1465,
         catName: 'head_accessories1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "122. Аксессуары для одежды",
+        "name": "Аксессуары для одежды",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 187,
+        "parent": 193,
+        "catalogId": 196,
         api: 1,
         catId: 9990,
         catName: 'clothes_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "123. Бижутерия",
+        "name": "Бижутерия",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 188,
+        "parent": 193,
+        "catalogId": 197,
         api: 1,
         serach: 'Бижутерия',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "124. Веера",
+        "name": "Веера",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 189,
+        "parent": 193,
+        "catalogId": 198,
         api: 1,
         catId: 0,
+        subject: 2920,
         catName: 'hand_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "125. Галстуки и бабочки",
+        "name": "Галстуки и бабочки",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 190,
+        "parent": 193,
+        "catalogId": 199,
         api: 1,
         catId: 9980,
         catName: 'clothes_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "126. Головные уборы",
+        "name": "Головные уборы",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 191,
+        "parent": 193,
+        "catalogId": 200,
         api: 1,
         catId: 9967,
         catName: 'head_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "127. Зеркальца",
+        "name": "Зеркальца",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 192,
+        "parent": 193,
+        "catalogId": 201,
         api: 1,
         catId: 0,
+        subject: 63,
         catName: 'hand_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "128. Зонты",
+        "name": "Зонты",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 193,
+        "parent": 193,
+        "catalogId": 202,
         api: 1,
         catId: 9974,
         catName: 'hand_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "129. Кошельки и кредитницы",
+        "name": "Кошельки и кредитницы",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 194,
+        "parent": 193,
+        "catalogId": 203,
         api: 1,
         catId: 9973,
         catName: 'hand_accessories1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "130. Маски для сна",
+        "name": "Маски для сна",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 195,
+        "parent": 193,
+        "catalogId": 204,
         api: 1,
         catId: 0,
+        subject: 985,
         catName: 'head_accessories1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "131. Носовые платки",
+        "name": "Носовые платки",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 196,
+        "parent": 193,
+        "catalogId": 205,
         api: 1,
         catId: 0,
+        subject: 946,
         catName: 'hand_accessories1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "132. Очки и футляры",
+        "name": "Очки и футляры",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 197,
+        "parent": 193,
+        "catalogId": 206,
         api: 1,
         catId: 9972,
         catName: 'clothes_accessories1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "133. Перчатки и варежки",
+        "name": "Перчатки и варежки",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 198,
+        "parent": 193,
+        "catalogId": 207,
         api: 1,
         catId: 9977,
         catName: 'hand_accessories1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "134. Платки и шарфы",
+        "name": "Платки и шарфы",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 199,
+        "parent": 193,
+        "catalogId": 208,
         api: 1,
         catId: 9971,
         catName: 'clothes_accessories3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "135. Религиозные",
+        "name": "Религиозные",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 200,
+        "parent": 193,
+        "catalogId": 209,
         api: 1,
         catId: 128331,
         catName: 'clothes_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "136. Ремни и пояса",
+        "name": "Ремни и пояса",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 201,
+        "parent": 193,
+        "catalogId": 210,
         api: 1,
         catId: 9970,
         catName: 'clothes_accessories3',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "137. Сумки и рюкзаки",
+        "name": "Сумки и рюкзаки",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 202,
+        "parent": 193,
+        "catalogId": 211,
         api: 1,
         search: 'Сумки%20и%20рюкзаки',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "138. Часы и ремешки",
+        "name": "Часы и ремешки",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 203,
+        "parent": 193,
+        "catalogId": 212,
         api: 1,
         catId: 9976,
         catName: 'hand_accessories2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "139. Чемоданы и защита багажа",
+        "name": "Чемоданы и защита багажа",
         "platform": 2,
-        "parent": 185,
-        "catalogId": 204,
+        "parent": 193,
+        "catalogId": 213,
         api: 1,
         catId: 62903,
         catName: 'bags1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 194}
         ]
     },
     {
-        "name": "140. Электроника",
+        "name": "Электроника",
         "platform": 2,
         "parent": -1,
-        "catalogId": 205,
+        "catalogId": 214,
         "up_name": "Электроника",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "141. Автоэлектроника и навигация",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 206,
+        "parent": 214,
+        "catalogId": 215,
+    },
+    {
+        "name": "Автоэлектроника и навигация",
+        "platform": 2,
+        "parent": 214,
+        "catalogId": 216,
         catId: 9835,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "142. Гарнитуры и наушники",
+        "name": "Гарнитуры и наушники",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 207,
+        "parent": 214,
+        "catalogId": 217,
         catId: 9468,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "143. Детская электроника",
+        "name": "Детская электроника",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 208,
+        "parent": 214,
+        "catalogId": 218,
         catId: 58513,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "144. Игровые консоли и игры",
+        "name": "Игровые консоли и игры",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 209,
+        "parent": 214,
+        "catalogId": 219,
         catId: 15693,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "145. Кабели и зарядные устройства",
+        "name": "Кабели и зарядные устройства",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 210,
+        "parent": 214,
+        "catalogId": 220,
         catId: 59132,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "146. Музыка и видео",
+        "name": "Музыка и видео",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 211,
+        "parent": 214,
+        "catalogId": 221,
         catId: 128516,
         catName: 'books3',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "147. Ноутбуки и компьютеры",
+        "name": "Ноутбуки и компьютеры",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 212,
+        "parent": 214,
+        "catalogId": 222,
         catId: 9491,
         catName: 'electronic18',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "148. Офисная техника",
+        "name": "Офисная техника",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 213,
+        "parent": 214,
+        "catalogId": 223,
         catId: 58331,
         catName: 'electronic15',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "149. Развлечения и гаджеты",
+        "name": "Развлечения и гаджеты",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 214,
+        "parent": 214,
+        "catalogId": 224,
         catId: 9497,
         catName: 'electronic15',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "150. Сетевое оборудование",
+        "name": "Сетевое оборудование",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 215,
+        "parent": 214,
+        "catalogId": 225,
         catId: 9846,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "151. Системы безопасности",
+        "name": "Системы безопасности",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 216,
+        "parent": 214,
+        "catalogId": 226,
         catId: 9746,
         catName: 'electronic17',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "152. Cмартфоны и телефоны",
+        "name": "Cмартфоны и телефоны",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 217,
+        "parent": 214,
+        "catalogId": 227,
         search: 'Смартфоны%20и%20телефоны',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "153. Смарт-часы и браслеты",
+        "name": "Смарт-часы и браслеты",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 218,
+        "parent": 214,
+        "catalogId": 228,
         catId: 9845,
         catName: 'electronic17',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "154. Солнечные электростанции и комплектующие",
+        "name": "Солнечные электростанции и комплектующие",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 219,
+        "parent": 214,
+        "catalogId": 229,
         catId: 0,
         catName: 'electronic17',
         api: 1,
+        subject: 8395,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "155. ТВ, Аудио, Фото, Видео техника",
+        "name": "ТВ, Аудио, Фото, Видео техника",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 220,
+        "parent": 214,
+        "catalogId": 230,
         catId: 9834,
         catName: 'electronic13',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "156. Торговое оборудование",
+        "name": "Торговое оборудование",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 221,
+        "parent": 214,
+        "catalogId": 231,
         catId: 0,
         catName: 'electronic14',
         api: 1,
+        subject: 2479,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "157. Умный дом",
+        "name": "Умный дом",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 222,
+        "parent": 214,
+        "catalogId": 232,
         catId: 7588,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "158. Электротранспорт и аксессуары",
+        "name": "Электротранспорт и аксессуары",
         "platform": 2,
-        "parent": 205,
-        "catalogId": 223,
+        "parent": 214,
+        "catalogId": 233,
         catId: 9240,
         catName: 'electronic14',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 215}
         ]
     },
     {
-        "name": "159. Игрушки",
+        "name": "Игрушки",
         "platform": 2,
         "parent": -1,
-        "catalogId": 224,
+        "catalogId": 234,
         "up_name": "Игрушки",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "160. Антистресс",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 225,
+        "parent": 234,
+        "catalogId": 235,
+    },
+    {
+        "name": "Антистресс",
+        "platform": 2,
+        "parent": 234,
+        "catalogId": 236,
         api: 1,
         catId: 9541,
         catName: 'toys5',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "161. Для малышей",
+        "name": "Для малышей",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 226,
+        "parent": 234,
+        "catalogId": 237,
         api: 1,
         catId: 482,
         catName: 'toys1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "162. Для песочницы",
+        "name": "Для песочницы",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 227,
+        "parent": 234,
+        "catalogId": 238,
         api: 1,
         catId: 8274,
         catName: 'toys1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "163. Игровые комплексы",
+        "name": "Игровые комплексы",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 228,
+        "parent": 234,
+        "catalogId": 239,
         api: 1,
         catId: 8275,
         catName: 'toys1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "164. Игровые наборы",
+        "name": "Игровые наборы",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 229,
+        "parent": 234,
+        "catalogId": 240,
         api: 1,
         catId: 8604,
         catName: 'toys1',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "165. Игрушечное оружие и аксессуары",
+        "name": "Игрушечное оружие и аксессуары",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 230,
+        "parent": 234,
+        "catalogId": 241,
         api: 1,
         catId: 128562,
         catName: 'toys2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "166. Игрушечный транспорт",
+        "name": "Игрушечный транспорт",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 231,
+        "parent": 234,
+        "catalogId": 242,
         api: 1,
         catId: 8277,
         catName: 'toys2',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "167. Игрушки для ванной",
+        "name": "Игрушки для ванной",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 232,
+        "parent": 234,
+        "catalogId": 243,
         api: 1,
         catId: 0,
         catName: 'toys2',
         subject: 227,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "168. Интерактивные",
+        "name": "Интерактивные",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 233,
+        "parent": 234,
+        "catalogId": 244,
         api: 1,
         catId: 0,
         catName: 'toys2',
         subject: 2095,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "169. Кинетический песок",
+        "name": "Кинетический песок",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 234,
+        "parent": 234,
+        "catalogId": 245,
         api: 1,
         catId: 0,
         catName: 'toys2',
         subject: 1052,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "170. Конструкторы",
+        "name": "Конструкторы",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 235,
+        "parent": 234,
+        "catalogId": 246,
         api: 1,
         catId: 0,
         catName: 'toys2',
         subject: 117,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "171. Конструкторы LEGO",
+        "name": "Конструкторы LEGO",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 236,
+        "parent": 234,
+        "catalogId": 247,
         api: 1,
         catId: 128594,
         catName: 'toys2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "172. Куклы и аксессуары",
+        "name": "Куклы и аксессуары",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 237,
+        "parent": 234,
+        "catalogId": 248,
         api: 1,
         catId: 8281,
         catName: 'toys3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "173. Музыкальные",
+        "name": "Музыкальные",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 238,
+        "parent": 234,
+        "catalogId": 249,
         api: 1,
         catId: 8282,
         catName: 'toys3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
         "name": "174. Мыльные пузыри",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 239,
+        "parent": 234,
+        "catalogId": 250,
         api: 1,
         catId: 0,
         catName: 'toys3',
         subject: 1029,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "175. Мягкие игрушки",
+        "name": "Мягкие игрушки",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 240,
+        "parent": 234,
+        "catalogId": 251,
         api: 1,
         catId: 0,
         catName: 'toys3',
         subject: 268,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "176. Наборы для опытов",
+        "name": "Наборы для опытов",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 241,
+        "parent": 234,
+        "catalogId": 252,
         api: 1,
         catId: 0,
         catName: 'toys3',
         subject: 2619,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "177. Настольные игры",
+        "name": "Настольные игры",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 242,
+        "parent": 234,
+        "catalogId": 253,
         api: 1,
         catId: 8285,
         catName: 'toys6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "178. Радиоуправляемые",
+        "name": "Радиоуправляемые",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 243,
+        "parent": 234,
+        "catalogId": 254,
         api: 1,
         catId: 0,
         catName: 'toys3',
         subject: 123,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "179. Развивающие игрушки",
+        "name": "Развивающие игрушки",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 244,
+        "parent": 234,
+        "catalogId": 255,
         api: 1,
         catId: 8287,
         catName: 'toys4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "180. Сборные модели",
+        "name": "Сборные модели",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 245,
+        "parent": 234,
+        "catalogId": 256,
         api: 1,
         catId: 0,
         catName: 'toys3',
         subject: 2763,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "181. Спортивные игры",
+        "name": "Спортивные игры",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 246,
+        "parent": 234,
+        "catalogId": 257,
         api: 1,
         catId: 8093,
         catName: 'toys3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "182. Сюжетно-ролевые игры",
+        "name": "Сюжетно-ролевые игры",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 247,
+        "parent": 234,
+        "catalogId": 258,
         api: 1,
         catId: 16260,
         catName: 'toys3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "183. Творчество и рукоделие",
+        "name": "Творчество и рукоделие",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 248,
+        "parent": 234,
+        "catalogId": 259,
         api: 1,
         catId: 8288,
         catName: 'toys5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "184. Фигурки и роботы",
+        "name": "Фигурки и роботы",
         "platform": 2,
-        "parent": 224,
-        "catalogId": 249,
+        "parent": 234,
+        "catalogId": 260,
         api: 1,
         catId: 8289,
         catName: 'toys6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 235}
         ]
     },
     {
-        "name": "185. Мебель",
+        "name": "Мебель",
         "platform": 2,
         "parent": -1,
-        "catalogId": 250,
+        "catalogId": 261,
         "up_name": 'Мебель',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "186. Бескаркасная мебель",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 251,
+        "parent": 261,
+        "catalogId": 262,
+        api: 1,
+    },
+    {
+        "name": "Бескаркасная мебель",
+        "platform": 2,
+        "parent": 261,
+        "catalogId": 263,
         api: 1,
         catId: 129026,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "187. Детская мебель",
+        "name": "Детская мебель",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 252,
+        "parent": 261,
+        "catalogId": 264,
         api: 1,
         catId: 129027,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "188. Диваны и кресла",
+        "name": "Диваны и кресла",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 253,
+        "parent": 261,
+        "catalogId": 265,
         api: 1,
         catId: 129028,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "189. Столы и стулья",
+        "name": "Столы и стулья",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 254,
+        "parent": 261,
+        "catalogId": 266,
         api: 1,
         catId: 129169,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "190. Компьютерная мебель",
+        "name": "Компьютерная мебель",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 255,
+        "parent": 261,
+        "catalogId": 267,
         api: 1,
         catId: 130734,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "191. Мебель для геймеров",
+        "name": "Мебель для геймеров",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 256,
+        "parent": 261,
+        "catalogId": 268,
         api: 1,
         catId: 130731,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "192. Мебель для гостиной",
+        "name": "Мебель для гостиной",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 257,
+        "parent": 261,
+        "catalogId": 269,
         api: 1,
         catId: 129029,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "193. Мебель для кухни",
+        "name": "Мебель для кухни",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 258,
+        "parent": 261,
+        "catalogId": 270,
         api: 1,
         catId: 129030,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "194. Мебель для прихожей",
+        "name": "Мебель для прихожей",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 259,
+        "parent": 261,
+        "catalogId": 271,
         api: 1,
         catId: 129031,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "195. Мебель для спальни",
+        "name": "Мебель для спальни",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 260,
+        "parent": 261,
+        "catalogId": 272,
         api: 1,
         catId: 129032,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "196. Гардеробная мебель",
+        "name": "Гардеробная мебель",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 261,
+        "parent": 261,
+        "catalogId": 273,
         api: 1,
         catId: 130759,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "197. Офисная мебель",
+        "name": "Офисная мебель",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 262,
+        "parent": 261,
+        "catalogId": 274,
         api: 1,
         catId: 129033,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "198. Торговая мебель",
+        "name": "Торговая мебель",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 263,
+        "parent": 261,
+        "catalogId": 275,
         api: 1,
         catId: 130694,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "199. Зеркала",
+        "name": "Зеркала",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 264,
+        "parent": 261,
+        "catalogId": 276,
         api: 1,
         catId: 130727,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "200. Мебельная фурнитура",
+        "name": "Мебельная фурнитура",
         "platform": 2,
-        "parent": 250,
-        "catalogId": 265,
+        "parent": 261,
+        "catalogId": 277,
         api: 1,
         catId: 129168,
         catName: 'rooms',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "201. Товары для взрослых",
+        "name": "Товары для взрослых",
         "platform": 2,
         "parent": -1,
-        "catalogId": 266,
+        "catalogId": 278,
         "up_name": "Товары для взрослых",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "202. Белье и аксессуары",
+        "name": "Белье и аксессуары",
         "platform": 2,
-        "parent": 266,
-        "catalogId": 267,
+        "parent": 278,
+        "catalogId": 279,
         api: 1,
         catId: 8174,
         catName: 'adult1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "203. Игры и сувениры",
+        "name": "Игры и сувениры",
         "platform": 2,
-        "parent": 266,
-        "catalogId": 268,
+        "parent": 278,
+        "catalogId": 280,
         api: 1,
         catId: 62073,
         catName: 'adult1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
         ]
     },
     {
-        "name": "204. Интимная косметика",
+        "name": "Интимная косметика",
         "platform": 2,
-        "parent": 266,
-        "catalogId": 269,
+        "parent": 278,
+        "catalogId": 281,
         api: 1,
         catId: 10013,
         catName: 'adult1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
         ]
     },
     {
-        "name": "205. Интимная съедобная косметика",
+        "name": "Интимная съедобная косметика",
         "platform": 2,
-        "parent": 266,
-        "catalogId": 270,
+        "parent": 278,
+        "catalogId": 282,
         api: 1,
         catId: 128338,
         catName: 'adult1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
         ]
     },
     {
-        "name": "206. Презервативы и лубриканты",
+        "name": "Презервативы и лубриканты",
         "platform": 2,
-        "parent": 266,
-        "catalogId": 271,
+        "parent": 278,
+        "catalogId": 283,
         api: 1,
         catId: 62071,
         catName: 'adult1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "207. Секс игрушки",
+        "name": "Секс игрушки",
         "platform": 2,
-        "parent": 266,
-        "catalogId": 272,
+        "parent": 278,
+        "catalogId": 284,
         api: 1,
         catId: 62457,
         catName: 'adult1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "208. Фетиш и БДСМ",
+        "name": "Фетиш и БДСМ",
         "platform": 2,
-        "parent": 266,
-        "catalogId": 273,
+        "parent": 278,
+        "catalogId": 285,
         api: 1,
         catId: 62064,
         catName: 'adult1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 262}
         ]
     },
     {
-        "name": "209. Продукты",
+        "name": "Продукты",
         "platform": 2,
         "parent": -1,
-        "catalogId": 274,
+        "catalogId": 286,
         "up_name": "Продукты",
         api: 1,
         publications: [
@@ -4001,500 +4287,558 @@ const catalogs = [
         ]
     },
     {
-        "name": "210. Вкусные подарки",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 275,
+        "parent": 286,
+        "catalogId": 287,
+        api: 1,
+    },
+    {
+        "name": "Вкусные подарки",
+        "platform": 2,
+        "parent": 286,
+        "catalogId": 288,
         api: 1,
         catId: 58757,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "211. Чай и кофе",
+        "name": "Чай и кофе",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 276,
+        "parent": 286,
+        "catalogId": 289,
         api: 1,
         catId: 9510,
         catName: 'product1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "212. Сладости и хлебобулочные изделия",
+        "name": "Сладости и хлебобулочные изделия",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 277,
+        "parent": 286,
+        "catalogId": 290,
         api: 1,
         catId: 10558,
         catName: 'product1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "213. Бакалея",
+        "name": "Бакалея",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 278,
+        "parent": 286,
+        "catalogId": 291,
         api: 1,
         catId: 10411,
         catName: 'product2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "214. Детское питание",
+        "name": "Детское питание",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 279,
+        "parent": 286,
+        "catalogId": 292,
         api: 1,
         catId: 0,
         catName: 'product3',
         subject: 2638,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "215. Добавки пищевые",
+        "name": "Добавки пищевые",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 280,
+        "parent": 286,
+        "catalogId": 293,
         api: 1,
         catId: 60125,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "216. Здоровое питание",
+        "name": "Здоровое питание",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 281,
+        "parent": 286,
+        "catalogId": 294,
         api: 1,
         catId: 10299,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "217. Мясная продукция",
+        "name": "Мясная продукция",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 282,
+        "parent": 286,
+        "catalogId": 295,
         api: 1,
         catId: 62466,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "218. Молочные продукты и яйца",
+        "name": "Молочные продукты и яйца",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 283,
+        "parent": 286,
+        "catalogId": 296,
         api: 1,
         catId: 10305,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "219. Напитки",
+        "name": "Напитки",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 284,
+        "parent": 286,
+        "catalogId": 297,
         api: 1,
         catId: 10557,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "220. Снеки",
+        "name": "Снеки",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 285,
+        "parent": 286,
+        "catalogId": 298,
         api: 1,
         catId: 10297,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "221. Замороженная продукция",
+        "name": "Замороженная продукция",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 286,
+        "parent": 286,
+        "catalogId": 299,
         api: 1,
         catId: 128326,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "222. Фрукты и ягоды",
+        "name": "Фрукты и ягоды",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 287,
+        "parent": 286,
+        "catalogId": 300,
         api: 1,
         catId: 128327,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "223. Овощи",
+        "name": "Овощи",
         "platform": 2,
-        "parent": 274,
-        "catalogId": 288,
+        "parent": 286,
+        "catalogId": 301,
         api: 1,
         catId: 128328,
         catName: 'product3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 287}
         ]
     },
     {
-        "name": "224. Бытовая техника",
+        "name": "Бытовая техника",
         "platform": 2,
         "parent": -1,
-        "catalogId": 289,
+        "catalogId": 302,
         "up_name": "Бытовая техника",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
         ]
     },
     {
-        "name": "225. Климатическая техника",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 289,
-        "catalogId": 290,
+        "parent": 302,
+        "catalogId": 303,
+        api: 1,
+    },
+    {
+        "name": "Климатическая техника",
+        "platform": 2,
+        "parent": 302,
+        "catalogId": 304,
         api: 1,
         catId: 9808,
         catName: 'appliances1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 303}
         ]
     },
     {
-        "name": "226. Красота и здоровье",
+        "name": "Красота и здоровье",
         "platform": 2,
-        "parent": 289,
-        "catalogId": 291,
+        "parent": 302,
+        "catalogId": 305,
         api: 1,
         catId: 5380,
         catName: 'appliances1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 303}
         ]
     },
     {
-        "name": "227. Садовая техника",
+        "name": "Садовая техника",
         "platform": 2,
-        "parent": 289,
-        "catalogId": 292,
+        "parent": 302,
+        "catalogId": 306,
         api: 1,
         catId: 0,
         catName: 'appliances2',
         subject: 2240,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 303}
         ]
     },
     {
-        "name": "228. Техника для дома",
+        "name": "Техника для дома",
         "platform": 2,
-        "parent": 289,
-        "catalogId": 293,
+        "parent": 302,
+        "catalogId": 307,
         api: 1,
         catId: 5364,
         catName: 'appliances2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 303}
         ]
     },
     {
-        "name": "229. Техника для кухни",
+        "name": "Техника для кухни",
         "platform": 2,
-        "parent": 289,
-        "catalogId": 294,
+        "parent": 302,
+        "catalogId": 308,
         api: 1,
         catId: 5351,
         catName: 'appliances3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 303}
         ]
     },
     {
-        "name": "230. Крупная бытовая техника",
+        "name": "Крупная бытовая техника",
         "platform": 2,
-        "parent": 289,
-        "catalogId": 295,
+        "parent": 302,
+        "catalogId": 309,
         api: 1,
         catId: 62379,
         catName: 'appliances3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 303}
         ]
     },
     {
-        "name": "231. Зоотовары",
+        "name": "Зоотовары",
         "platform": 2,
         "parent": -1,
-        "catalogId": 296,
+        "catalogId": 310,
         "up_name": "Зоотовары",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 303}
         ]
     },
     {
-        "name": "232. Для кошек",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 297,
+        "parent": 310,
+        "catalogId": 311,
+        api: 1,
+    },
+    {
+        "name": "Для кошек",
+        "platform": 2,
+        "parent": 310,
+        "catalogId": 312,
         api: 1,
         catId: 16347,
         catName: 'zoo1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "233. Для собак",
+        "name": "Для собак",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 298,
+        "parent": 310,
+        "catalogId": 313,
         api: 1,
         catId: 16438,
         catName: 'zoo2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "234. Для птиц",
+        "name": "Для птиц",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 299,
+        "parent": 310,
+        "catalogId": 314,
         api: 1,
         catId: 16449,
         catName: 'zoo1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "235. Для грызунов и хорьков",
+        "name": "Для грызунов и хорьков",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 300,
+        "parent": 310,
+        "catalogId": 315,
         api: 1,
         catId: 16467,
         catName: 'zoo1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "236. Для лошадей",
+        "name": "Для лошадей",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 301,
+        "parent": 310,
+        "catalogId": 316,
         api: 1,
         catId: 58591,
         catName: 'zoo1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "237. Аквариумистика",
+        "name": "Аквариумистика",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 302,
+        "parent": 310,
+        "catalogId": 317,
         api: 1,
         catId: 10540,
         catName: 'zoo1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "238. Фермерство",
+        "name": "Фермерство",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 303,
+        "parent": 310,
+        "catalogId": 318,
         api: 1,
         catId: 128591,
         catName: 'zoo1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "239. Корм и лакомства",
+        "name": "Корм и лакомства",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 304,
+        "parent": 310,
+        "catalogId": 319,
         api: 1,
         catId: 130708,
         catName: 'zoo3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "240. Аксессуары для кормления",
+        "name": "Аксессуары для кормления",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 305,
+        "parent": 310,
+        "catalogId": 320,
         api: 1,
         catId: 130709,
         catName: 'zoo3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "241. Лотки и наполнители",
+        "name": "Лотки и наполнители",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 306,
+        "parent": 310,
+        "catalogId": 321,
         api: 1,
         catId: 130710,
         catName: 'zoo3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "242. Транспортировка",
+        "name": "Транспортировка",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 307,
+        "parent": 310,
+        "catalogId": 322,
         api: 1,
         catId: 130711,
         catName: 'zoo4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "243. Амуниция и дрессировка",
+        "name": "Амуниция и дрессировка",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 308,
+        "parent": 310,
+        "catalogId": 323,
         api: 1,
         catId: 130716,
         catName: 'zoo4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "244. Игрушки",
+        "name": "Игрушки",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 309,
+        "parent": 310,
+        "catalogId": 324,
         api: 1,
         catId: 0,
         catName: 'zoo4',
         subject: 731,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "245. Груминг и уход",
+        "name": "Груминг и уход",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 310,
+        "parent": 310,
+        "catalogId": 325,
         api: 1,
         catId: 130714,
         catName: 'zoo4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "246. Одежда",
+        "name": "Одежда",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 311,
+        "parent": 310,
+        "catalogId": 326,
         api: 1,
         catId: 130712,
         catName: 'zoo4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "247. Ветаптека",
+        "name": "Ветаптека",
         "platform": 2,
-        "parent": 296,
-        "catalogId": 312,
+        "parent": 310,
+        "catalogId": 327,
         api: 1,
         catId: 130717,
         catName: 'zoo4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 311}
         ]
     },
     {
-        "name": "248. Спорт",
+        "name": "Спорт",
         "platform": 2,
         "parent": -1,
-        "catalogId": 313,
+        "catalogId": 328,
         "up_name": "Спорт",
         api: 1,
         publications: [
@@ -4502,965 +4846,1053 @@ const catalogs = [
         ]
     },
     {
-        "name": "249. Фитнес и тренажеры",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 314,
+        "parent": 328,
+        "catalogId": 329,
+    },
+    {
+        "name": "Фитнес и тренажеры",
+        "platform": 2,
+        "parent": 328,
+        "catalogId": 330,
         api: 1,
         catId: 58875,
         catName: 'sport13',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "250. Фитнес и тренажеры",
+        "name": "Фитнес и тренажеры",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 315,
+        "parent": 328,
+        "catalogId": 331,
         api: 1,
+        isWork: "none",
         catId: 58875,
         catName: 'sport13',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "251. Велоспорт",
+        "name": "Велоспорт",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 316,
+        "parent": 328,
+        "catalogId": 332,
         api: 1,
         search: 'Товары%20для%20велоспорта',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "252. Йога/Пилатес",
+        "name": "Йога/Пилатес",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 317,
+        "parent": 328,
+        "catalogId": 333,
         api: 1,
         catId: 9098,
         catName: 'sport14',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "253. Охота и рыбалка",
+        "name": "Охота и рыбалка",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 318,
+        "parent": 328,
+        "catalogId": 334,
         api: 1,
         catId: 9393,
         catName: 'sport20',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "254. Самокаты/Ролики/Скейтборды",
+        "name": "Самокаты/Ролики/Скейтборды",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 319,
+        "parent": 328,
+        "catalogId": 335,
         api: 1,
         catId: 2204,
         catName: 'sport10',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "255. Туризм/Походы",
+        "name": "Туризм/Походы",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 320,
+        "parent": 328,
+        "catalogId": 336,
         api: 1,
         search: 'Товары%20для%20туризма%20и%20кемпинга',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "256. Бег/Ходьба",
+        "name": "Бег/Ходьба",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 321,
+        "parent": 328,
+        "catalogId": 337,
         api: 1,
         search: 'Товары%20для%20бега%20и%20скандинавской%20ходьбы',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "257. Командные виды спорта",
+        "name": "Командные виды спорта",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 322,
+        "parent": 328,
+        "catalogId": 338,
         api: 1,
         catId: 58871,
         catName: 'sport22',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "258. Командные виды спорта",
+        "name": "Командные виды спорта",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 323,
+        "parent": 328,
+        "catalogId": 339,
         api: 1,
         catId: 58871,
+        isWork: "none",
         catName: 'sport22',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "259. Водные виды спорта",
+        "name": "Водные виды спорта",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 324,
+        "parent": 328,
+        "catalogId": 340,
         api: 1,
         catId: 832,
         catName: 'sport22',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "260. Зимние виды спорта",
+        "name": "Зимние виды спорта",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 325,
+        "parent": 328,
+        "catalogId": 341,
         api: 1,
         catId: 58797,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "261. Поддержка и восстановление",
+        "name": "Поддержка и восстановление",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 326,
+        "parent": 328,
+        "catalogId": 342,
         api: 1,
         catId: 59997,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "262. Спортивное питание и косметика",
+        "name": "Спортивное питание и косметика",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 327,
+        "parent": 328,
+        "catalogId": 343,
         api: 1,
         catId: 8471,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "263. Бадминтон/Теннис",
+        "name": "Бадминтон/Теннис",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 328,
+        "parent": 328,
+        "catalogId": 344,
         api: 1,
         catId: 58795,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "264. Бильярд/Гольф/Дартс/Метание ножей",
+        "name": "Бильярд/Гольф/Дартс/Метание ножей",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 329,
+        "parent": 328,
+        "catalogId": 345,
         api: 1,
         catId: 62547,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "265. Единоборства",
+        "name": "Единоборства",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 330,
+        "parent": 328,
+        "catalogId": 346,
         api: 1,
         catId: 820,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "266. Конный спорт",
+        "name": "Конный спорт",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 331,
+        "parent": 328,
+        "catalogId": 347,
         api: 1,
         catId: 61005,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
-        ]
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
+        ],
     },
     {
-        "name": "267. Мотоспорт",
+        "name": "Мотоспорт",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 332,
+        "parent": 328,
+        "catalogId": 348,
         api: 1,
         catId: 10405,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "268. Парусный спорт",
+        "name": "Парусный спорт",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 333,
+        "parent": 328,
+        "catalogId": 349,
         api: 1,
         catId: 10020,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "269. Скалолазание/Альпинизм",
+        "name": "Скалолазание/Альпинизм",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 334,
+        "parent": 328,
+        "catalogId": 350,
         api: 1,
         catId: 60193,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "270. Страйкбол и пейнтбол",
+        "name": "Страйкбол и пейнтбол",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 335,
+        "parent": 328,
+        "catalogId": 351,
         api: 1,
         catId: 16103,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "271. Танцы/Гимнастика",
+        "name": "Танцы/Гимнастика",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 336,
+        "parent": 328,
+        "catalogId": 352,
         api: 1,
         catId: 59617,
         catName: 'sport17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "272. Для детей",
+        "name": "Для детей",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 336,
+        "parent": 328,
+        "catalogId": 353,
         api: 1,
         catId: 962,
         catName: 'sport27',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "273. Для женщин",
+        "name": "Для женщин",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 337,
+        "parent": 328,
+        "catalogId": 354,
         api: 1,
         catId: 971,
         catName: 'sport19',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "274. Для мужчинам",
+        "name": "Для мужчинам",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 338,
+        "parent": 328,
+        "catalogId": 355,
         api: 1,
         search: 'Спортивная%20одежда%20и%20аксессуары%20для%20мужчин',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "275. Спортивная обувь",
+        "name": "Спортивная обувь",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 339,
+        "parent": 328,
+        "catalogId": 356,
         api: 1,
         catId: 998,
         catName: 'sport18',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "276. Товары для самообороны",
+        "name": "Товары для самообороны",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 340,
+        "parent": 328,
+        "catalogId": 357,
         api: 1,
         catId: 130664,
         catName: 'sport18',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "277. Электроника",
+        "name": "Электроника",
         "platform": 2,
-        "parent": 313,
-        "catalogId": 341,
+        "parent": 328,
+        "catalogId": 358,
         api: 1,
         catId: 60859,
         catName: 'sport18',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 329}
         ]
     },
     {
-        "name": "278. Автотовары",
+        "name": "Автотовары",
         "platform": 2,
         "parent": -1,
-        "catalogId": 342,
+        "catalogId": 359,
         "up_name": "Автотовары",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "279. Запчасти на легковые автомобили",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 343,
+        "parent": 359,
+        "catalogId": 360,
         api: 1,
-        search: 'Запчасти%20на%20легковые%20автомобили',
         publications: [
             {channel: '-1817408131', catalogId: 1002}
         ]
     },
     {
-        "name": "280. Масла и жидкости",
+        "name": "Запчасти на легковые автомобили",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 344,
+        "parent": 359,
+        "catalogId": 361,
+        api: 1,
+        isWork: "none",
+        search: 'Запчасти%20на%20легковые%20автомобили',
+        publications: [
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
+        ]
+    },
+    {
+        "name": "Масла и жидкости",
+        "platform": 2,
+        "parent": 359,
+        "catalogId": 362,
         api: 1,
         catId: 128640,
         catName: 'autoproduct13',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "281. Автокосметика и автохимия",
+        "name": "Автокосметика и автохимия",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 345,
+        "parent": 359,
+        "catalogId": 363,
         api: 1,
         catId: 17147,
         catName: 'autoproduct13',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "282. Краски и грунтовки",
+        "name": "Краски и грунтовки",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 346,
+        "parent": 359,
+        "catalogId": 364,
         api: 1,
         search: 'Краски%20и%20грунтовки',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "283. Автоэлектроника и навигация",
+        "name": "Автоэлектроника и навигация",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 347,
+        "parent": 359,
+        "catalogId": 365,
         api: 1,
         catId: 9835,
         catName: 'electronic14',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "284. Аксессуары в салон и багажник",
+        "name": "Аксессуары в салон и багажник",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 348,
+        "parent": 359,
+        "catalogId": 366,
         api: 1,
         search: 'Аксессуары%20в%20салон%20и%20багажник',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "285. Коврики",
+        "name": "Коврики",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 349,
+        "parent": 359,
+        "catalogId": 367,
         api: 1,
         catId: 129174,
         catName: 'autoproduct4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "286. Внешний тюнинг",
+        "name": "Внешний тюнинг",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 350,
+        "parent": 359,
+        "catalogId": 368,
         api: 1,
         catId: 128664,
         catName: 'autoproduct9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "287. Другие аксессуары и доп. оборудование",
+        "name": "Другие аксессуары и доп. оборудование",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 351,
+        "parent": 359,
+        "catalogId": 369,
         api: 1,
         search: 'Другие%20аксессуары%20и%20доп.%20оборудование',
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "288. Шины и диски колесные",
+        "name": "Шины и диски колесные",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 352,
+        "parent": 359,
+        "catalogId": 370,
         api: 1,
         catId: 62554,
         catName: 'autoproduct9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "289. Инструменты",
+        "name": "Инструменты",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 353,
+        "parent": 359,
+        "catalogId": 371,
         api: 1,
         catId: 128858,
         catName: 'autoproduct19',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "290. Мойки высокого давления",
+        "name": "Мойки высокого давления",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 354,
+        "parent": 359,
+        "catalogId": 372,
         api: 1,
         catId: 128767,
         catName: 'garden8',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "291. Мототовары",
+        "name": "Мототовары",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 355,
+        "parent": 359,
+        "catalogId": 373,
         api: 1,
         catId: 58377,
         catName: 'autoproduct15',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "292. OFFroad",
+        "name": "OFFroad",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 356,
+        "parent": 359,
+        "catalogId": 374,
         api: 1,
         catId: 128669,
         catName: 'autoproduct19',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "293. OFFroad",
+        "name": "OFFroad",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 357,
+        "parent": 359,
+        "catalogId": 375,
+        isWork: 'none',
         api: 1,
         catId: 128669,
         catName: 'autoproduct19',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "294. Запчасти на силовую технику",
+        "name": "Запчасти на силовую технику",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 358,
+        "parent": 359,
+        "catalogId": 376,
         api: 1,
         catId: 128699,
         catName: 'autoproduct15',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "295. Запчасти для лодок и катеров",
+        "name": "Запчасти для лодок и катеров",
         "platform": 2,
-        "parent": 342,
-        "catalogId": 359,
+        "parent": 359,
+        "catalogId": 377,
         api: 1,
         catId: 0,
         catName: 'autoproduct15',
         subject: 6920,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 360}
         ]
     },
     {
-        "name": "296. Книги",
+        "name": "Книги",
         "platform": 2,
         "parent": -1,
-        "catalogId": 360,
+        "catalogId": 378,
         "up_name": 'Книги',
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     {
-        "name": "297. Художественная литература",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 361,
+        "parent": 378,
+        "catalogId": 379,
+        api: 1,
+    },
+    {
+        "name": "Художественная литература",
+        "platform": 2,
+        "parent": 378,
+        "catalogId": 380,
         api: 1,
         catId: 9163,
         catName: 'books_fiction',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "298. Комиксы и манга",
+        "name": "Комиксы и манга",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 362,
+        "parent": 378,
+        "catalogId": 381,
         api: 1,
         catId: 9167,
         catName: 'books_fiction',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "299. Книги для детей",
+        "name": "Книги для детей",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 363,
+        "parent": 378,
+        "catalogId": 382,
         api: 1,
         catId: 9110,
         catName: 'books_children',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "300. Воспитание и развитие ребенка",
+        "name": "Воспитание и развитие ребенка",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 364,
+        "parent": 378,
+        "catalogId": 383,
         api: 1,
         catId: 129287,
         catName: 'books_children',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "301. Образование",
+        "name": "Образование",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 365,
+        "parent": 378,
+        "catalogId": 384,
         api: 1,
         catId: 9157,
         catName: 'books3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "302. Самообразование и развитие",
+        "name": "Самообразование и развитие",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 366,
+        "parent": 378,
+        "catalogId": 385,
         api: 1,
         catId: 129275,
         catName: 'books3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "303. Самообразование и развитие",
+        "name": "Самообразование и развитие",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 367,
+        "parent": 378,
+        "catalogId": 386,
         api: 1,
         catId: 9127,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "304. Бизнес и менеджмент",
+        "name": "Бизнес и менеджмент",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 368,
+        "parent": 378,
+        "catalogId": 387,
         api: 1,
         catId: 9127,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "305. Хобби и досуг",
+        "name": "Хобби и досуг",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 369,
+        "parent": 378,
+        "catalogId": 388,
         api: 1,
         catId: 129273,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "306. Астрология и эзотерика",
+        "name": "Астрология и эзотерика",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 370,
+        "parent": 378,
+        "catalogId": 389,
         api: 1,
         catId: 9126,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "307. Дом, сад и огород",
+        "name": "Дом, сад и огород",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 371,
+        "parent": 378,
+        "catalogId": 390,
         api: 1,
         catId: 129269,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "308. Красота, здоровье и спорт",
+        "name": "Красота, здоровье и спорт",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 372,
+        "parent": 378,
+        "catalogId": 391,
         api: 1,
         catId: 129268,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "309. Научно-популярная литература",
+        "name": "Научно-популярная литература",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 373,
+        "parent": 378,
+        "catalogId": 392,
         api: 1,
         catId: 9142,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "310. Интернет и технологии",
+        "name": "Интернет и технологии",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 374,
+        "parent": 378,
+        "catalogId": 393,
         api: 1,
         catId: 9135,
         catName: 'books2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "311. Литературоведение и публицистика",
+        "name": "Литературоведение и публицистика",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 375,
+        "parent": 378,
+        "catalogId": 394,
         api: 1,
         catId: 129286,
         catName: 'books_literary_criticism',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "312. Философия",
+        "name": "Философия",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 376,
+        "parent": 378,
+        "catalogId": 395,
         api: 1,
         catId: 9235,
         catName: 'books4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "313. Религия",
+        "name": "Религия",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 377,
+        "parent": 378,
+        "catalogId": 396,
         api: 1,
         catId: 9148,
         catName: 'books2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "314. Политика и право",
+        "name": "Политика и право",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 378,
+        "parent": 378,
+        "catalogId": 397,
         api: 1,
         catId: 129277,
         catName: 'books2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "315. Букинистика",
+        "name": "Букинистика",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 379,
+        "parent": 378,
+        "catalogId": 398,
         api: 1,
         catId: 10555,
         catName: 'books2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "316. Книги на иностранных языках",
+        "name": "Книги на иностранных языках",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 380,
+        "parent": 378,
+        "catalogId": 399,
         api: 1,
         catId: 0,
         catName: 'books2',
         subject: 5805,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "317. Плакаты",
+        "name": "Плакаты",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 381,
+        "parent": 378,
+        "catalogId": 400,
         api: 1,
         catId: 0,
         catName: 'books2',
         subject: 1046,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "318. Календари",
+        "name": "Календари",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 382,
+        "parent": 378,
+        "catalogId": 401,
         api: 1,
         catId: 130525,
         catName: 'books_printed_products',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "319. Коллекционные издания",
+        "name": "Коллекционные издания",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 383,
+        "parent": 378,
+        "catalogId": 402,
         api: 1,
         catId: 0,
         catName: 'books2',
         subject: 5322,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "320. Репринтные издания",
+        "name": "Репринтные издания",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 384,
+        "parent": 378,
+        "catalogId": 403,
         api: 1,
         catId: 129274,
         catName: 'books_reprint_xviii',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "321. Мультимедиа",
+        "name": "Мультимедиа",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 385,
+        "parent": 378,
+        "catalogId": 404,
         api: 1,
         catId: 8051,
         catName: 'books2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "322. Аудиокниги",
+        "name": "Аудиокниги",
         "platform": 2,
-        "parent": 360,
-        "catalogId": 386,
+        "parent": 378,
+        "catalogId": 405,
         api: 1,
         catId: 0,
         catName: 'books2',
         subject: 5768,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 379}
         ]
     },
     {
-        "name": "323. Аудиокниги",
-        "platform": 2,
-        "parent": 360,
-        "catalogId": 387,
-        api: 1,
-        catId: 0,
-        catName: 'books2',
-        subject: 5768,
-        publications: [
-            {channel: '-1817408131', catalogId: 1002}
-        ]
-    },
-    {
-        "name": "324. Ювелирные изделия",
+        "name": "Ювелирные изделия",
         "platform": 2,
         "parent": -1,
-        "catalogId": 388,
+        "catalogId": 406,
         "up_name": 'Ювелирные изделия',
         api: 1,
         publications: [
@@ -5468,231 +5900,255 @@ const catalogs = [
         ]
     },
     {
-        "name": "325. Кольца",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 389,
+        "parent": 406,
+        "catalogId": 407,
+        api: 1,
+    },
+    {
+        "name": "Кольца",
+        "platform": 2,
+        "parent": 406,
+        "catalogId": 408,
         api: 1,
         catId: 0,
         catName: 'jewellery',
         subject: 54,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "326. Серьги",
+        "name": "Серьги",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 390,
+        "parent": 406,
+        "catalogId": 409,
         api: 1,
         catId: 0,
         catName: 'jewellery',
         subject: 207,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "327. Браслеты",
+        "name": "Браслеты",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 391,
+        "parent": 406,
+        "catalogId": 410,
         api: 1,
         catId: 0,
         catName: 'jewellery',
         subject: 205,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "328. Подвески и шармы",
+        "name": "Подвески и шармы",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 392,
+        "parent": 406,
+        "catalogId": 411,
         api: 1,
         catId: 63069,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "329. Комплекты",
+        "name": "Комплекты",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 393,
+        "parent": 406,
+        "catalogId": 412,
         api: 1,
         catId: 60289,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "330. Колье, цепи, шнурки",
+        "name": "Колье, цепи, шнурки",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 394,
+        "parent": 406,
+        "catalogId": 413,
         api: 1,
         catId: 63070,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "331. Броши",
+        "name": "Броши",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 395,
+        "parent": 406,
+        "catalogId": 414,
         api: 1,
         catId: 0,
         catName: 'jewellery',
         subject: 452,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "332. Пирсинг",
+        "name": "Пирсинг",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 396,
+        "parent": 406,
+        "catalogId": 415,
         api: 1,
         catId: 0,
         catName: 'jewellery',
         subject: 5369,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "333. Часы",
+        "name": "Часы",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 397,
+        "parent": 406,
+        "catalogId": 416,
         api: 1,
         catId: 9369,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "334. Зажимы, запонки, ремни",
+        "name": "Зажимы, запонки, ремни",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 398,
+        "parent": 406,
+        "catalogId": 417,
         api: 1,
         catId: 63071,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "335. Четки",
+        "name": "Четки",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 399,
+        "parent": 406,
+        "catalogId": 418,
         api: 1,
         catId: 0,
         catName: 'jewellery',
         subject: 2979,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "336. Сувениры и столовое серебро",
+        "name": "Сувениры и столовое серебро",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 400,
+        "parent": 406,
+        "catalogId": 419,
         api: 1,
         catId: 63072,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "337. Украшения из золота",
+        "name": "Украшения из золота",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 401,
+        "parent": 406,
+        "catalogId": 420,
         api: 1,
         catId: 1024,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "338. Украшения из серебра",
+        "name": "Украшения из серебра",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 402,
+        "parent": 406,
+        "catalogId": 421,
         api: 1,
         catId: 1031,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "339. Украшения из керамики",
+        "name": "Украшения из керамики",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 403,
+        "parent": 406,
+        "catalogId": 422,
         api: 1,
         catId: 9236,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "340. Украшения из керамики",
+        "name": "Украшения из керамики",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 404,
+        "parent": 406,
+        "catalogId": 423,
         api: 1,
         catId: 9236,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "341. Аксессуары для украшений",
+        "name": "Аксессуары для украшений",
         "platform": 2,
-        "parent": 388,
-        "catalogId": 405,
+        "parent": 406,
+        "catalogId": 424,
         api: 1,
         catId: 63073,
         catName: 'jewellery',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 407}
         ]
     },
     {
-        "name": "342. Для ремонта",
+        "name": "Для ремонта",
         "platform": 2,
         "parent": -1,
-        "catalogId": 406,
+        "catalogId": 425,
         "up_name": "Для ремонта",
         api: 1,
         publications: [
@@ -5700,668 +6156,746 @@ const catalogs = [
         ]
     },
     {
-        "name": "343. Двери, окна и фурнитура",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 407,
+        "parent": 425,
+        "catalogId": 426,
+        api: 1,
+    },
+    {
+        "name": "Двери, окна и фурнитура",
+        "platform": 2,
+        "parent": 425,
+        "catalogId": 427,
         api: 1,
         catId: 128904,
         catName: 'repair5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "344. Отделочные материалы",
+        "name": "Отделочные материалы",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 408,
+        "parent": 425,
+        "catalogId": 428,
         api: 1,
         catId: 16798,
         catName: 'repair7',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "345. Электрика",
+        "name": "Электрика",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 409,
+        "parent": 425,
+        "catalogId": 429,
         api: 1,
         catId: 17024,
         catName: 'repair4',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "346. Лакокрасочные материалы",
+        "name": "Лакокрасочные материалы",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 410,
+        "parent": 425,
+        "catalogId": 430,
         api: 1,
         catId: 128907,
         catName: 'repair9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "347. Сантехника, отопление и газоснабжение",
+        "name": "Сантехника, отопление и газоснабжение",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 411,
+        "parent": 425,
+        "catalogId": 431,
         api: 1,
         catId: 128917,
         catName: 'repair9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "348. Вентиляция",
+        "name": "Вентиляция",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 412,
+        "parent": 425,
+        "catalogId": 432,
         api: 1,
         catId: 128918,
         catName: 'repair9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "349. Крепеж",
+        "name": "Крепеж",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 413,
+        "parent": 442506,
+        "catalogId": 433,
         api: 1,
         catId: 128919,
         catName: 'repair9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "350. Стройматериалы",
+        "name": "Стройматериалы",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 414,
+        "parent": 425,
+        "catalogId": 434,
         api: 1,
         catId: 128920,
         catName: 'repair9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "351. Сборные конструкции",
+        "name": "Сборные конструкции",
         "platform": 2,
-        "parent": 406,
-        "catalogId": 415,
+        "parent": 425,
+        "catalogId": 435,
         api: 1,
         catId: 129017,
         catName: 'repair9',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "352. Сад и дача",
+        "name": "Сад и дача",
         "platform": 2,
         "parent": -1,
-        "catalogId": 416,
+        "catalogId": 436,
         "up_name": "Сад и дача",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 426}
         ]
     },
     {
-        "name": "353. Бассейны",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 417,
+        "parent": 436,
+        "catalogId": 437,
+        api: 1,
+    },
+    {
+        "name": "Бассейны",
+        "platform": 2,
+        "parent": 436,
+        "catalogId": 438,
         api: 1,
         catId: 9038,
         catName: 'garden7',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "354. Горшки, опоры и все для рассады",
+        "name": "Горшки, опоры и все для рассады",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 418,
+        "parent": 436,
+        "catalogId": 439,
         api: 1,
         catId: 128740,
         catName: 'garden8',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "355. Грили, мангалы и барбекю",
+        "name": "Грили, мангалы и барбекю",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 419,
+        "parent": 436,
+        "catalogId": 440,
         api: 1,
         catId: 128745,
         catName: 'garden8',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "356. Дачные умывальники, души и туалеты",
+        "name": "Дачные умывальники, души и туалеты",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 420,
+        "parent": 436,
+        "catalogId": 441,
         api: 1,
         catId: 128766,
         catName: 'garden8',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "357. Мойки высокого давления",
+        "name": "Мойки высокого давления",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 421,
+        "parent": 436,
+        "catalogId": 442,
         api: 1,
         catId: 128767,
         catName: 'garden8',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "358. Полив и водоснабжение",
+        "name": "Полив и водоснабжение",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 422,
+        "parent": 436,
+        "catalogId": 443,
         api: 1,
         catId: 128768,
         catName: 'garden6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "359. Растения, семена и грунты",
+        "name": "Растения, семена и грунты",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 423,
+        "parent": 436,
+        "catalogId": 444,
         api: 1,
         catId: 128760,
         catName: 'garden5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "360. Садовая мебель",
+        "name": "Садовая мебель",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 424,
+        "parent": 436,
+        "catalogId": 445,
         api: 1,
         catId: 128769,
         catName: 'garden6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "361. Садовая техника",
+        "name": "Садовая техника",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 425,
+        "parent": 436,
+        "catalogId": 446,
         api: 1,
         catId: 58530,
         catName: 'garden6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "362. Садовый декор",
+        "name": "Садовый декор",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 426,
+        "parent": 436,
+        "catalogId": 447,
         api: 1,
         catId: 128770,
         catName: 'garden6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "363. Садовый инструмент",
+        "name": "Садовый инструмент",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 427,
+        "parent": 436,
+        "catalogId": 448,
         api: 1,
         catId: 128771,
         catName: 'garden7',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "364. Теплицы, парники, укрывной материал",
+        "name": "Теплицы, парники, укрывной материал",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 428,
+        "parent": 436,
+        "catalogId": 449,
         api: 1,
         catId: 128772,
         catName: 'garden7',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "365. Товары для бани и сауны",
+        "name": "Товары для бани и сауны",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 429,
+        "parent": 436,
+        "catalogId": 450,
         api: 1,
         catId: 8744,
         catName: 'garden7',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "366. Товары для кемпинга, пикника и отдыха",
+        "name": "Товары для кемпинга, пикника и отдыха",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 430,
+        "parent": 436,
+        "catalogId": 451,
         api: 1,
         catId: 128774,
         catName: 'garden7',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "367. Удобрения, химикаты и средства защиты",
+        "name": "Удобрения, химикаты и средства защиты",
         "platform": 2,
-        "parent": 416,
-        "catalogId": 431,
+        "parent": 436,
+        "catalogId": 452,
         api: 1,
         catId: 128773,
         catName: 'garden3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "368. Здоровье",
+        "name": "Здоровье",
         "platform": 2,
         "parent": -1,
-        "catalogId": 432,
+        "catalogId": 453,
         "up_name": "Здоровье",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 437}
         ]
     },
     {
-        "name": "369. БАДы",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 433,
+        "parent": 453,
+        "catalogId": 454,
+        api: 1,
+    },
+    {
+        "name": "БАДы",
+        "platform": 2,
+        "parent": 453,
+        "catalogId": 455,
         api: 1,
         catId: 10327,
         catName: 'shealth2t1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "370. Грибы сушеные и капсулированные",
+        "name": "Грибы сушеные и капсулированные",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 434,
+        "parent": 453,
+        "catalogId": 456,
         api: 1,
         catId: 0,
         catName: 'shealth2t1',
         subject: 8107,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "371. Дезинфекция, стерилизация и утилизация",
+        "name": "Дезинфекция, стерилизация и утилизация",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 435,
+        "parent": 453,
+        "catalogId": 457,
         api: 1,
         catId: 10331,
         catName: 'shealth1t1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "372. Ухо, горло, нос",
+        "name": "Ухо, горло, нос",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 436,
+        "parent": 453,
+        "catalogId": 458,
         api: 1,
         catId: 130696,
         catName: 'shealth6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "373. Контрацептивы и лубриканты",
+        "name": "Контрацептивы и лубриканты",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 436,
+        "parent": 453,
+        "catalogId": 459,
         api: 1,
         catId: 10328,
         catName: 'shealth1t1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "374. Лечебное питание",
+        "name": "Лечебное питание",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 437,
+        "parent": 453,
+        "catalogId": 460,
         api: 1,
         catId: 0,
         catName: 'shealth5',
         subject: 5520,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "375. Маски защитные",
+        "name": "Маски защитные",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 438,
+        "parent": 453,
+        "catalogId": 461,
         api: 1,
         catId: 17114,
         catName: 'shealth2t1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "376. Медицинские изделия",
+        "name": "Медицинские изделия",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 439,
+        "parent": 453,
+        "catalogId": 462,
         api: 1,
         catId: 10329,
         catName: 'shealth2t1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "377. Медицинские приборы",
+        "name": "Медицинские приборы",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 440,
+        "parent": 453,
+        "catalogId": 463,
         api: 1,
         catId: 62257,
         catName: 'shealth5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "378. Оздоровление",
+        "name": "Оздоровление",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 441,
+        "parent": 453,
+        "catalogId": 464,
         api: 1,
         catId: 63007,
         catName: 'shealth5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "379. Оптика",
+        "name": "Оптика",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 442,
+        "parent": 453,
+        "catalogId": 465,
         api: 1,
         catId: 10364,
         catName: 'shealth6',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "380. Ортопедия",
+        "name": "Ортопедия",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 443,
+        "parent": 453,
+        "catalogId": 466,
         api: 1,
         catId: 5515,
         catName: 'shealth5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "381. Реабилитация",
+        "name": "Реабилитация",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 443,
+        "parent": 453,
+        "catalogId": 467,
         api: 1,
         catId: 61809,
         catName: 'shealth5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "382. Сиропы и бальзамы",
+        "name": "Сиропы и бальзамы",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 444,
+        "parent": 453,
+        "catalogId": 468,
         api: 1,
         catId: 130371,
         catName: 'shealth5',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "383. Уход за полостью рта",
+        "name": "Уход за полостью рта",
         "platform": 2,
-        "parent": 432,
-        "catalogId": 445,
+        "parent": 453,
+        "catalogId": 469,
         api: 1,
         catId: 63058,
         catName: 'shealth1t1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "384. Канцтовары",
+        "name": "Канцтовары",
         "platform": 2,
         "parent": -1,
-        "catalogId": 446,
+        "catalogId": 470,
         "up_name": "Канцтовары",
         api: 1,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "385. Бумажная продукция",
+        "name": "Все подкатегории",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 447,
+        "parent": 470,
+        "catalogId": 471,
         api: 1,
         catId: 17148,
         catName: 'stationery1',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "386. Карты и глобусы",
+        "name": "Бумажная продукция",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 448,
+        "parent": 470,
+        "catalogId": 472,
+        api: 1,
+        catId: 17148,
+        catName: 'stationery1',
+        subject: 0,
+        publications: [
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
+        ]
+    },
+    {
+        "name": "Карты и глобусы",
+        "platform": 2,
+        "parent": 470,
+        "catalogId": 473,
         api: 1,
         catId: 17152,
         catName: 'stationery2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "387. Офисные принадлежности",
+        "name": "Офисные принадлежности",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 449,
+        "parent": 470,
+        "catalogId": 474,
         api: 1,
         catId: 17153,
         catName: 'stationery2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "388. Письменные принадлежности",
+        "name": "Письменные принадлежности",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 450,
+        "parent": 470,
+        "catalogId": 475,
         api: 1,
         catId: 17159,
         catName: 'stationery3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "389. Рисование и лепка",
+        "name": "Рисование и лепка",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 450,
+        "parent": 470,
+        "catalogId": 476,
         api: 1,
         catId: 17164,
         catName: 'creativity17',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "390. Счетный материал",
+        "name": "Счетный материал",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 451,
+        "parent": 470,
+        "catalogId": 477,
         api: 1,
         catId: 16992,
         catName: 'stationery2',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "391. Торговые принадлежности",
+        "name": "Торговые принадлежности",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 452,
+        "parent": 470,
+        "catalogId": 478,
         api: 1,
         catId: 61872,
         catName: 'stationery3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "392. Чертежные принадлежности",
+        "name": "Чертежные принадлежности",
         "platform": 2,
-        "parent": 446,
-        "catalogId": 453,
+        "parent": 470,
+        "catalogId": 479,
         api: 1,
         catId: 17165,
         catName: 'stationery3',
         subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            {catalogId: 454}
         ]
     },
     {
-        "name": "393. Цифровые товары",
+        "name": "Сделано в Москве",
         "platform": 2,
         "parent": -1,
-        "catalogId": 454,
-        "up_name": "Цифровые товары",
+        "catalogId": 480,
         api: 1,
+        catId: 130255,
+        catName: 'moscow1',
+        subject: 0,
         publications: [
-            {channel: '-1817408131', catalogId: 1002}
-        ]
-    },
-    {
-        "name": "394. Цифровые товары",
-        "platform": 2,
-        "parent": -1,
-        "catalogId": 455,
-        api: 1,
-        publications: [
-            {channel: '-1817408131', catalogId: 1002}
+            {channel: '-1817408131', catalogId: 1002},
+            
         ]
     },
     // {

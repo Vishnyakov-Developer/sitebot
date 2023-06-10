@@ -17,8 +17,10 @@ const startApplication = async function (from, limit, catalogid, search, end = f
     clearInterval(timerArrowInner);
     timerArrowInner = setInterval(async () => {
         
-        const watchCount     = await getWatch(USER_ID, catalogid);
+        const watchCount     = (await getWatch(USER_ID, catalogid))+1;
         const lengthProducts = parseInt(await getCountProducts(catalogid));
+        console.log('watchcount, ', watchCount);
+        console.log(`lengthPRoducts , `, lengthProducts);
         if(document.documentElement.scrollTop > 0) {
             window.localStorage.setItem(`catalog-${catalogid}`, document.documentElement.scrollTop)
         }
@@ -27,13 +29,11 @@ const startApplication = async function (from, limit, catalogid, search, end = f
             prodCount = 0;
         }
         ELEMENT_ARROW_INNER.textContent = prodCount;
-        console.log('1232131312');
+        
         try {
             if(isVisible(list.querySelector(`.products__item[index="${lengthProducts-1}"]`))) {
                 document.querySelector('.arrow').classList.add('none');
-                console.log('123213131');
             } else {
-                console.log('123213131');
                 if(lengthProducts > 0) {
                     document.querySelector('.arrow').classList.remove('none');
                 } else {
@@ -55,6 +55,7 @@ const startApplication = async function (from, limit, catalogid, search, end = f
                 if(isVisible(block)) {
                     if(parseInt(block.getAttribute('index')) > parseInt(watchCount)) {
                         setWatch(USER_ID, catalogid, parseInt(block.getAttribute('index'))+1);
+                        
                     }
                     document.querySelector('.products__date .inner').textContent = block.getAttribute('date_string');
                 }
@@ -118,7 +119,6 @@ function isVisible(elem) {
 
 async function getWatch(userid, category) {
     
-    console.log('getwatch category - ', category);
 
     const result = (await axios({
         method: 'GET',
