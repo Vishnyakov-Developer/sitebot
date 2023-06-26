@@ -2084,6 +2084,7 @@ const catalogs = [
         api: 1,
         catId: 243,
         catName: 'children_things3',
+        isWork: "none",
         publications: [
             {channel: '-1817408131', catalogId: 1002},
             {catalogId: 105}
