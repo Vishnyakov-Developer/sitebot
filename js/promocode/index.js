@@ -35,7 +35,7 @@ promoButton.addEventListener('click', async () => {
         promoAfterText.classList.add('success');
         
         setTimeout(async () => {
-            await sendCloseMessage('Промокод был успешно активирован. Откройте приложение вновь, для того чтобы увидеть изменения в функционале!');
+            await sendCloseMessage('Промокод был успешно активирован.');
         }, 1000)
     }
 })

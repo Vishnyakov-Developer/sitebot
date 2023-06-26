@@ -18,9 +18,29 @@ const startApplication = async function (from, limit, catalogid, search, end = f
     timerArrowInner = setInterval(async () => {
         
         const watchCount     = (await getWatch(USER_ID, catalogid))+1;
-        const lengthProducts = parseInt(await getCountProducts(catalogid));
+        let lengthProducts = parseInt(await getCountProducts(catalogid));
         console.log('watchcount, ', watchCount);
         console.log(`lengthPRoducts , `, lengthProducts);
+
+        // [...list.querySelectorAll('.products__item:not(.template)')].reduce((prev, item) => {
+        //     const value = item.href;
+        //     prev.forEach(val => {
+        //         if(item.querySelector('.products__item__url').href == val) {
+        //             lengthProducts--;
+        //             return false;
+        //         }
+        //     })
+        //     if(prev.indexOf(value) == -1) {
+        //         prev.push(value)
+        //     }
+        //     return prev;
+            
+            
+            
+        // }, [])
+
+        
+        
         if(document.documentElement.scrollTop > 0) {
             window.localStorage.setItem(`catalog-${catalogid}`, document.documentElement.scrollTop)
         }
@@ -76,7 +96,9 @@ const startApplication = async function (from, limit, catalogid, search, end = f
     await showProducts(from, limit, catalogid, search);
 
     setTimeout(() => {
-        document.documentElement.scrollTop = parseInt(window.localStorage.getItem('catalog-' + catalogid));
+        if(currentPage().classList.contains('main-catalog')) {
+            document.documentElement.scrollTop = parseInt(window.localStorage.getItem('catalog-' + catalogid));
+        }
     }, 900)
     
     // console.log(parseInt(window.localStorage.getItem('catalog-' + catalogid)));
