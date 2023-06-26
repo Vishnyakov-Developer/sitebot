@@ -5617,6 +5617,7 @@ const catalogs = [
         api: 1,
         catId: 9127,
         catName: 'books4',
+        isWork: "none",
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
