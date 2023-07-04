@@ -450,5 +450,6 @@ body {
   }
 }
 .products .products__list .products__item .products__item__img .products__item__sale.products__item__sale_two {
-  left: 54px;
+  right: -105px;
+  background: #31DA07;
 }/*# sourceMappingURL=style.css.map */
