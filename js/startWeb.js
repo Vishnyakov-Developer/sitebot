@@ -40,9 +40,9 @@ async function webApplicationStart() {
                 if(user.end > Date.now()/1000) {
                     const date2 = moment(
                         new Date(user.end*1000).toLocaleString("en-US", { timeZone: "Europe/Moscow" })
-                    ).format("DD.MM.YYYY");
+                    ).format("D.M.YYYY");
                     document.querySelector('#end_next').textContent = date2;
-                    document.querySelector('#does').textContent = `Действие подписки до `
+                    document.querySelector('#does').textContent = `Действие подписки до `;
                 } else {
                     document.querySelector('#end_next').textContent = 'отсутствует';
                 }

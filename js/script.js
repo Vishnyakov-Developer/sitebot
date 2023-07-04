@@ -6757,7 +6757,6 @@ const catalogs = [
         api: 1,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
         ]
     },
     {
@@ -6771,7 +6770,6 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
         ]
     },
     {
@@ -6785,7 +6783,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
@@ -6799,7 +6797,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
@@ -6813,7 +6811,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
@@ -6827,7 +6825,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
@@ -6841,7 +6839,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
@@ -6855,7 +6853,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
@@ -6869,7 +6867,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
@@ -6883,7 +6881,7 @@ const catalogs = [
         subject: 0,
         publications: [
             {channel: '-1817408131', catalogId: 1002},
-            {catalogId: 454}
+            {catalogId: 471}
         ]
     },
     {
