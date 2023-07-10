@@ -5,7 +5,7 @@ document.addEventListener('click', async (ctx) => {
     const element = ctx.target;
 
     if(element.getAttribute('like') == 'false') {
-        new Toaster('Добавленно в избранное', 3000);
+        new Toaster('Добавлено в избранное', 3000);
     }
     
     if(element.classList.contains('like')) {
@@ -31,7 +31,8 @@ const getCountProducts = async function(catalogid, search = '') {
         url: CATALOG_URL + 'get_count',
         params: {
             catalogid: catalogid,
-            search: search
+            search: search,
+            userid: USER_ID,
         }
     })).data;
 
@@ -57,7 +58,9 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
             // limit: parseInt(limit),
             limit: count,
             catalogid: catalogid,
-            search: search
+            search: search,
+            userid: USER_ID,
+            
         }
     })).data.map(product => {
         for(let i = 0; i<favors.length; i++) {
@@ -88,8 +91,10 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
     const countProducts = await getCountProducts(catalogid, search);
     if(parseInt(from) + parseInt(count) >= countProducts) {
         nextProducts = () => {};
+        document.querySelector('.main-catalog .products__loader').classList.add('none');
     } else {
         nextProducts = async (interval = 0) => {
+            document.querySelector('.main-catalog .products__loader').classList.remove('none');
 
             const value = document.documentElement.scrollHeight-document.documentElement.scrollTop;
             clearProducts(countForAdd);
@@ -197,8 +202,18 @@ function appendProduct(image, price, oldPrice, startPrice, views, name, rate, re
 
     block.classList.remove('template', 'none');
 
-    block.querySelector('.products__item__img img').src = image;
+    // change
+    for(let i = 0; i<12; i++) {
+        let num = `${i+1}`;
+        if(num.length == 1) {
+            num = `0${num}`;
+        }
+        block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
+        block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
+    }
+    
     block.querySelector('.products__item__name').textContent = name;
+    // str.replace(/https:\/\/basket-[\d]+/g, 'https://basket-02')
 
     if(rate == 'undefined') {
         rate = 0;

@@ -27,7 +27,6 @@ function autoloaderStart() {
         }
     
         if(scroll < 9000) {
-            
             if(timerPageBack == undefined) {
                 timerPageBack = setTimeout(async () => {
                     addProductsBack();

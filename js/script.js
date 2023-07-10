@@ -168,10 +168,36 @@ document.addEventListener('click', async event => {
         if(event.target.getAttribute('platform') != null) {
             currentPlatform = parseInt(event.target.getAttribute('platform'));
             
-            openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform'));    
+            openCatalog(event.target.getAttribute('step'), event.target.getAttribute('platform')); 
+            document.documentElement.scrollTop = 0;   
+            if(user.helper == 0) {
+                user.helper = 1;
+                openModal('help');
+                await axios({
+                    method: 'GET',
+                    url: CATALOG_URL + 'was_help',
+                    params: {
+                        userid: USER_ID,
+                    }
+                });
+
+            }
+            
         } else {
             if(user.end*1000 > Date.now()) {
                 openCatalog(event.target.getAttribute('step'));
+                document.documentElement.scrollTop = 0;
+                if(user.helper == 0) {
+                    user.helper = 1;
+                    openModal('help');
+                    await axios({
+                        method: 'GET',
+                        url: CATALOG_URL + 'was_help',
+                        params: {
+                            userid: USER_ID,
+                        }
+                    });
+                }
             }
         }
         

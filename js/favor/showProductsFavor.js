@@ -41,7 +41,8 @@ const showProductsSearch = async (text = '') => {
             // limit: parseInt(limit),
             limit: 300,
             catalogid: 'all',
-            search: text
+            search: text,
+            userid: USER_ID
         }
     })).data.map(product => {
         for(let i = 0; i<favors.length; i++) {
@@ -86,6 +87,15 @@ function appendProductFavor(image,  price, oldPrice, startPrice, views, name, ra
 
     image.replace('///', '//');
 
+    for(let i = 0; i<12; i++) {
+        let num = `${i+1}`;
+        if(num.length == 1) {
+            num = `0${num}`;
+        }
+        block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
+        block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
+    }
+
     if(rate == 'undefined') {
         rate = 0;
     }
@@ -108,7 +118,6 @@ function appendProductFavor(image,  price, oldPrice, startPrice, views, name, ra
     } else {
         // return true;
     }
-    block.querySelector('.products__item__img img').src = image;
     block.querySelector('.products__item__name').textContent = name;
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;
@@ -197,7 +206,14 @@ function appendProductSearch(image, price, oldPrice, startPrice, views, name, ra
     } else {
         // return true;
     }
-    block.querySelector('.products__item__img img').src = image;
+    for(let i = 0; i<12; i++) {
+        let num = `${i+1}`;
+        if(num.length == 1) {
+            num = `0${num}`;
+        }
+        block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
+        block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
+    }
     block.querySelector('.products__item__name').textContent = name;
     block.querySelector('.products__item__rating span').textContent = rate;
     block.querySelector('.products__item__reviews span').textContent = reviews;

@@ -8,7 +8,8 @@ const testProductsShow = async function (from, limit, catalogid, search = '', pr
             from: from,
             limit: parseInt(limit),
             catalogid: catalogid,
-            search: search
+            search: search,
+            userid: USER_ID,
         }
     })).data;
 
