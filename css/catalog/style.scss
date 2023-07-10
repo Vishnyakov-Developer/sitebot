@@ -207,6 +207,17 @@ body {
 .products {
     margin-top: 13px;
     // padding-top: 60px;
+    .products__loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 21px;  
+        svg {
+            width: 42px;
+        }
+    }
     .products__date {
         width: 100%;
         display: flex;
@@ -419,7 +430,7 @@ body {
                 width: 170px;
                 height: 195px;
                 position: relative;
-                .original {
+                .products__item__template {
                     @media(max-width: 350px) {
                         width: 150px;
                         height: 178px;
