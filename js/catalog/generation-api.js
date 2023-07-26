@@ -40,6 +40,7 @@ const getCountProducts = async function(catalogid, search = '') {
 } 
 
 const showProducts = async function (from, limit, catalogid, search = '', prepend = false) {
+    const startFunc = performance.now();
     setHistory(catalogid, from);
     const favors = (await axios({
         method: 'GET',
@@ -49,7 +50,7 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         }
     })).data;
 
-    
+    console.log(CATALOG_URL + 'get_products' + `?from=${from}&limit=${count}&catalogid=${catalogid}&search=${search}&userid=${USER_ID}`);
     const products = (await axios({
         method: 'GET',
         url: CATALOG_URL + 'get_products',
@@ -74,8 +75,10 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         return product;
     });
 
-    console.log(products)
+    console.log(`первичные запросы в show_products завершены за ${performance.now()-startFunc}`)
 
+
+    console.log(products)
 
 
     if(prepend == true) {
@@ -85,10 +88,14 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.startPrice, product.views, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id, product.saleProcents, product.change_procents));
     }
     
+    
     window.localStorage.setItem('catalog_id', catalogid);
     list.classList.remove('fullpading');
+    const countProducts = 123;
+    // const countProducts = await getCountProducts(catalogid, search);
 
-    const countProducts = await getCountProducts(catalogid, search);
+    // change изменить выше
+
     if(parseInt(from) + parseInt(count) >= countProducts) {
         nextProducts = () => {};
         document.querySelector('.main-catalog .products__loader').classList.add('none');
@@ -150,6 +157,8 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
         
         document.documentElement.scrollTop = document.documentElement.scrollHeight;
     }
+
+    console.log('функция show_products завершена за ', performance.now()-startFunc)
     
 }
 
@@ -181,6 +190,7 @@ function clearProducts(count, startWithEnd = false) {
 }
 
 function appendProduct(image, price, oldPrice, startPrice, views, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id, saleOriginal = 0, changeProcents = 0) {
+    console.log('appendProduct');
     let block = list.querySelector('.template').cloneNode(true);
     let continueNext = true;
 
@@ -257,12 +267,13 @@ function appendProduct(image, price, oldPrice, startPrice, views, name, rate, re
     block.setAttribute('product_id', id);
     block.setAttribute('index', index);
 
-    list.querySelectorAll('.products__item:not(.template)').forEach((item, index) => {
-        if(item.querySelector('.products__item__url').href == url) {
-            continueNext = false;
-            return false;
-        }
-    })
+    // Поиск клонов
+    // list.querySelectorAll('.products__item:not(.template)').forEach((item, index) => {
+    //     if(item.querySelector('.products__item__url').href == url) {
+    //         continueNext = false;
+    //         return false;
+    //     }
+    // })
 
     if(!continueNext) {
         return false;
