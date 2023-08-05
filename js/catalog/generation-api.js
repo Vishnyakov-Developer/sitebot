@@ -36,7 +36,7 @@ const getCountProducts = async function(catalogid, search = '') {
         }
     })).data;
 
-    return parseInt(Object.values(result[0])[0]);
+    return result[0];
 } 
 
 const showProducts = async function (from, limit, catalogid, search = '', prepend = false) {
@@ -91,8 +91,8 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
     
     window.localStorage.setItem('catalog_id', catalogid);
     list.classList.remove('fullpading');
-    const countProducts = 123;
-    // const countProducts = await getCountProducts(catalogid, search);
+
+    const countProducts = await getCountProducts(catalogid, search);
 
     // change изменить выше
 
@@ -116,7 +116,7 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
             await showProducts(parseInt(from)+countForAdd, countForAdd, catalogid, search);
         }
     }
-    // nextProducts = async () => await showProducts(parseInt(from)+parseInt(limit), limit, catalogid, search);
+    nextProducts = async () => await showProducts(parseInt(from)+parseInt(limit), limit, catalogid, search);
     
 
     if(parseInt(from) > 0) {
