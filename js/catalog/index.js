@@ -18,7 +18,7 @@ const startApplication = async function (from, limit, catalogid, search, end = f
     timerArrowInner = setInterval(async () => {
         
         const watchCount     = (await getWatch(USER_ID, catalogid))+1;
-        let lengthProducts = 123;
+        let lengthProducts = parseInt(await getCountProducts(catalogid));
         console.log('watchcount, ', watchCount);
         console.log(`lengthPRoducts , `, lengthProducts);
 
@@ -94,8 +94,6 @@ const startApplication = async function (from, limit, catalogid, search, end = f
 
     console.log('from', from);
     await showProducts(from, limit, catalogid, search);
-    openPage('main-catalog');
-    
 
     setTimeout(() => {
         if(currentPage().classList.contains('main-catalog')) {
@@ -107,7 +105,7 @@ const startApplication = async function (from, limit, catalogid, search, end = f
 
     autoloaderStart();
 
-    // openPage('main-catalog');
+    openPage('main-catalog');
 
     stopApplication = async () => {
         clearProducts(500);

@@ -94,14 +94,13 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
 
     const countProducts = await getCountProducts(catalogid, search);
 
-    // change изменить выше
-
+    document.querySelector('.main-catalog .products__loader').classList.add('none');
     if(parseInt(from) + parseInt(count) >= countProducts) {
         nextProducts = () => {};
-        document.querySelector('.main-catalog .products__loader').classList.add('none');
+        
     } else {
         nextProducts = async (interval = 0) => {
-            document.querySelector('.main-catalog .products__loader').classList.remove('none');
+            
 
             const value = document.documentElement.scrollHeight-document.documentElement.scrollTop;
             clearProducts(countForAdd);
