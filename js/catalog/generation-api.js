@@ -36,7 +36,7 @@ const getCountProducts = async function(catalogid, search = '') {
         }
     })).data;
 
-    return result[0];
+    return result;
 } 
 
 const showProducts = async function (from, limit, catalogid, search = '', prepend = false) {
@@ -93,10 +93,11 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
     list.classList.remove('fullpading');
 
     const countProducts = await getCountProducts(catalogid, search);
-
-    document.querySelector('.main-catalog .products__loader').classList.add('none');
+    document.querySelector('.main-catalog .products__loader').classList.remove('none');
+    
     if(parseInt(from) + parseInt(count) >= countProducts) {
         nextProducts = () => {};
+        document.querySelector('.main-catalog .products__loader').classList.add('none');
         
     } else {
         nextProducts = async (interval = 0) => {

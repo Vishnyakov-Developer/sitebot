@@ -156,6 +156,7 @@ document.querySelectorAll(`[openSection]`).forEach(block => {
     block.addEventListener('click', () => {
         const section = sections[block.getAttribute('openSection')];
         openSection(section);
+        document.documentElement.scrollTop = 0;
     })
 })
 

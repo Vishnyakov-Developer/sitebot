@@ -6153,6 +6153,7 @@ const catalogs = [
         catId: 9236,
         catName: 'jewellery',
         subject: 0,
+        isWork: "none",
         publications: [
             {channel: '-1817408131', catalogId: 1002},
             {catalogId: 407}

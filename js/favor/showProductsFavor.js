@@ -87,14 +87,21 @@ function appendProductFavor(image,  price, oldPrice, startPrice, views, name, ra
 
     image.replace('///', '//');
 
-    for(let i = 0; i<12; i++) {
-        let num = `${i+1}`;
-        if(num.length == 1) {
-            num = `0${num}`;
+    
+
+    block.querySelectorAll('.products__item__img .products__item__template').forEach((e,index) => {
+        // block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
+        // block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
+        let strIndex = ``;
+        if(index < 9) {
+            strIndex = `0${index+1}`;
+        } else {
+            strIndex = index+1;
         }
-        block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
-        block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
-    }
+        e.src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${strIndex}`);
+        e.classList.remove('none');
+        
+    })
 
     if(rate == 'undefined') {
         rate = 0;
