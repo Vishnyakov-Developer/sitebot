@@ -2717,7 +2717,7 @@ const catalogs = [
         ]
     },
     {
-        "name": "Прихожая",
+        "name": "Религия, эзотерика",
         "platform": 2,
         "parent": 146,
         "catalogId": 164,
