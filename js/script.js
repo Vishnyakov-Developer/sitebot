@@ -49,7 +49,7 @@ const start = async () => {
         
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
             // id: 5178264021
-            id: tg.initDataUnsafe.user.id
+            id: USER_ID
         }), {mode: 'cors'})
         user = await data.json();
         if(user.end < Date.now()/1000) {

@@ -102,7 +102,7 @@ const sendCloseMessage = async function (message) {
         method: 'GET',
         url: link,
         params: {
-            user: JSON.stringify(tg.initDataUnsafe.user),
+            user: JSON.stringify(USER_ID),
             message: message
         }
     });
@@ -194,7 +194,7 @@ document.querySelectorAll(`[onMessage]`).forEach(block => {
     block.addEventListener('click', async () => {
         const message = block.getAttribute('onMessage');
         await fetch(URL + 'onmessage?' + new URLSearchParams({
-            user: JSON.stringify(tg.initDataUnsafe.user),
+            user: JSON.stringify(USER_ID),
             message: message
         }));
         tg.close();
