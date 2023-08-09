@@ -51,7 +51,8 @@ const start = async () => {
     try {
         
         const data = await fetch(URL + 'get_user?' + new URLSearchParams({
-            id: tg.initDataUnsafe.user.id
+            // id: tg.initDataUnsafe.user.id
+            id: USER_ID
         }), {mode: 'cors'})
         user = await data.json();
         if(user.end < Date.now()/1000) {
@@ -170,7 +171,7 @@ document.addEventListener('click', async event => {
         if(event.target.getAttribute('platform') != null) {
             if(user.end*1000 < Date.now()) {
                 await fetch(URL + 'message?' + new URLSearchParams({
-                    user: JSON.stringify(tg.initDataUnsafe.user),
+                    user: JSON.stringify(USER_ID),
                     message: 'Для просмотра каталога приобретите подписку или возьми пробный *период 7 дней*'
                 }));
                 tg.close();
