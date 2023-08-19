@@ -6949,7 +6949,7 @@ const catalogs = [
         "platform": 3,
         "parent": 482,
         "catalogId": 483,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Обувь",
@@ -7029,7 +7029,7 @@ const catalogs = [
         "platform": 3,
         "parent": 490,
         "catalogId": 491,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Блузы и рубашки",
@@ -7451,7 +7451,7 @@ const catalogs = [
         "platform": 3,
         "parent": 516,
         "catalogId": 517,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Балетки",
@@ -7788,7 +7788,7 @@ const catalogs = [
         "platform": 3,
         "parent": 537,
         "catalogId": 538,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары для волос",
@@ -8125,7 +8125,7 @@ const catalogs = [
         "platform": 3,
         "parent": 558,
         "catalogId": 559,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары",
@@ -8190,7 +8190,7 @@ const catalogs = [
         "platform": 3,
         "parent": 563,
         "catalogId": 564,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Баскетбол",
@@ -8476,7 +8476,7 @@ const catalogs = [
         "platform": 3,
         "parent": 581,
         "catalogId": 582,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Антисептики",
@@ -8949,7 +8949,7 @@ const catalogs = [
         "platform": 3,
         "parent": 610,
         "catalogId": 611,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары для ванной",
@@ -9480,7 +9480,7 @@ const catalogs = [
         "platform": 3,
         "parent": 643,
         "catalogId": 644,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Обувь",
@@ -9596,7 +9596,7 @@ const catalogs = [
         "platform": 3,
         "parent": 651,
         "catalogId": 652,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Брюки",
@@ -9933,7 +9933,7 @@ const catalogs = [
         "platform": 3,
         "parent": 672,
         "catalogId": 673,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Ботинки",
@@ -10151,7 +10151,7 @@ const catalogs = [
         "platform": 3,
         "parent": 686,
         "catalogId": 687,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Галстуки и запонки",
@@ -10471,7 +10471,7 @@ const catalogs = [
         "platform": 3,
         "parent": 706,
         "catalogId": 707,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары",
@@ -10536,7 +10536,7 @@ const catalogs = [
         "platform": 3,
         "parent": 711,
         "catalogId": 712,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Баскетбол",
@@ -10818,7 +10818,7 @@ const catalogs = [
         "platform": 3,
         "parent": 729,
         "catalogId": 730,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Антисептики",
@@ -11019,7 +11019,7 @@ const catalogs = [
         "platform": 3,
         "parent": 742,
         "catalogId": 743,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары для ванной",
@@ -11291,7 +11291,7 @@ const catalogs = [
         "platform": 3,
         "parent": 760,
         "catalogId": 761,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Девочкам",
@@ -11390,7 +11390,7 @@ const catalogs = [
         "platform": 3,
         "parent": 767,
         "catalogId": 768,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары",
@@ -11472,7 +11472,7 @@ const catalogs = [
         "platform": 3,
         "parent": 773,
         "catalogId": 774,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары",
@@ -11554,7 +11554,7 @@ const catalogs = [
         "platform": 3,
         "parent": 779,
         "catalogId": 780,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары",
@@ -11636,7 +11636,7 @@ const catalogs = [
         "platform": 3,
         "parent": 785,
         "catalogId": 786,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Блузы и рубашки",
@@ -11905,7 +11905,7 @@ const catalogs = [
         "platform": 3,
         "parent": 802,
         "catalogId": 803,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "LEGO",
@@ -12140,7 +12140,7 @@ const catalogs = [
         "platform": 3,
         "parent": 817,
         "catalogId": 818,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Бутылочки",
@@ -12324,7 +12324,7 @@ const catalogs = [
         "platform": 3,
         "parent": 829,
         "catalogId": 830,
-        "up_name": "Все подкатегории",
+        
     },
     {
         "name": "Аксессуары для ванной",
