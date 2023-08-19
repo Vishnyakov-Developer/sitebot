@@ -2,10 +2,12 @@ let timerApplication    = undefined;
 let timerArrowInner     = undefined;
 
 const startApplication = async function (from, limit, catalogid, search, end = false) {
+    console.log('startapplication')
     const hist = await getHistory(catalogid);
     if(hist > 0) {
         from = hist;
     }
+    
     clearInterval(timerApplication);
     timerApplication = setTimeout(() => {
         const scrollElement = document.querySelector('.search');
@@ -13,7 +15,7 @@ const startApplication = async function (from, limit, catalogid, search, end = f
     }, 10)
 
     window.localStorage.setItem('from', 0);
-
+    
     clearInterval(timerArrowInner);
     timerArrowInner = setInterval(async () => {
         
@@ -94,7 +96,7 @@ const startApplication = async function (from, limit, catalogid, search, end = f
 
     console.log('from', from);
     await showProducts(from, limit, catalogid, search);
-
+    console.log('startapplication 2')
     setTimeout(() => {
         if(currentPage().classList.contains('main-catalog')) {
             document.documentElement.scrollTop = parseInt(window.localStorage.getItem('catalog-' + catalogid));

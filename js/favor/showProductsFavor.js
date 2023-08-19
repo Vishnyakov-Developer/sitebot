@@ -88,20 +88,29 @@ function appendProductFavor(image,  price, oldPrice, startPrice, views, name, ra
     image.replace('///', '//');
 
     
-
-    block.querySelectorAll('.products__item__img .products__item__template').forEach((e,index) => {
-        // block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
-        // block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
-        let strIndex = ``;
-        if(index < 9) {
-            strIndex = `0${index+1}`;
-        } else {
-            strIndex = index+1;
-        }
-        e.src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${strIndex}`);
-        e.classList.remove('none');
-        
-    })
+    if(platform == 2) {
+        block.querySelectorAll('.products__item__img .products__item__template').forEach((e,index) => {
+            // block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
+            // block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
+            let strIndex = ``;
+            if(index < 9) {
+                strIndex = `0${index+1}`;
+            } else {
+                strIndex = index+1;
+            }
+            e.src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${strIndex}`);
+            e.classList.remove('none');
+            
+        })
+    } else {
+        block.querySelectorAll('.products__item__img .products__item__template').forEach((e,index) => {
+            if(index != 0) return true;
+            e.src = image;
+            e.classList.remove('none');
+            
+        })
+    }
+    
 
     if(rate == 'undefined') {
         rate = 0;

@@ -83,9 +83,9 @@ const showProducts = async function (from, limit, catalogid, search = '', prepen
 
     if(prepend == true) {
         products.reverse();
-        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.startPrice, product.views, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse, product.id, product.saleProcents, product.change_procents));
+        await products.forEach((product, index) => appendProduct(product.image, product.platform, product.price, product.oldPrice, product.startPrice, product.views, product.name, product.rate, product.reviews, product.url, true, parseInt(from) + index, product.like, product.date_parse, product.id, product.saleProcents, product.change_procents));
     } else {
-        await products.forEach((product, index) => appendProduct(product.image, product.price, product.oldPrice, product.startPrice, product.views, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id, product.saleProcents, product.change_procents));
+        await products.forEach((product, index) => appendProduct(product.image, product.platform, product.price, product.oldPrice, product.startPrice, product.views, product.name, product.rate, product.reviews, product.url, prepend, parseInt(from) + index, product.like, product.date_parse, product.id, product.saleProcents, product.change_procents));
     }
     
     
@@ -189,7 +189,7 @@ function clearProducts(count, startWithEnd = false) {
     
 }
 
-function appendProduct(image, price, oldPrice, startPrice, views, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id, saleOriginal = 0, changeProcents = 0) {
+function appendProduct(image, platform, price, oldPrice, startPrice, views, name, rate, reviews, url, prepend = false, index = 0, like = false, date, id, saleOriginal = 0, changeProcents = 0) {
     console.log('appendProduct');
     let block = list.querySelector('.template').cloneNode(true);
     let continueNext = true;
@@ -212,15 +212,32 @@ function appendProduct(image, price, oldPrice, startPrice, views, name, rate, re
 
     block.classList.remove('template', 'none');
 
-    // change
-    for(let i = 0; i<12; i++) {
-        let num = `${i+1}`;
-        if(num.length == 1) {
-            num = `0${num}`;
+    if(platform == 2) {
+        for(let i = 0; i<12; i++) {
+            let num = `${i+1}`;
+            if(num.length == 1) {
+                num = `0${num}`;
+            }
+            block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
+            block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
         }
-        block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image.replace(/https:\/\/basket-[\d]+/g, `https://basket-${num}`);
-        block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
+    } else {
+        for(let i = 0; i<12; i++) {
+            let num = `${i+1}`;
+            if(num.length == 1) {
+                num = `0${num}`;
+            }
+            if(i == 0) {
+                block.querySelector(`.products__item__img img:nth-child(${i+1})`).src = image;
+                block.querySelector(`.products__item__img img:nth-child(${i+1})`).classList.remove('none');
+            } else {
+                continue;
+            }
+            
+            
+        }
     }
+    
     
     block.querySelector('.products__item__name').textContent = name;
     // str.replace(/https:\/\/basket-[\d]+/g, 'https://basket-02')
