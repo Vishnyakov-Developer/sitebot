@@ -6925,6 +6925,5671 @@ const catalogs = [
             
         ]
     },
+    {
+        "name": "Женщинам",
+        "platform": 3,
+        "parent": -1,
+        "catalogId": 481,
+        "up_name": "Женщинам",
+        // api: 2,
+        // catUrl: 'https://www.lamoda.ru/c/355/clothes-zhenskaya-odezhda/?sitelink=topmenuW&l=3',
+        // publications: [
+        //     { channel: '-1817408131', catalogId: 1003 },
+        // ]
+    },
+    {
+        "name": "Новинки",
+        "platform": 3,
+        "parent": 481,  
+        "catalogId": 482,
+        "up_name": "Новинки",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 482,
+        "catalogId": 483,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 482,
+        "catalogId": 484,
+        catUrl: "https://www.lamoda.ru/c/15/shoes-women/?is_new=1",
+        publications: [
+            { channel: '-1817408131', catalogId: 1003 },
+            { channel: '-1817408131', catalogId: 483 },
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 482,
+        "catalogId": 485,
+        catUrl: "https://www.lamoda.ru/c/355/clothes-zhenskaya-odezhda/?is_new=1",
+        publications: [
+            { channel: '-1817408131', catalogId: 1003 },
+            { channel: '-1817408131', catalogId: 483 },
+        ]
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 482,
+        "catalogId": 486,
+        catUrl: "https://www.lamoda.ru/c/557/accs-zhenskieaksessuary/?is_new=1",
+        publications: [
+            { channel: '-1817408131', catalogId: 1003 },
+            { channel: '-1817408131', catalogId: 483 },
+        ],
+    },
+    {
+        "name": "Premium",
+        "platform": 3,
+        "parent": 482,
+        "catalogId": 487,
+        catUrl: "https://www.lamoda.ru/c/1262/default-premium-women/?is_new=1",
+        publications: [
+            { channel: '-1817408131', catalogId: 1003 },
+            { channel: '-1817408131', catalogId: 483 },
+        ],
+    },
+    {
+        "name": "Sport",
+        "platform": 3,
+        "parent": 482,
+        "catalogId": 488,
+        catUrl: "https://www.lamoda.ru/c/1262/default-premium-women/?is_new=1",
+        publications: [
+            { channel: '-1817408131', catalogId: 1003 },
+            { channel: '-1817408131', catalogId: 483 },
+        ],
+    },
+    {
+        "name": "Красота",
+        "platform": 3,
+        "parent": 482,
+        "catalogId": 489,
+        catUrl: "https://www.lamoda.ru/c/4308/default-krasotawoman/?is_new=1",
+        publications: [
+            { channel: '-1817408131', catalogId: 1003 },
+            { channel: '-1817408131', catalogId: 483 },
+        ],
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 490,
+        "up_name": "Одежда",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 491,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Блузы и рубашки",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 492,
+        "catUrl": "https://www.lamoda.ru/c/399/clothes-bluzy-rubashki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Боди",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 493,
+        "catUrl": "https://www.lamoda.ru/c/4418/clothes-body/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Брюки",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 494,
+        "catUrl": "https://www.lamoda.ru/c/401/clothes-bryuki-shorty-kombinezony/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Верхняя одежда",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 495,
+        "catUrl": "https://www.lamoda.ru/c/357/clothes-verkhnyaya-odezhda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Вязаные костюмы",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 496,
+        "catUrl": "https://www.lamoda.ru/c/7571/default-knitted-suits/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Джемперы, свитеры и кардиганы",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 497,
+        "catUrl": "https://www.lamoda.ru/c/371/clothes-trikotazh/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Джинсы",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 498,
+        "catUrl": "https://www.lamoda.ru/c/397/clothes-d-insy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Домашняя одежда",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 499,
+        "catUrl": "https://www.lamoda.ru/c/4651/clothes-dom-odejda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Комбинезоны",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 500,
+        "catUrl": "https://www.lamoda.ru/c/4184/clothes-coveralls/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Купальники и пляжная одежда",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 501,
+        "catUrl": "https://www.lamoda.ru/c/3002/clothes-plyajnaya-odejda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Нижнее белье",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 502,
+        "catUrl": "https://www.lamoda.ru/c/709/clothes-nizhneye-belyo/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Носки, чулки и колготки",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 503,
+        "catUrl": "https://www.lamoda.ru/c/4112/default-stockings/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Одежда больших размеров",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 504,
+        "catUrl": "https://www.lamoda.ru/c/2937/clothes-clothes-big-size/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Одежда для беременных",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 505,
+        "catUrl": "https://www.lamoda.ru/c/4170/clothes-maternityclothes/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Пиджаки и костюмы",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 506,
+        "catUrl": "https://www.lamoda.ru/c/367/clothes-pidzhaki-zhaketi/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Платья и сарафаны",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 507,
+        "catUrl": "https://www.lamoda.ru/c/369/clothes-platiya/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Спортивные костюмы",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 508,
+        "catUrl": "https://www.lamoda.ru/c/415/clothes-kostyumy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Топы и майки",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 509,
+        "catUrl": "https://www.lamoda.ru/c/2627/clothes-topy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Туники",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 510,
+        "catUrl": "https://www.lamoda.ru/c/4748/clothes-womtuniki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Уход за одеждой",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 511,
+        "catUrl": "https://www.lamoda.ru/c/7678/accs-sredstva-i-aksessuary-dlya-odejdy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Футболки и поло",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 512,
+        "catUrl": "https://www.lamoda.ru/c/2478/clothes-futbolki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Худи и свитшоты",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 513,
+        "catUrl": "https://www.lamoda.ru/c/2474/clothes-tolstovki-olimpiyki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Шорты",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 514,
+        "catUrl": "https://www.lamoda.ru/c/2485/clothes-shorty/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Юбки",
+        "platform": 3,
+        "parent": 490,
+        "catalogId": 515,
+        "catUrl": "https://www.lamoda.ru/c/423/clothes-yubki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 491
+            }
+        ]
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 516,
+        "up_name": "Обувь",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 517,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Балетки",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 518,
+        "catUrl": "https://www.lamoda.ru/c/37/shoes-baletki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Босоножки",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 519,
+        "catUrl": "https://www.lamoda.ru/c/39/shoes-bosonozhki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Ботильоны",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 520,
+        "catUrl": "https://www.lamoda.ru/c/2448/shoes-botilony/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Ботинки",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 521,
+        "catUrl": "https://www.lamoda.ru/c/23/shoes-botinki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Вечерняя обувь",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 522,
+        "catUrl": "https://www.lamoda.ru/c/7675/shoes-women-eveningshoes/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Домашняя обувь",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 523,
+        "catUrl": "https://www.lamoda.ru/c/209/shoes-domashnaja/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Казаки",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 524,
+        "catUrl": "https://www.lamoda.ru/c/7628/shoes-women-shoes-cossacks/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Кроссовки и кеды",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 525,
+        "catUrl": "https://www.lamoda.ru/c/2968/shoes-krossovki-kedy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Мокасины и топсайдеры",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 526,
+        "catUrl": "https://www.lamoda.ru/c/35/shoes-mokasiny/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Обувь с увеличенной полнотой",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 527,
+        "catUrl": "https://www.lamoda.ru/c/4077/shoes-sizeplusshoes/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Резиновая обувь",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 528,
+        "catUrl": "https://www.lamoda.ru/c/2428/shoes-rezinovaia-obuv/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Сабо и мюли",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 529,
+        "catUrl": "https://www.lamoda.ru/c/41/shoes-sabo-i-muli/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Сандалии",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 530,
+        "catUrl": "https://www.lamoda.ru/c/127/shoes-sandalii/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Сапоги",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 531,
+        "catUrl": "https://www.lamoda.ru/c/21/shoes-sapogi/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Слипоны",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 532,
+        "catUrl": "https://www.lamoda.ru/c/3219/shoes-slipony/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Туфли",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 533,
+        "catUrl": "https://www.lamoda.ru/c/33/shoes-tufli/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Уход за обувью",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 534,
+        "catUrl": "https://www.lamoda.ru/c/821/accs-sredstva-i-aksessuary-dl-a-obuvi/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Шнурки",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 535,
+        "catUrl": "https://www.lamoda.ru/c/7423/default-shnurki_wom/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Эспадрильи",
+        "platform": 3,
+        "parent": 516,
+        "catalogId": 536,
+        "catUrl": "https://www.lamoda.ru/c/2440/shoes-espadrily/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 517
+            }
+        ]
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 537,
+        "up_name": "Аксессуары",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 538,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары для волос",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 539,
+        "catUrl": "https://www.lamoda.ru/c/1857/accs_ns-accs-dlia-volos/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Головные уборы",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 540,
+        "catUrl": "https://www.lamoda.ru/c/647/hats-golovnyeubory/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Защитные маски",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 541,
+        "catUrl": "https://www.lamoda.ru/c/7740/beauty_accs-protective-masks-women/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Зонты",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 542,
+        "catUrl": "https://www.lamoda.ru/c/783/accs-zonty/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Канцелярские товары",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 543,
+        "catUrl": "https://www.lamoda.ru/c/7293/accs-women-stationery/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Ключницы и брелоки",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 544,
+        "catUrl": "https://www.lamoda.ru/c/777/bags-women-housekeepers/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Косметички",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 545,
+        "catUrl": "https://www.lamoda.ru/c/775/bags-kosmetichki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Кошельки и визитницы",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 546,
+        "catUrl": "https://www.lamoda.ru/c/779/bags-women-wallets-and-cardholders/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Обложки для документов",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 547,
+        "catUrl": "https://www.lamoda.ru/c/781/accs-women-covers/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Очки",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 548,
+        "catUrl": "https://www.lamoda.ru/c/2395/accs_ns-ochki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Перчатки и варежки",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 549,
+        "catUrl": "https://www.lamoda.ru/c/815/accs-perchatki-i-varezhki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Платки и шарфы",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 550,
+        "catUrl": "https://www.lamoda.ru/c/683/scarfs-platki-i-sharfy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Ремни и пояса",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 551,
+        "catUrl": "https://www.lamoda.ru/c/701/accs-remni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Рюкзаки",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 552,
+        "catUrl": "https://www.lamoda.ru/c/567/bags-ryukzaki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Сумки",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 553,
+        "catUrl": "https://www.lamoda.ru/c/563/bags-sumki-chehli/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Украшения",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 554,
+        "catUrl": "https://www.lamoda.ru/c/1870/accs-bizyteria/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Часы",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 555,
+        "catUrl": "https://www.lamoda.ru/c/785/accs-chasy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Чемоданы и дорожные сумки",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 556,
+        "catUrl": "https://www.lamoda.ru/c/569/bags-dorojniyesumki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Чехлы для телефонов",
+        "platform": 3,
+        "parent": 537,
+        "catalogId": 557,
+        "catUrl": "https://www.lamoda.ru/c/5360/bags-chehlydlyatehnikizhen/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 538
+            }
+        ]
+    },
+    {
+        "name": "Premium",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 558,
+        "up_name": "Premium",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 558,
+        "catalogId": 559,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 558,
+        "catalogId": 560,
+        "catUrl": "https://www.lamoda.ru/c/1352/accs-premium-accs/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 559
+            }
+        ]
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 558,
+        "catalogId": 561,
+        "catUrl": "https://www.lamoda.ru/c/1265/shoes-premium-obuv/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 559
+            }
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 558,
+        "catalogId": 562,
+        "catUrl": "https://www.lamoda.ru/c/1303/clothes-premium-odezda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 559
+            }
+        ]
+    },
+    {
+        "name": "Спорт",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 563,
+        "up_name": "Спорт",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 564,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Баскетбол",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 565,
+        "catUrl": "https://www.lamoda.ru/c/4814/default-sport_women_basketbol/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Бег",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 566,
+        "catUrl": "https://www.lamoda.ru/c/4004/default-sport_women_run/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Велоспорт",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 567,
+        "catUrl": "https://www.lamoda.ru/c/7070/default-sport_women_velo/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Волейбол",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 568,
+        "catUrl": "https://www.lamoda.ru/c/3942/default-sport_women_voleyball/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Все спортивные товары",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 569,
+        "catUrl": "https://www.lamoda.ru/c/4016/default-sport_women_sportstyle/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Горные лыжи и сноуборд",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 570,
+        "catUrl": "https://www.lamoda.ru/c/4869/default-sport_women_gornye_lyzhi/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Единоборства",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 571,
+        "catUrl": "https://www.lamoda.ru/c/4007/default-sport_women_fight/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Плавание",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 572,
+        "catUrl": "https://www.lamoda.ru/c/4012/default-sport_women_swimming/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Скейтборд",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 573,
+        "catUrl": "https://www.lamoda.ru/c/7829/default-sport_women_skateboard/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Танцы и йога",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 574,
+        "catUrl": "https://www.lamoda.ru/c/4009/default-sport_women_yoga/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Теннис",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 575,
+        "catUrl": "https://www.lamoda.ru/c/4043/default-sport_women_tennis/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Трекинг и туризм",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 576,
+        "catUrl": "https://www.lamoda.ru/c/4040/default-sport_women_tourism/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Фитнес",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 577,
+        "catUrl": "https://www.lamoda.ru/c/4035/default-sport_women_fitnes/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Футбол",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 578,
+        "catUrl": "https://www.lamoda.ru/c/5178/default-sport_women_football/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Хоккей",
+        "platform": 3,
+        "parent": 563,
+        "catalogId": 579,
+        "catUrl": "https://www.lamoda.ru/c/5202/default-sport_women_hockey/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Resale",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 580,
+        "catUrl": "https://www.lamoda.ru/c/4153/default-women/?display_locations=resale",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 564
+            }
+        ]
+    },
+    {
+        "name": "Красота",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 581,
+        "up_name": "Красота",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 582,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Антисептики",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 583,
+        "catUrl": "https://www.lamoda.ru/c/7746/beauty_accs-antiseptics-women/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Аптечная косметика",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 584,
+        "catUrl": "https://www.lamoda.ru/c/7287/beauty_accs-women-medicalcosmetics/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Волосы",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 585,
+        "catUrl": "https://www.lamoda.ru/c/7212/beauty_accs-women-haircare/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Для ванны и душа",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 586,
+        "catUrl": "https://www.lamoda.ru/c/7288/beauty_accs-women-bathandshower/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Макияж",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 587,
+        "catUrl": "https://www.lamoda.ru/c/7153/beauty_accs-women-makeup/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Маникюр и педикюр",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 588,
+        "catUrl": "https://www.lamoda.ru/c/7190/beauty_accs-women-manicure/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Наборы и подарки",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 589,
+        "catUrl": "https://www.lamoda.ru/c/7755/default-women-beauty-nabory-podarki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Натуральная и органическая косметика",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 590,
+        "catUrl": "https://www.lamoda.ru/c/7656/beauty_accs-women-naturalcosmetics/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Парфюмерия",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 591,
+        "catUrl": "https://www.lamoda.ru/c/3224/beauty_accs-parfyumeriya/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Солнцезащитные средства и автозагары",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 592,
+        "catUrl": "https://www.lamoda.ru/c/7198/beauty_accs-women-sunscreenproducts/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Техника для красоты и здоровья",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 593,
+        "catUrl": "https://www.lamoda.ru/c/7784/beauty_accs-tehnika_dlya_krasoty/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Уход за кожей",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 594,
+        "catUrl": "https://www.lamoda.ru/c/7211/beauty_accs-women-care/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Уход и косметика для детей",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 595,
+        "catUrl": "https://www.lamoda.ru/c/7444/beauty_accs-women-beauty-kids/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Все товары",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 596,
+        "catUrl": "https://www.lamoda.ru/c/4308/beauty_accs-krasota/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Антисептики",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 597,
+        "catUrl": "https://www.lamoda.ru/c/7746/beauty_accs-antiseptics-women/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Аптечная косметика",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 598,
+        "catUrl": "https://www.lamoda.ru/c/7287/beauty_accs-women-medicalcosmetics/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Волосы",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 599,
+        "catUrl": "https://www.lamoda.ru/c/7212/beauty_accs-women-haircare/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Для ванны и душа",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 600,
+        "catUrl": "https://www.lamoda.ru/c/7288/beauty_accs-women-bathandshower/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Макияж",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 601,
+        "catUrl": "https://www.lamoda.ru/c/7153/beauty_accs-women-makeup/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Маникюр и педикюр",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 602,
+        "catUrl": "https://www.lamoda.ru/c/7190/beauty_accs-women-manicure/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Наборы и подарки",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 603,
+        "catUrl": "https://www.lamoda.ru/c/7755/default-women-beauty-nabory-podarki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Натуральная и органическая косметика",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 604,
+        "catUrl": "https://www.lamoda.ru/c/7656/beauty_accs-women-naturalcosmetics/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Парфюмерия",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 605,
+        "catUrl": "https://www.lamoda.ru/c/3224/beauty_accs-parfyumeriya/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Солнцезащитные средства и автозагары",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 606,
+        "catUrl": "https://www.lamoda.ru/c/7198/beauty_accs-women-sunscreenproducts/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Техника для красоты и здоровья",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 607,
+        "catUrl": "https://www.lamoda.ru/c/7784/beauty_accs-tehnika_dlya_krasoty/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Уход за кожей",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 608,
+        "catUrl": "https://www.lamoda.ru/c/7211/beauty_accs-women-care/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Уход и косметика для детей",
+        "platform": 3,
+        "parent": 581,
+        "catalogId": 609,
+        "catUrl": "https://www.lamoda.ru/c/7444/beauty_accs-women-beauty-kids/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 582
+            }
+        ]
+    },
+    {
+        "name": "Дом",
+        "platform": 3,
+        "parent": 481,
+        "catalogId": 610,
+        "up_name": "Дом",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 611,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары для ванной",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 612,
+        "catUrl": "https://www.lamoda.ru/c/7495/default-bathroom-accessories/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Ароматы для дома",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 613,
+        "catUrl": "https://www.lamoda.ru/c/6715/home_accs-aromatydlyadoma/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Ковры и коврики",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 614,
+        "catUrl": "https://www.lamoda.ru/c/6695/home_accs-kovriki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Кухонная посуда",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 615,
+        "catUrl": "https://www.lamoda.ru/c/7618/home_accs-cookware/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Кухонные принадлежности",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 616,
+        "catUrl": "https://www.lamoda.ru/c/6648/home_accs-tovarydlyakuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Освещение",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 617,
+        "catUrl": "https://www.lamoda.ru/c/7545/home_accs-home-lighting/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Оформление интерьера",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 618,
+        "catUrl": "https://www.lamoda.ru/c/7481/home_accs-interior-decoratio/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Покрывала и пледы",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 619,
+        "catUrl": "https://www.lamoda.ru/c/7474/home_accs-bedspreads-and-blankets/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Полотенца",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 620,
+        "catUrl": "https://www.lamoda.ru/c/6696/home_accs-polotentsa/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Постельные принадлежности",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 621,
+        "catUrl": "https://www.lamoda.ru/c/6655/home_accs-tovarydlyaspalnipostelnyeprinadlezhnosti/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Столовая посуда",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 622,
+        "catUrl": "https://www.lamoda.ru/c/6884/home_accs-posuda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Текстиль для кухни",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 623,
+        "catUrl": "https://www.lamoda.ru/c/7616/home_accs-textil-dlya-kuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Товары для животных",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 624,
+        "catUrl": "https://www.lamoda.ru/c/7771/home_accs-tovarydlyajivotnyh/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Хранение вещей",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 625,
+        "catUrl": "https://www.lamoda.ru/c/6681/home_accs-hranenieveschey/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Все товары",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 626,
+        "catUrl": "https://www.lamoda.ru/c/6647/home_accs-tovarydlyadoma/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Аксессуары для ванной",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 627,
+        "catUrl": "https://www.lamoda.ru/c/7495/default-bathroom-accessories/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Ароматы для дома",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 628,
+        "catUrl": "https://www.lamoda.ru/c/6715/home_accs-aromatydlyadoma/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Ковры и коврики",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 629,
+        "catUrl": "https://www.lamoda.ru/c/6695/home_accs-kovriki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Кухонная посуда",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 630,
+        "catUrl": "https://www.lamoda.ru/c/7618/home_accs-cookware/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Кухонные принадлежности",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 631,
+        "catUrl": "https://www.lamoda.ru/c/6648/home_accs-tovarydlyakuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Освещение",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 632,
+        "catUrl": "https://www.lamoda.ru/c/7545/home_accs-home-lighting/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Оформление интерьера",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 633,
+        "catUrl": "https://www.lamoda.ru/c/7481/home_accs-interior-decoratio/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Покрывала и пледы",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 634,
+        "catUrl": "https://www.lamoda.ru/c/7474/home_accs-bedspreads-and-blankets/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Полотенца",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 635,
+        "catUrl": "https://www.lamoda.ru/c/6696/home_accs-polotentsa/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Постельные принадлежности",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 636,
+        "catUrl": "https://www.lamoda.ru/c/6655/home_accs-tovarydlyaspalnipostelnyeprinadlezhnosti/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Столовая посуда",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 637,
+        "catUrl": "https://www.lamoda.ru/c/6884/home_accs-posuda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Текстиль для кухни",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 638,
+        "catUrl": "https://www.lamoda.ru/c/7616/home_accs-textil-dlya-kuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Товары для животных",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 639,
+        "catUrl": "https://www.lamoda.ru/c/7771/home_accs-tovarydlyajivotnyh/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Хранение вещей",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 640,
+        "catUrl": "https://www.lamoda.ru/c/6681/home_accs-hranenieveschey/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "SALE%",
+        "platform": 3,
+        "parent": 610,
+        "catalogId": 641,
+        "catUrl": "https://www.lamoda.ru/c/4153/default-women/?is_sale=1&display_locations=outlet",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 611
+            }
+        ]
+    },
+    {
+        "name": "Мужчинам",
+        "platform": 3,
+        "parent": -1,
+        "catalogId": 642,
+        "up_name": "Мужчинам",
+    },
+    {
+        "name": "Новинки",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 643,
+        "up_name": "Новинки",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 643,
+        "catalogId": 644,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 643,
+        "catalogId": 645,
+        "catUrl": "https://www.lamoda.ru/c/17/shoes-men/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 644
+            }
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 643,
+        "catalogId": 646,
+        "catUrl": "https://www.lamoda.ru/c/477/clothes-muzhskaya-odezhda/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 644
+            }
+        ]
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 643,
+        "catalogId": 647,
+        "catUrl": "https://www.lamoda.ru/c/559/accs-muzhskieaksessuary/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 644
+            }
+        ]
+    },
+    {
+        "name": "Premium",
+        "platform": 3,
+        "parent": 643,
+        "catalogId": 648,
+        "catUrl": "https://www.lamoda.ru/c/1263/default-premium-men/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 644
+            }
+        ]
+    },
+    {
+        "name": "Спорт",
+        "platform": 3,
+        "parent": 643,
+        "catalogId": 649,
+        "catUrl": "https://www.lamoda.ru/c/832/default-sports-men/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 644
+            }
+        ]
+    },
+    {
+        "name": "Красота",
+        "platform": 3,
+        "parent": 643,
+        "catalogId": 650,
+        "catUrl": "https://www.lamoda.ru/c/4288/beauty_accs-menbeauty/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 644
+            }
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 651,
+        "up_name": "Одежда",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 652,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Брюки",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 653,
+        "catUrl": "https://www.lamoda.ru/c/517/clothes-muzhskie-bryuki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Верхняя одежда",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 654,
+        "catUrl": "https://www.lamoda.ru/c/479/clothes-muzhskaya-verkhnyaya-odezhda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Джемперы, свитеры и кардиганы",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 655,
+        "catUrl": "https://www.lamoda.ru/c/497/clothes-muzhskoy-trikotazh/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Джинсы",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 656,
+        "catUrl": "https://www.lamoda.ru/c/513/clothes-muzhskie-d-insy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Домашняя одежда",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 657,
+        "catUrl": "https://www.lamoda.ru/c/5289/clothes-odezhdadlyadomamuj/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Комбинезоны",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 658,
+        "catUrl": "https://www.lamoda.ru/c/7660/clothes-men-kombenizony/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Майки",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 659,
+        "catUrl": "https://www.lamoda.ru/c/3039/clothes-topyi-muzhskie/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Нижнее белье",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 660,
+        "catUrl": "https://www.lamoda.ru/c/523/clothes-muzhskoe-nizhneye-belyo/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Носки и гетры",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 661,
+        "catUrl": "https://www.lamoda.ru/c/4121/socks-socks/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Одежда больших размеров",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 662,
+        "catUrl": "https://www.lamoda.ru/c/7528/clothes-bigsize-clothes-men/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Пиджаки и костюмы",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 663,
+        "catUrl": "https://www.lamoda.ru/c/3043/clothes-pid-aki-kostumi-muzhskie/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Плавки и шорты для плавания",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 664,
+        "catUrl": "https://www.lamoda.ru/c/2526/clothes-plyazhnaya-odezhda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Рубашки",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 665,
+        "catUrl": "https://www.lamoda.ru/c/515/clothes-muzhskie-rubashki-i-sorochki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Спортивные костюмы",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 666,
+        "catUrl": "https://www.lamoda.ru/c/3042/clothes-sportivnye-kostyumy-muzhskie/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Термобелье",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 667,
+        "catUrl": "https://www.lamoda.ru/c/5295/clothes-termobelyemuj/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Уход за одеждой",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 668,
+        "catUrl": "https://www.lamoda.ru/c/7679/accs-mujskie-sredstva-i-aksessuary-dlya-odejdy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Футболки и поло",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 669,
+        "catUrl": "https://www.lamoda.ru/c/2512/clothes-muzhskie-futbolki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Худи и свитшоты",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 670,
+        "catUrl": "https://www.lamoda.ru/c/2508/clothes-tolstovki-i-olimpiyki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Шорты",
+        "platform": 3,
+        "parent": 651,
+        "catalogId": 671,
+        "catUrl": "https://www.lamoda.ru/c/519/clothes-muzhskie-shorty/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 652
+            }
+        ]
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 672,
+        "up_name": "Обувь",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 673,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Ботинки",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 674,
+        "catUrl": "https://www.lamoda.ru/c/151/shoes-muzhskie-botinki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Домашняя обувь",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 675,
+        "catUrl": "https://www.lamoda.ru/c/211/shoes-domashnaja-obuv/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Кроссовки и кеды",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 676,
+        "catUrl": "https://www.lamoda.ru/c/2981/shoes-krossovk-kedy-muzhskie/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Мокасины и топсайдеры",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 677,
+        "catUrl": "https://www.lamoda.ru/c/53/shoes-muzhskie-mokasiny/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Резиновая обувь",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 678,
+        "catUrl": "https://www.lamoda.ru/c/2450/shoes-muzhskaia-rezin-obuv/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Сандалии",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 679,
+        "catUrl": "https://www.lamoda.ru/c/59/shoes-muzhskie-sandalii/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Сапоги ",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 680,
+        "catUrl": "https://www.lamoda.ru/c/7091/shoes-sapogi-men/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Слипоны",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 681,
+        "catUrl": "https://www.lamoda.ru/c/5324/shoes-sliponyespadrilimuj/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Туфли",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 682,
+        "catUrl": "https://www.lamoda.ru/c/157/shoes-muzhskie-tufli/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Уход за обувью",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 683,
+        "catUrl": "https://www.lamoda.ru/c/823/accs-muzhskie-sredstva-i-aksessuary-dl-a-obuvi/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Шнурки",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 684,
+        "catUrl": "https://www.lamoda.ru/c/7424/default-shnurki_men/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Эспадрильи",
+        "platform": 3,
+        "parent": 672,
+        "catalogId": 685,
+        "catUrl": "https://www.lamoda.ru/c/2457/shoes-myzskie-espadrily/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 673
+            }
+        ]
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 686,
+        "up_name": "Аксессуары",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 687,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Галстуки и запонки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 688,
+        "catUrl": "https://www.lamoda.ru/c/1735/accs-myzskie-galstyki-babochki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Головные уборы",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 689,
+        "catUrl": "https://www.lamoda.ru/c/2765/hats-muzhskie-golovnyeubory/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Защитные маски",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 690,
+        "catUrl": "https://www.lamoda.ru/c/7741/beauty_accs-protective-masks-men/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Зонты",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 691,
+        "catUrl": "https://www.lamoda.ru/c/797/accs-muzhskie-zonty/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Канцелярские товары",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 692,
+        "catUrl": "https://www.lamoda.ru/c/7298/accs-men-stationary/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Ключницы и брелоки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 693,
+        "catUrl": "https://www.lamoda.ru/c/791/bags-men-housekeepers/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Кошельки и визитницы",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 694,
+        "catUrl": "https://www.lamoda.ru/c/7372/accs_ns-men-wallets-and-cardholders/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Обложки для документов",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 695,
+        "catUrl": "https://www.lamoda.ru/c/795/accs-men-covers/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Очки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 696,
+        "catUrl": "https://www.lamoda.ru/c/2396/accs_ns-ochki-myzskie/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Перчатки и варежки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 697,
+        "catUrl": "https://www.lamoda.ru/c/817/accs-muzhskie-perchatki-i-varezhki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Ремни и подтяжки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 698,
+        "catUrl": "https://www.lamoda.ru/c/703/accs-muzhskie-remni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Рюкзаки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 699,
+        "catUrl": "https://www.lamoda.ru/c/595/bags-muzhskie-ryukzaki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Сумки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 700,
+        "catUrl": "https://www.lamoda.ru/c/591/bags-muzhskie-sumki-chehli/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Украшения",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 701,
+        "catUrl": "https://www.lamoda.ru/c/3153/accs-ukrasheniya-men/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Часы",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 702,
+        "catUrl": "https://www.lamoda.ru/c/799/accs-muzhskie-chasy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Чемоданы и дорожные сумки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 703,
+        "catUrl": "https://www.lamoda.ru/c/597/bags-muzhskie-dorojniyesumki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Чехлы для телефонов",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 704,
+        "catUrl": "https://www.lamoda.ru/c/5375/accs_ns-chechlydlyatehnikimuj/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Шарфы и платки",
+        "platform": 3,
+        "parent": 686,
+        "catalogId": 705,
+        "catUrl": "https://www.lamoda.ru/c/689/scarfs-muzhskie-sharfy/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 687
+            }
+        ]
+    },
+    {
+        "name": "Premium",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 706,
+        "up_name": "Premium",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 706,
+        "catalogId": 707,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 706,
+        "catalogId": 708,
+        "catUrl": "https://www.lamoda.ru/c/1453/accs-premium-men-accs/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 707
+            }
+        ]
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 706,
+        "catalogId": 709,
+        "catUrl": "https://www.lamoda.ru/c/1386/shoes-premium-men-obuv/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 707
+            }
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 706,
+        "catalogId": 710,
+        "catUrl": "https://www.lamoda.ru/c/1415/clothes-premium-men-odejda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 707
+            }
+        ]
+    },
+    {
+        "name": "Спорт",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 711,
+        "up_name": "Спорт",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 712,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Баскетбол",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 713,
+        "catUrl": "https://www.lamoda.ru/c/3945/default-sport_men_basketball/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Бег",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 714,
+        "catUrl": "https://www.lamoda.ru/c/3949/default-sport_men_run/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Велоспорт",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 715,
+        "catUrl": "https://www.lamoda.ru/c/7061/default-sport_men_velo/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Волейбол",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 716,
+        "catUrl": "https://www.lamoda.ru/c/3953/default-sport_men_voleyball/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Все спортивные товары",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 717,
+        "catUrl": "https://www.lamoda.ru/c/3967/default-sport_men_sportstyle/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Горные лыжи и сноуборд",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 718,
+        "catUrl": "https://www.lamoda.ru/c/4504/default-sport_men_gornye_lyzhi/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Единоборства",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 719,
+        "catUrl": "https://www.lamoda.ru/c/3957/default-sport_men_fight/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Плавание",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 720,
+        "catUrl": "https://www.lamoda.ru/c/3963/default-sport_men_swimming/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Скейтборд",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 721,
+        "catUrl": "https://www.lamoda.ru/c/7839/default-sport_men_skateboard/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Танцы и йога",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 722,
+        "catUrl": "https://www.lamoda.ru/c/3961/default-sport_men_yoga/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Теннис",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 723,
+        "catUrl": "https://www.lamoda.ru/c/3986/default-sport_men_tennis/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Трекинг и туризм",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 724,
+        "catUrl": "https://www.lamoda.ru/c/3989/default-sport_men_tourism/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Фитнес",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 725,
+        "catUrl": "https://www.lamoda.ru/c/3993/default-sport_men_fitnes/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Футбол",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 726,
+        "catUrl": "https://www.lamoda.ru/c/3997/default-sport_men_football/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Хоккей",
+        "platform": 3,
+        "parent": 711,
+        "catalogId": 727,
+        "catUrl": "https://www.lamoda.ru/c/4001/default-sport_men_hockey/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 712
+            }
+        ]
+    },
+    {
+        "name": "Resale",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 728,
+        "catUrl": "https://www.lamoda.ru/c/4152/default-men/?display_locations=resale",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+        ]
+    },
+    {
+        "name": "Красота",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 729,
+        "up_name": "Красота",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 730,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Антисептики",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 731,
+        "catUrl": "https://www.lamoda.ru/c/7747/beauty_accs-antiseptics-men/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Аптечная косметика",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 732,
+        "catUrl": "https://www.lamoda.ru/c/7661/beauty_accs-men-medicalcosmetics/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Волосы",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 733,
+        "catUrl": "https://www.lamoda.ru/c/7109/beauty_accs-men-hair/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Лицо",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 734,
+        "catUrl": "https://www.lamoda.ru/c/7117/beauty_accs-men-face/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Маникюр и педикюр",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 735,
+        "catUrl": "https://www.lamoda.ru/c/7127/beauty_accs-men-manicure/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Наборы",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 736,
+        "catUrl": "https://www.lamoda.ru/c/7151/beauty_accs-men-set/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Парфюмерия",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 737,
+        "catUrl": "https://www.lamoda.ru/c/4290/default-parfyumeriya-men/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Солнцезащитные средства и автозагары",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 738,
+        "catUrl": "https://www.lamoda.ru/c/7128/beauty_accs-men-sunprotection/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Стрижка и бритье",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 739,
+        "catUrl": "https://www.lamoda.ru/c/7130/beauty_accs-men-haircutandshaving/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Тело",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 740,
+        "catUrl": "https://www.lamoda.ru/c/7137/beauty_accs-men-body/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Уход за полостью рта",
+        "platform": 3,
+        "parent": 729,
+        "catalogId": 741,
+        "catUrl": "https://www.lamoda.ru/c/7148/beauty_accs-men-oralcare/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 730
+            }
+        ]
+    },
+    {
+        "name": "Дом",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 742,
+        "up_name": "Дом",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 743,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары для ванной",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 744,
+        "catUrl": "https://www.lamoda.ru/c/7495/default-bathroom-accessories/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Ароматы для дома",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 745,
+        "catUrl": "https://www.lamoda.ru/c/6715/home_accs-aromatydlyadoma/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Ковры и коврики",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 746,
+        "catUrl": "https://www.lamoda.ru/c/6695/home_accs-kovriki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Кухонная посуда",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 747,
+        "catUrl": "https://www.lamoda.ru/c/7618/home_accs-cookware/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Кухонные принадлежности",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 748,
+        "catUrl": "https://www.lamoda.ru/c/6648/home_accs-tovarydlyakuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Освещение",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 749,
+        "catUrl": "https://www.lamoda.ru/c/7545/home_accs-home-lighting/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Оформление интерьера",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 750,
+        "catUrl": "https://www.lamoda.ru/c/7481/home_accs-interior-decoratio/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Покрывала и пледы",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 751,
+        "catUrl": "https://www.lamoda.ru/c/7474/home_accs-bedspreads-and-blankets/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Полотенца",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 752,
+        "catUrl": "https://www.lamoda.ru/c/6696/home_accs-polotentsa/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Постельные принадлежности",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 753,
+        "catUrl": "https://www.lamoda.ru/c/6655/home_accs-tovarydlyaspalnipostelnyeprinadlezhnosti/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Столовая посуда",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 754,
+        "catUrl": "https://www.lamoda.ru/c/6884/home_accs-posuda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Текстиль для кухни",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 755,
+        "catUrl": "https://www.lamoda.ru/c/7616/home_accs-textil-dlya-kuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Товары для животных",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 756,
+        "catUrl": "https://www.lamoda.ru/c/7771/home_accs-tovarydlyajivotnyh/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "Хранение вещей",
+        "platform": 3,
+        "parent": 742,
+        "catalogId": 757,
+        "catUrl": "https://www.lamoda.ru/c/6681/home_accs-hranenieveschey/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 743
+            }
+        ]
+    },
+    {
+        "name": "SALE%",
+        "platform": 3,
+        "parent": 642,
+        "catalogId": 758,
+        "catUrl": "https://www.lamoda.ru/men-home/?sitelink=topmenuM",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+        ]
+    },
+    {
+        "name": "Детям",
+        "platform": 3,
+        "parent": -1,
+        "catalogId": 759,
+        "up_name": "Детям",
+    },
+    {
+        "name": "Новинки",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 760,
+        "up_name": "Новинки",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 760,
+        "catalogId": 761,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Девочкам",
+        "platform": 3,
+        "parent": 760,
+        "catalogId": 762,
+        "catUrl": "https://www.lamoda.ru/c/5379/default-devochkam/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 761
+            }
+        ]
+    },
+    {
+        "name": "Мальчикам",
+        "platform": 3,
+        "parent": 760,
+        "catalogId": 763,
+        "catUrl": "https://www.lamoda.ru/c/5378/default-malchikam/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 761
+            }
+        ]
+    },
+    {
+        "name": "Малышам",
+        "platform": 3,
+        "parent": 760,
+        "catalogId": 764,
+        "catUrl": "https://www.lamoda.ru/c/5414/default-novorozhdennym/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 761
+            }
+        ]
+    },
+    {
+        "name": "Игрушки",
+        "platform": 3,
+        "parent": 760,
+        "catalogId": 765,
+        "catUrl": "https://www.lamoda.ru/c/6327/default-detskieigrushki/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 761
+            }
+        ]
+    },
+    {
+        "name": "Уход и косметика",
+        "platform": 3,
+        "parent": 760,
+        "catalogId": 766,
+        "catUrl": "https://www.lamoda.ru/c/6815/default-uhod_za_rebenkom/?is_new=1",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 761
+            }
+        ]
+    },
+    {
+        "name": "Мальчикам",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 767,
+        "up_name": "Мальчикам",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 767,
+        "catalogId": 768,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 767,
+        "catalogId": 769,
+        "catUrl": "https://www.lamoda.ru/c/5381/default-aksydlyamalchikov/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 768
+            }
+        ]
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 767,
+        "catalogId": 770,
+        "catUrl": "https://www.lamoda.ru/c/205/shoes-boys/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 768
+            }
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 767,
+        "catalogId": 771,
+        "catUrl": "https://www.lamoda.ru/c/1589/clothes-dlia-malchikov/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 768
+            }
+        ]
+    },
+    {
+        "name": "Спорт",
+        "platform": 3,
+        "parent": 767,
+        "catalogId": 772,
+        "catUrl": "https://www.lamoda.ru/c/1875/default-sports-forboys/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 768
+            }
+        ]
+    },
+    {
+        "name": "Девочкам",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 773,
+        "up_name": "Девочкам",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 773,
+        "catalogId": 774,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 773,
+        "catalogId": 775,
+        "catUrl": "https://www.lamoda.ru/c/561/accs-detskieaksessuary/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 774
+            }
+        ]
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 773,
+        "catalogId": 776,
+        "catUrl": "https://www.lamoda.ru/c/203/shoes-girls/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 774
+            }
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 773,
+        "catalogId": 777,
+        "catUrl": "https://www.lamoda.ru/c/1590/clothes-dlia-devochek/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 774
+            }
+        ]
+    },
+    {
+        "name": "Спорт",
+        "platform": 3,
+        "parent": 773,
+        "catalogId": 778,
+        "catUrl": "https://www.lamoda.ru/c/1874/default-sports-forgirls/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 774
+            }
+        ]
+    },
+    {
+        "name": "Новорожденным",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 779,
+        "up_name": "Новорожденным",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 779,
+        "catalogId": 780,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары",
+        "platform": 3,
+        "parent": 779,
+        "catalogId": 781,
+        "catUrl": "https://www.lamoda.ru/c/5600/accs-newbornaccs/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 780
+            }
+        ]
+    },
+    {
+        "name": "Конверты и одеяла",
+        "platform": 3,
+        "parent": 779,
+        "catalogId": 782,
+        "catUrl": "https://www.lamoda.ru/c/5611/accs-newbornkonvertyodeyala/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 780
+            }
+        ]
+    },
+    {
+        "name": "Обувь",
+        "platform": 3,
+        "parent": 779,
+        "catalogId": 783,
+        "catUrl": "https://www.lamoda.ru/c/5599/shoes-kidsnewborn/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 780
+            }
+        ]
+    },
+    {
+        "name": "Одежда",
+        "platform": 3,
+        "parent": 779,
+        "catalogId": 784,
+        "catUrl": "https://www.lamoda.ru/c/5598/clothes-newbornclothes/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 780
+            }
+        ]
+    },
+    {
+        "name": "Молодым мамам",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 785,
+        "up_name": "Молодым мамам",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 786,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Блузы и рубашки",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 787,
+        "catUrl": "https://www.lamoda.ru/c/4171/clothes-maternityshirts/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Брюки и комбинезоны",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 788,
+        "catUrl": "https://www.lamoda.ru/c/4172/clothes-maternitytrousers/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Верхняя одежда",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 789,
+        "catUrl": "https://www.lamoda.ru/c/4173/clothes-maternityoutwear/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Джемперы и кардиганы",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 790,
+        "catUrl": "https://www.lamoda.ru/c/4174/clothes-maternityknitwear/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Джинсы",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 791,
+        "catUrl": "https://www.lamoda.ru/c/4175/clothes-maternityjeans/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Домашняя одежда",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 792,
+        "catUrl": "https://www.lamoda.ru/c/4176/clothes-maternityhomewear/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Колготки",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 793,
+        "catUrl": "https://www.lamoda.ru/c/5831/clothes-tights_pregnant/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Костюмы и жакеты",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 794,
+        "catUrl": "https://www.lamoda.ru/c/4177/clothes-maternitysuits/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Купальники и пляжная одежда",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 795,
+        "catUrl": "https://www.lamoda.ru/c/6202/clothes-kupalniki_maternity/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Нижнее белье",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 796,
+        "catUrl": "https://www.lamoda.ru/c/4373/default-maternity-underwear/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Платья",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 797,
+        "catUrl": "https://www.lamoda.ru/c/4178/clothes-maternitydresses/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Топы и майки",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 798,
+        "catUrl": "https://www.lamoda.ru/c/4180/clothes-maternitytops/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Футболки и поло",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 799,
+        "catUrl": "https://www.lamoda.ru/c/4181/clothes-maternitypolos/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Худи и свитшоты",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 800,
+        "catUrl": "https://www.lamoda.ru/c/4179/clothes-maternitysweatshirts/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Юбки",
+        "platform": 3,
+        "parent": 785,
+        "catalogId": 801,
+        "catUrl": "https://www.lamoda.ru/c/4182/clothes-maternityskirts/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 786
+            }
+        ]
+    },
+    {
+        "name": "Игрушки",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 802,
+        "up_name": "Игрушки",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 803,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "LEGO",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 804,
+        "catUrl": "https://www.lamoda.ru/c/7499/toys-lego/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Игровые наборы",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 805,
+        "catUrl": "https://www.lamoda.ru/c/6775/default-igrovyenabory/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Игрушечное оружие",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 806,
+        "catUrl": "https://www.lamoda.ru/c/6777/default-igrushechnoeoruzhie/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Игрушки для малышей",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 807,
+        "catUrl": "https://www.lamoda.ru/c/6776/default-igrushkidlyamalyshey/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Конструкторы",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 808,
+        "catUrl": "https://www.lamoda.ru/c/6333/toys-detskiekonstruktory/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Куклы",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 809,
+        "catUrl": "https://www.lamoda.ru/c/6331/default-kuklyvse/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Мягкие игрушки",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 810,
+        "catUrl": "https://www.lamoda.ru/c/6332/default-myagkieigrushki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Настольные игры ",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 811,
+        "catUrl": "https://www.lamoda.ru/c/6795/default-nastolnyeigry/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Развивающие игрушки",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 812,
+        "catUrl": "https://www.lamoda.ru/c/6328/default-razvivayuschieigrushki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Роботы",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 813,
+        "catUrl": "https://www.lamoda.ru/c/6778/default-roboty/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Спортивный инвентарь",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 814,
+        "catUrl": "https://www.lamoda.ru/c/6779/default-sportivnyyinventar/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Транспорт",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 815,
+        "catUrl": "https://www.lamoda.ru/c/6780/default-transport/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Фигурки",
+        "platform": 3,
+        "parent": 802,
+        "catalogId": 816,
+        "catUrl": "https://www.lamoda.ru/c/6781/default-figurki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 803
+            }
+        ]
+    },
+    {
+        "name": "Уход и косметика",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 817,
+        "up_name": "Уход и косметика",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 818,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Бутылочки",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 819,
+        "catUrl": "https://www.lamoda.ru/c/6816/beauty_accs-butylochki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Детская косметика",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 820,
+        "catUrl": "https://www.lamoda.ru/c/6896/default-kosm_nabory_deti/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Защита от солнца",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 821,
+        "catUrl": "https://www.lamoda.ru/c/6819/beauty_accs-zashita_ot_solnca/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Лечебная косметика",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 822,
+        "catUrl": "https://www.lamoda.ru/c/7662/beauty_accs-kids-medicalcometics/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Подгузники",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 823,
+        "catUrl": "https://www.lamoda.ru/c/7685/beauty_accs-beauty-diapers-kids/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Пустышки",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 824,
+        "catUrl": "https://www.lamoda.ru/c/6821/beauty_accs-pustishki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Уход за волосами",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 825,
+        "catUrl": "https://www.lamoda.ru/c/6822/beauty_accs-uhod_za_volosami/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Уход за лицом",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 826,
+        "catUrl": "https://www.lamoda.ru/c/6823/beauty_accs-uhod_za_litsom/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Уход за полостью рта",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 827,
+        "catUrl": "https://www.lamoda.ru/c/6826/beauty_accs-uhod_za_polostiyu_rta/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Уход за телом",
+        "platform": 3,
+        "parent": 817,
+        "catalogId": 828,
+        "catUrl": "https://www.lamoda.ru/c/6829/default-uhod_za_telom/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 818
+            }
+        ]
+    },
+    {
+        "name": "Дом",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 829,
+        "up_name": "Дом",
+    },
+    {
+        "name": "Все подкатегории",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 830,
+        "up_name": "Все подкатегории",
+    },
+    {
+        "name": "Аксессуары для ванной",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 831,
+        "catUrl": "https://www.lamoda.ru/c/7495/default-bathroom-accessories/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Ароматы для дома",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 832,
+        "catUrl": "https://www.lamoda.ru/c/6715/home_accs-aromatydlyadoma/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Ковры и коврики",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 833,
+        "catUrl": "https://www.lamoda.ru/c/6695/home_accs-kovriki/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Кухонная посуда",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 834,
+        "catUrl": "https://www.lamoda.ru/c/7618/home_accs-cookware/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Кухонные принадлежности",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 835,
+        "catUrl": "https://www.lamoda.ru/c/6648/home_accs-tovarydlyakuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Освещение",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 836,
+        "catUrl": "https://www.lamoda.ru/c/7545/home_accs-home-lighting/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Оформление интерьера",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 837,
+        "catUrl": "https://www.lamoda.ru/c/7481/home_accs-interior-decoratio/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Покрывала и пледы",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 838,
+        "catUrl": "https://www.lamoda.ru/c/7474/home_accs-bedspreads-and-blankets/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Полотенца",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 839,
+        "catUrl": "https://www.lamoda.ru/c/6696/home_accs-polotentsa/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Постельные принадлежности",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 840,
+        "catUrl": "https://www.lamoda.ru/c/6655/home_accs-tovarydlyaspalnipostelnyeprinadlezhnosti/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Столовая посуда",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 841,
+        "catUrl": "https://www.lamoda.ru/c/6884/home_accs-posuda/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Текстиль для кухни",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 842,
+        "catUrl": "https://www.lamoda.ru/c/7616/home_accs-textil-dlya-kuhni/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Товары для животных",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 843,
+        "catUrl": "https://www.lamoda.ru/c/7771/home_accs-tovarydlyajivotnyh/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Хранение вещей",
+        "platform": 3,
+        "parent": 829,
+        "catalogId": 844,
+        "catUrl": "https://www.lamoda.ru/c/6681/home_accs-hranenieveschey/",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+            {
+                "channel": "-1817408131",
+                "catalogId": 830
+            }
+        ]
+    },
+    {
+        "name": "Resale",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 845,
+        "catUrl": "https://www.lamoda.ru/c/4154/default-kids/?display_locations=resale",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+        ]
+    },
+    {
+        "name": "SALE%",
+        "platform": 3,
+        "parent": 759,
+        "catalogId": 846,
+        "catUrl": "https://www.lamoda.ru/c/4154/default-kids/?is_sale=1&display_locations=outlet",
+        "publications": [
+            {
+                "channel": "-1817408131",
+                "catalogId": 1003
+            },
+        ]
+    },
     // {
     //     "url": "https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=newly&search=%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD%D0%B0%D0%BC",
     //     "name": "2. Женщинам",
